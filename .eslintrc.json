@@ -4,13 +4,16 @@
     "commonjs": true,
     "es6": true
   },
+  "plugins": ["prettier", "jest", "testing-library", "jest-dom"],
   "extends": [
     "standard",
     "prettier",
     "eslint:recommended",
     "plugin:prettier/recommended",
     "plugin:jest/recommended",
-    "plugin:jest/style"
+    "plugin:jest/style",
+    "plugin:jest-dom/recommended",
+    "plugin:testing-library/recommended"
   ],
   "globals": {
     "Atomics": "readonly",

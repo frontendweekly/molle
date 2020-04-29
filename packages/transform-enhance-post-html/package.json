@@ -1,0 +1,27 @@
+{
+  "name": "@frontendweekly/transform-enhance-post-html",
+  "version": "0.0.0",
+  "description": "A transform to enhance HTML for post",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/frontendweekly/molle",
+    "directory": "packages/transform-enhance-post-html"
+  },
+  "keywords": [
+    "eleventy",
+    "eleventy-plugin"
+  ],
+  "author": "Yuya Saito <hello@studiomohawk.com> (https://github.com/studiomohawk)",
+  "license": "MIT",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/frontendweekly"
+  },
+  "dependencies": {
+    "jsdom": "^16.2.2",
+    "slugify": "^1.4.0"
+  }
+}
