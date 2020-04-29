@@ -1,0 +1,9 @@
+name = "Lerna package"
+description = "A scaffold for Lerna package"
+kickstart_version = 1
+directory = "{{directory_name}}"
+
+[[variables]]
+name = "directory_name"
+default = "name"
+prompt = "What is this package name?"

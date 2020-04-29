@@ -1,0 +1,23 @@
+{
+  "name": "@frontendweekly/transform-htmlmin",
+  "version": "0.0.0",
+  "description": "FILL ME",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/frontendweekly/molle",
+    "directory": "packages/transform-htmlmin"
+  },
+  "keywords": [
+    "eleventy",
+    "eleventy-plugin"
+  ],
+  "author": "Yuya Saito <hello@studiomohawk.com> (https://github.com/studiomohawk)",
+  "license": "MIT",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/frontendweekly"
+  },
+  "dependencies": {
+    "html-minifier": "^4.0.0"
+  }
+}
