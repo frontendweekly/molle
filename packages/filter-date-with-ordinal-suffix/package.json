@@ -1,0 +1,15 @@
+{
+  "name": "filter-date-ordinal-suffix",
+  "version": "0.0.0",
+  "description": "A filter to change given date into date with ordinal suffix. e.g. 28th April 2020",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "eleventy",
+    "eleventy-plugin"
+  ],
+  "author": "Yuya Saito <hello@studiomohawk.com> (https://github.com/studiomohawk)",
+  "license": "MIT"
+}

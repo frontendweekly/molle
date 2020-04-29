@@ -1,0 +1,11 @@
+node_modules
+dist
+
+*.log
+npm-debug.*
+*.scssc
+*.swp
+.DS_Store
+.sass-cache
+.envrc
+.env
