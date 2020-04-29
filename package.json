@@ -2,6 +2,8 @@
   "name": "root",
   "private": true,
   "scripts": {
+    "prepublish": "npm run test",
+    "publish": "lerna publish",
     "test": "jest"
   },
   "devDependencies": {

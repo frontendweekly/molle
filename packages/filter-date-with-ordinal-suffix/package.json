@@ -4,12 +4,20 @@
   "description": "A filter to change given date into date with ordinal suffix. e.g. 28th April 2020",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/frontendweekly/molle",
+    "directory": "packages/filter-date-with-ordinal-suffix"
   },
   "keywords": [
     "eleventy",
     "eleventy-plugin"
   ],
   "author": "Yuya Saito <hello@studiomohawk.com> (https://github.com/studiomohawk)",
-  "license": "MIT"
+  "license": "MIT",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  }
 }
