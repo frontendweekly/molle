@@ -1,6 +1,6 @@
 {
   "name": "filter-date-ordinal-suffix",
-  "version": "0.0.0",
+  "version": "0.0.1-alpha.0",
   "description": "A filter to change given date into date with ordinal suffix. e.g. 28th April 2020",
   "main": "index.js",
   "scripts": {
