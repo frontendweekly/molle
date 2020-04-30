@@ -1,7 +1,7 @@
 {
-  "name": "@frontendweekly/filter-date-iso",
-  "version": "0.0.1",
-  "description": "A filter to change given date into iso string. e.g. 2020-04-28T23:35:02.221Z",
+  "name": "@frontendweekly/filter-date-ordinal-suffix",
+  "version": "0.0.4",
+  "description": "A filter to change given date into date with ordinal suffix. e.g. 28th April 2020",
   "main": "index.js",
   "scripts": {
     "test": "jest"
@@ -9,7 +9,7 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/frontendweekly/molle",
-    "directory": "packages/filter-date-iso"
+    "directory": "packages/filter-date-with-ordinal-suffix"
   },
   "keywords": [
     "eleventy",
