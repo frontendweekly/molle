@@ -1,7 +1,7 @@
-const filterDateOrdinalSuffix = require('../filter-date-with-ordinal-suffix');
-const filterDateIso = require('../filter-date-iso');
-const transformHtmlMin = require('../transform-htmlmin');
-const transformEnhancePostHtml = require('../transform-enhance-post-html');
+const filterDateOrdinalSuffix = require('@frontendweekly/filter-date-ordinal-suffix');
+const filterDateIso = require('@frontendweekly/filter-date-iso');
+const transformHtmlMin = require('@frontendweekly/transform-htmlmin');
+const transformEnhancePostHtml = require('@frontendweekly/transform-enhance-post-html');
 
 module.exports = function (eleventyConfig) {
   eleventyConfig.addFilter('dateOrdinalSuffixFilter', filterDateOrdinalSuffix);
