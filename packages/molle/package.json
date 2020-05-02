@@ -36,6 +36,9 @@
   "dependencies": {
     "@frontendweekly/filter-date-iso": "^0.0.6",
     "@frontendweekly/filter-date-ordinal-suffix": "^0.0.9",
+    "@frontendweekly/filter-head": "^0.0.1",
+    "@frontendweekly/filter-markdown": "^0.0.1",
+    "@frontendweekly/filter-tags-to-sentence": "^0.0.2",
     "@frontendweekly/transform-enhance-post-html": "^0.0.6",
     "@frontendweekly/transform-htmlmin": "^0.0.7"
   }
