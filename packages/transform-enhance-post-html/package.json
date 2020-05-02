@@ -25,5 +25,6 @@
   },
   "devDependencies": {
     "@11ty/eleventy": "^0.10.0"
-  }
+  },
+  "gitHead": "7503d8c418a29a43c508caf06bcabba1fdc9634e"
 }
