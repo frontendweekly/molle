@@ -1,0 +1,25 @@
+{
+  "name": "@frontendweekly/filter-tags-to-sentence",
+  "version": "0.0.0",
+  "description": "FILL ME",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/frontendweekly/molle",
+    "directory": "packages/filter-tags-to-sentence"
+  },
+  "keywords": [
+    "eleventy"
+  ],
+  "author": "Yuya Saito <hello@studiomohawk.com> (https://github.com/studiomohawk)",
+  "license": "MIT",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/frontendweekly"
+  },
+  "dependencies": {
+    "slugify": "^1.4.0"
+  }
+}

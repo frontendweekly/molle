@@ -1,0 +1,22 @@
+{
+  "name": "@frontendweekly/filter-head",
+  "version": "0.0.0",
+  "description": "A filter to return specified head from array",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/frontendweekly/molle",
+    "directory": "packages/filter-head"
+  },
+  "keywords": [
+    "eleventy"
+  ],
+  "author": "Yuya Saito <hello@studiomohawk.com> (https://github.com/studiomohawk)",
+  "license": "MIT",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/frontendweekly"
+  }
+}

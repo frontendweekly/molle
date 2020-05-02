@@ -23,6 +23,9 @@ module.exports = function (config) {
 
 ### Filters: date related
 
+- `dateIsoFilter` — returns `date.toISOString()`
+- `dateOrdinalSuffixFilter` — returns date as 28th April 2020
+
 ```
 <time datetime="{{ date | dateIsoFilter }}"
       class="dt-published">{{ date | dateOrdinalSuffixFilter }}</time>
@@ -33,6 +36,16 @@ which yields
 ```
 <time datetime="2020-05-02T00:00:00.000Z" class="dt-published">2nd May 2020</time>
 ```
+
+### Filters: array related
+
+- `tagsToSentence` — when tags are given this yields something like `<a href="${ slug(tag) }">tag</a>, <a href="${ slug(tag) }">tag</a> and <a href="${ slug(tag) }">tag</a>`
+- `head` — returns specified head from array
+
+### Filters: misc
+
+- `markdownFilter` — converts markdown into HTML
+- `jsonify` — returns `JSON.stringify(value)`
 
 ### Transforms: html related
 
