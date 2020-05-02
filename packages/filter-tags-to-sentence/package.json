@@ -1,7 +1,7 @@
 {
   "name": "@frontendweekly/filter-tags-to-sentence",
   "version": "0.0.1",
-  "description": "FILL ME",
+  "description": "A filter to tags to sentence",
   "main": "index.js",
   "scripts": {
     "test": "jest"
