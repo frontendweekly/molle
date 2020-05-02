@@ -1,3 +1,9 @@
+const markdownIt = require('markdown-it');
+const markdownItClassy = require('markdown-it-classy');
+const markdownItFootnote = require('markdown-it-footnote');
+const markdownItDeflist = require('markdown-it-deflist');
+const markdownItAttribution = require('markdown-it-attribution');
+
 const filterDateOrdinalSuffix = require('@frontendweekly/filter-date-ordinal-suffix');
 const filterDateIso = require('@frontendweekly/filter-date-iso');
 const filterHead = require('@frontendweekly/filter-head');
@@ -16,4 +22,20 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addFilter('jsonify', (value) => JSON.stringify(value));
   eleventyConfig.addTransform('htmlmin', transformHtmlMin);
   eleventyConfig.addTransform('enhancePostHtml', transformEnhancePostHtml);
+
+  eleventyConfig.setLibrary(
+    'md',
+    markdownIt({
+      html: true,
+      breaks: true,
+      linkify: true,
+      typographer: true,
+    })
+      .use(markdownItClassy)
+      .use(markdownItFootnote)
+      .use(markdownItDeflist)
+      .use(markdownItAttribution, {
+        removeMarker: false,
+      })
+  );
 };

@@ -40,6 +40,11 @@
     "@frontendweekly/filter-markdown": "^0.0.1",
     "@frontendweekly/filter-tags-to-sentence": "^0.0.2",
     "@frontendweekly/transform-enhance-post-html": "^0.0.6",
-    "@frontendweekly/transform-htmlmin": "^0.0.7"
+    "@frontendweekly/transform-htmlmin": "^0.0.7",
+    "markdown-it": "^10.0.0",
+    "markdown-it-attribution": "^0.1.1",
+    "markdown-it-classy": "^0.2.0",
+    "markdown-it-deflist": "^2.0.3",
+    "markdown-it-footnote": "^3.0.2"
   }
 }
