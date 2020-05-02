@@ -1,6 +1,6 @@
 {
   "name": "@frontendweekly/molle",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "MOLLE is a plugin for Eleventy. Not for everyone to use it.",
   "keywords": [
     "eleventy",

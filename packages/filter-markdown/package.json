@@ -1,6 +1,6 @@
 {
   "name": "@frontendweekly/filter-markdown",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "A filter to convert markdown format text into html",
   "main": "index.js",
   "scripts": {
