@@ -17,7 +17,8 @@
   "author": "Yuya Saito <hello@studiomohawk.com> (https://github.com/studiomohawk)",
   "license": "MIT",
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com/frontendweekly"
+    "registry": "https://npm.pkg.github.com/frontendweekly",
+    "access": "public"
   },
   "dependencies": {
     "jsdom": "^16.2.2",

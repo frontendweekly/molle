@@ -14,7 +14,8 @@
     "test": "__tests__"
   },
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com/frontendweekly"
+    "registry": "https://npm.pkg.github.com/frontendweekly",
+    "access": "public"
   },
   "repository": {
     "type": "git",
