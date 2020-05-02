@@ -11,7 +11,7 @@
   "license": "MIT",
   "main": ".eleventy.js",
   "directories": {
-    "test": "__tests__"
+    "test": "example"
   },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/frontendweekly",
@@ -30,14 +30,13 @@
     "url": "https://github.com/frontendweekly/molle/issues"
   },
   "devDependencies": {
-    "@11ty/eleventy": "^0.10.0",
+    "@11ty/eleventy": "^0.10.0"
+  },
+  "gitHead": "7503d8c418a29a43c508caf06bcabba1fdc9634e",
+  "dependencies": {
     "@frontendweekly/filter-date-iso": "^0.0.6",
     "@frontendweekly/filter-date-ordinal-suffix": "^0.0.9",
-    "@frontendweekly/filter-head": "^0.0.1",
-    "@frontendweekly/filter-markdown": "^0.0.1",
-    "@frontendweekly/filter-tags-to-sentence": "^0.0.2",
     "@frontendweekly/transform-enhance-post-html": "^0.0.5",
     "@frontendweekly/transform-htmlmin": "^0.0.6"
-  },
-  "gitHead": "7503d8c418a29a43c508caf06bcabba1fdc9634e"
+  }
 }
