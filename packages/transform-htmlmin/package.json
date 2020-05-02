@@ -1,6 +1,6 @@
 {
   "name": "@frontendweekly/transform-htmlmin",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "A transform to minify html",
   "main": "index.js",
   "repository": {
