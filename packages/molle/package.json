@@ -1,0 +1,34 @@
+{
+  "name": "molle",
+  "version": "0.0.1",
+  "description": "MOLLE is a plugin for Eleventy. Not for everyone to use it.",
+  "keywords": [
+    "eleventy",
+    "eleventy-plugin"
+  ],
+  "author": "Yuya Saito <hello@studiomohawk.com> (https://github.com/studiomohawk)",
+  "homepage": "https://github.com/frontendweekly/molle",
+  "license": "MIT",
+  "main": ".eleventy.js",
+  "directories": {
+    "test": "__tests__"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/frontendweekly"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/frontendweekly/molle.git",
+    "directory": "packages/{{directory_name}}"
+  },
+  "scripts": {
+    "test": "jest",
+    "example": "ELEVENTY_ENV=production eleventy --input=example --output=example/_site --config=example/eleventy-config.js"
+  },
+  "bugs": {
+    "url": "https://github.com/frontendweekly/molle/issues"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^0.10.0"
+  }
+}

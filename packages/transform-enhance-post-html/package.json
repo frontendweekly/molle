@@ -12,8 +12,7 @@
     "directory": "packages/transform-enhance-post-html"
   },
   "keywords": [
-    "eleventy",
-    "eleventy-plugin"
+    "eleventy"
   ],
   "author": "Yuya Saito <hello@studiomohawk.com> (https://github.com/studiomohawk)",
   "license": "MIT",
@@ -23,5 +22,8 @@
   "dependencies": {
     "jsdom": "^16.2.2",
     "slugify": "^1.4.0"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^0.10.0"
   }
 }

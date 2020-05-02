@@ -13,7 +13,9 @@
     "plugin:jest/recommended",
     "plugin:jest/style",
     "plugin:jest-dom/recommended",
-    "plugin:testing-library/recommended"
+    "plugin:testing-library/recommended",
+    "plugin:import/errors",
+    "plugin:import/warnings"
   ],
   "globals": {
     "Atomics": "readonly",

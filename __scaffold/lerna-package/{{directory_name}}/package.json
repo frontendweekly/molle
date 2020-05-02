@@ -12,8 +12,7 @@
     "directory": "packages/{{directory_name}}"
   },
   "keywords": [
-    "eleventy",
-    "eleventy-plugin"
+    "eleventy"
   ],
   "author": "Yuya Saito <hello@studiomohawk.com> (https://github.com/studiomohawk)",
   "license": "MIT",

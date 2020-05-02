@@ -19,5 +19,9 @@
   "license": "MIT",
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/frontendweekly"
+  },
+  "gitHead": "507a806dcdc607f6ccf5fcf6cae6088cbb46f74d",
+  "devDependencies": {
+    "@11ty/eleventy": "^0.10.0"
   }
 }
