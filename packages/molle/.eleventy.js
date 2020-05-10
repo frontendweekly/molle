@@ -13,7 +13,7 @@ const filterMarkdown = require('@frontendweekly/filter-markdown');
 const transformHtmlMin = require('@frontendweekly/transform-htmlmin');
 const transformEnhancePostHtml = require('@frontendweekly/transform-enhance-post-html');
 
-module.exports = function (eleventyConfig) {
+module.exports = function (eleventyConfig, options = {}) {
   eleventyConfig.addFilter('dateOrdinalSuffixFilter', filterDateOrdinalSuffix);
   eleventyConfig.addFilter('dateIsoFilter', filterDateIso);
   eleventyConfig.addFilter('head', filterHead);

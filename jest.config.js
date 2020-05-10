@@ -1,5 +1,8 @@
-const {defaults} = require('jest-config');
 module.exports = {
-  setupFiles: ['jest-date-mock'],
-  projects: ['<rootDir>/packages/*'],
+  ...require('./__test/jest-common'),
+  projects: [
+    './__test/jest-lint.js',
+    './__test/jest-client.js',
+    './__test/jest-server.js',
+  ],
 };

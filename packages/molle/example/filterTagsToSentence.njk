@@ -1,0 +1,13 @@
+---
+tags:
+- testing
+- tagstosentence
+- e2e
+---
+{% extends 'layouts/base.njk' %}
+
+{% block content %}
+<main id="main-content" tabindex="-1" class="qa-{{ page.fileSlug }}" data-testid="qa-{{ page.fileSlug }}">
+  {{ tags | tagsToSentence | safe }}
+</main>
+{% endblock %}

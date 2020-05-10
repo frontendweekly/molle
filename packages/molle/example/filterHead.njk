@@ -1,0 +1,21 @@
+---
+tags:
+  - 1
+  - 2
+  - 3
+  - 4
+  - 5
+  - 6
+  - 7
+---
+{% extends 'layouts/base.njk' %}
+
+{% block content %}
+<main id="main-content" tabindex="-1" class="qa-{{ page.fileSlug }}" data-testid="qa-{{ page.fileSlug }}">
+  <ol>
+    {% for tag in tags | head(5) %}
+      <li>{{ tag }}</li>
+    {% endfor %}
+  </ol>
+</main>
+{% endblock %}

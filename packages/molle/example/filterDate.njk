@@ -1,0 +1,11 @@
+---
+date: 2020-05-02
+---
+{% extends 'layouts/base.njk' %}
+
+{% block content %}
+<main id="main-content" tabindex="-1" class="qa-{{ page.fileSlug }}" data-testid="qa-{{ page.fileSlug }}">
+  <time datetime="{{ date | dateIsoFilter }}"
+        class="dt-published">{{ date | dateOrdinalSuffixFilter }}</time>
+</main>
+{% endblock %}

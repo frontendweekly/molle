@@ -1,0 +1,15 @@
+{% extends 'layouts/base.njk' %}
+
+{% block content %}
+<main id="main-content" tabindex="-1" class="qa-{{ page.fileSlug }}" data-testid="qa-{{ page.fileSlug }}">
+<article class="c-post">
+  <h2>I'm h2</h2>
+  <img src="#dummy" alt="this is dummy">
+  <img src="#dummy" title="dummy" alt="">
+  <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/UaelNxjgGCo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  <pre class="language-css">
+    pre
+  </pre>
+</article>
+</main>
+{% endblock %}

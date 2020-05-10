@@ -1,0 +1,14 @@
+---
+markdown: |-
+  # This is markdown
+
+  - I hope
+  - This works
+---
+{% extends 'layouts/base.njk' %}
+
+{% block content %}
+<main id="main-content" tabindex="-1" class="qa-{{ page.fileSlug }}" data-testid="qa-{{ page.fileSlug }}">
+  {{ markdown | markdownFilter | safe }}
+</main>
+{% endblock %}
