@@ -1,0 +1,22 @@
+{
+  "name": "@frontendweekly/collection-postFeed",
+  "version": "0.0.0",
+  "description": "A custom collection which checks date and draft status AND limit by maxPostsPerPage",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/frontendweekly/molle",
+    "directory": "packages/collection-postFeed"
+  },
+  "keywords": [
+    "eleventy"
+  ],
+  "author": "Yuya Saito <hello@studiomohawk.com> (https://github.com/studiomohawk)",
+  "license": "MIT",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/frontendweekly"
+  }
+}
