@@ -1,6 +1,6 @@
 {
   "name": "@frontendweekly/collection-postFeed",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "A custom collection which checks date and draft status AND limit by maxPostsPerPage",
   "main": "index.js",
   "scripts": {
