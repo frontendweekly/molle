@@ -1,6 +1,6 @@
 {
   "name": "@frontendweekly/collection-posts",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A custom collection which checks date and draft status",
   "main": "index.js",
   "scripts": {
@@ -18,5 +18,6 @@
   "license": "MIT",
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/frontendweekly"
-  }
+  },
+  "gitHead": "976716b24c6b55edbb5b9507fa48a7eff089e149"
 }
