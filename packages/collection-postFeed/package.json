@@ -1,6 +1,6 @@
 {
   "name": "@frontendweekly/collection-postfeed",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "A custom collection which checks date and draft status AND limit by maxPostsPerPage",
   "main": "index.js",
   "repository": {
@@ -16,5 +16,5 @@
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/frontendweekly"
   },
-  "gitHead": "976716b24c6b55edbb5b9507fa48a7eff089e149"
+  "gitHead": "83195749cbcc7f397665349a5f1a01854dde28eb"
 }

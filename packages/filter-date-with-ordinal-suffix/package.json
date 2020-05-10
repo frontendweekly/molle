@@ -1,6 +1,6 @@
 {
   "name": "@frontendweekly/filter-date-ordinal-suffix",
-  "version": "0.0.11",
+  "version": "0.0.12",
   "description": "A filter to change given date into date with ordinal suffix. e.g. 28th April 2020",
   "main": "index.js",
   "scripts": {
@@ -21,5 +21,5 @@
     "registry": "https://npm.pkg.github.com/frontendweekly",
     "access": "public"
   },
-  "gitHead": "7503d8c418a29a43c508caf06bcabba1fdc9634e"
+  "gitHead": "83195749cbcc7f397665349a5f1a01854dde28eb"
 }
