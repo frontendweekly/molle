@@ -13,4 +13,6 @@ describe('dateISO', () => {
     const expected = `2020-03-31T15:00:00.000Z`;
     expect(actual).toEqual(expected);
   });
+
+  afterAll(() => clear());
 });

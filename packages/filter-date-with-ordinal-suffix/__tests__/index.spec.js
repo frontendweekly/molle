@@ -46,4 +46,6 @@ describe('filterDateWithOrdinalSuffix', () => {
     const expected = `29th April 2020`;
     expect(actual).toEqual(expected);
   });
+
+  afterAll(() => clear());
 });

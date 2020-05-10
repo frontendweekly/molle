@@ -2,7 +2,7 @@ const jsdom = require('jsdom');
 const {JSDOM} = jsdom;
 const slugify = require('slugify');
 
-const minify = (input) => input.replace(/\s{2,}/g, '').replace(/\'/g, '"');
+const minify = (input) => input.replace(/\s{2,}/g, '').replace(/'/g, '"');
 const shouldTransformHTML = (outputPath) => outputPath && outputPath.endsWith('.html');
 
 module.exports = function (content, outputPath) {

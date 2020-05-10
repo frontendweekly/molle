@@ -23,7 +23,6 @@
     "directory": "packages/molle"
   },
   "scripts": {
-    "test": "jest",
     "example": "ELEVENTY_ENV=production eleventy --input=example --output=example/_site --config=example/eleventy-config.js"
   },
   "bugs": {
