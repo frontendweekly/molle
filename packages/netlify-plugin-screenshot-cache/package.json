@@ -25,7 +25,9 @@
     "registry": "https://npm.pkg.github.com/frontendweekly"
   },
   "dependencies": {
-    "fs-extra": "^9.0.0",
     "signale": "^1.4.0"
+  },
+  "devDependencies": {
+    "metro-memory-fs": "^0.59.0"
   }
 }
