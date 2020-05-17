@@ -1,0 +1,11 @@
+name: netlify-plugin-screenshot-cache
+inputs:
+  - name: screenshotDir
+    description: The name of a directory saving screenshot
+    default: previews
+  - name: cacheDirPath
+    description: The path of a directory saving cache
+    default: ../.cache
+  - name: outputFile
+    description: Output the result in this file
+    default: cache-preview.json
