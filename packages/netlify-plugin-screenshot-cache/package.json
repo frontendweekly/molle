@@ -28,6 +28,6 @@
     "signale": "^1.4.0"
   },
   "devDependencies": {
-    "metro-memory-fs": "^0.59.0"
+    "mock-fs": "^4.12.0"
   }
 }

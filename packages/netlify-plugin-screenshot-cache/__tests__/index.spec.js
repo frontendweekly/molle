@@ -1,3 +1,5 @@
+const mock = require('mock-fs');
+
 const path = require('path');
 const fs = require('fs');
 
@@ -9,12 +11,15 @@ describe('onPreBuild', () => {
       list: jest.fn(),
     },
   };
-  jest.mock('fs', () => new (require('metro-memory-fs'))());
 
   beforeEach(() => {
     mockcache.cache.list.mockClear();
-    require('fs').reset();
+    mock({
+      'packages/netlify-plugin-screenshot-cache/__tests__/.cache': {},
+    });
   });
+
+  afterEach(mock.restore);
 
   test('it should return list of file name in an array', async () => {
     // Arrange
@@ -30,15 +35,31 @@ describe('onPreBuild', () => {
       '/Users/studiomohawk/Sync/Hack/sixtysix/dist/previews/k9ul5949/preview.png',
     ];
 
-    const expected = ['ka9kyr19', 'ka9ij8ni', 'k9ul5949'];
     mockcache.cache.list.mockReturnValueOnce(fixture);
 
     // Act
     await SUT.onPreBuild({constants: PUBLISH_DIR, utils: mockcache, inputs: inputs});
-    const actual = JSON.parse(
-      await fs.promises.readFile(`${inputs.cacheDirPath}/${inputs.outputFile}`)
+    const actual = await fs.promises.readFile(
+      `${inputs.cacheDirPath}/${inputs.outputFile}`
     );
     // Assert
-    expect(actual).toStrictEqual(expected);
+    expect(
+      JSON.parse(
+        actual,
+        `
+        Array [
+          "ka9kyr19",
+          "ka9ij8ni",
+          "k9ul5949",
+        ]
+      `
+      )
+    ).toMatchInlineSnapshot(`
+      Array [
+        "ka9kyr19",
+        "ka9ij8ni",
+        "k9ul5949",
+      ]
+    `);
   });
 });
