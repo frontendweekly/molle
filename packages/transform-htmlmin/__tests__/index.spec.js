@@ -44,14 +44,4 @@ describe('transform-htmlmin', () => {
     // Assert
     expect(actual).toMatchSnapshot();
   });
-
-  test('it should return content when output is not html', () => {
-    // Arrange
-    const content = `dummy content`;
-    const outputPath = `dummy.html`;
-    // Act
-    const actual = SUT(content, outputPath);
-    // Assert
-    expect(actual).toMatchInlineSnapshot(`"dummy content"`);
-  });
 });
