@@ -26,8 +26,5 @@
   },
   "dependencies": {
     "signale": "^1.4.0"
-  },
-  "devDependencies": {
-    "mock-fs": "^4.12.0"
   }
 }

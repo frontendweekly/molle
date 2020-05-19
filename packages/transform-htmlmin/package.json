@@ -3,6 +3,9 @@
   "version": "0.0.9",
   "description": "A transform to minify html",
   "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/frontendweekly/molle",
