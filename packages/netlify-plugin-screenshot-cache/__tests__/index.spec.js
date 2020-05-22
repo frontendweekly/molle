@@ -1,5 +1,3 @@
-const mock = require('mock-fs');
-
 const path = require('path');
 const fs = require('fs');
 
@@ -12,23 +10,19 @@ describe('onPreBuild', () => {
     },
   };
 
-  beforeEach(() => {
+  afterEach(() => {
     mockcache.cache.list.mockClear();
-    mock({
-      'packages/netlify-plugin-screenshot-cache/__tests__/.cache': {},
-    });
   });
-
-  afterEach(mock.restore);
 
   test('it should return list of file name in an array', async () => {
     // Arrange
-    const PUBLISH_DIR = path.resolve(__dirname, '__dist');
-    const CACHE_PATH = '../.cache';
+    const PUBLISH_DIR = path.resolve(__dirname, '.');
+    const CACHE_PATH = '.cache';
     const inputs = {
       cacheDirPath: path.resolve(PUBLISH_DIR, CACHE_PATH),
       outputFile: 'cache-preview.json',
-    };
+    }; // ?
+
     const fixture = [
       '/Users/studiomohawk/Sync/Hack/sixtysix/dist/previews/ka9kyr19/preview.png',
       '/Users/studiomohawk/Sync/Hack/sixtysix/dist/previews/ka9ij8ni/preview.png',
@@ -41,7 +35,8 @@ describe('onPreBuild', () => {
     await SUT.onPreBuild({constants: PUBLISH_DIR, utils: mockcache, inputs: inputs});
     const actual = await fs.promises.readFile(
       `${inputs.cacheDirPath}/${inputs.outputFile}`
-    );
+    ); // ?
+
     // Assert
     expect(
       JSON.parse(
