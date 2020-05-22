@@ -32,7 +32,7 @@
     "@11ty/eleventy": "^0.11.0",
     "ucontent": "^1.3.3"
   },
-  "gitHead": "83195749cbcc7f397665349a5f1a01854dde28eb",
+  "gitHead": "8846c53f0f6315325a4042902b8ba289b5e9b7b7",
   "dependencies": {
     "@frontendweekly/filter-date-iso": "^0.0.9",
     "@frontendweekly/filter-date-ordinal-suffix": "^0.0.12",

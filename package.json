@@ -6,7 +6,7 @@
   ],
   "scripts": {
     "prepublish": "run-s test version",
-    "publish": "changeset publish",
+    "publish": "lerna publish",
     "version": "changeset version",
     "changeset": "changeset",
     "test": "jest"
