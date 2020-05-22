@@ -1,6 +1,6 @@
 {
   "name": "@frontendweekly/filter-head",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "A filter to return specified head from array",
   "main": "index.js",
   "scripts": {
@@ -18,5 +18,6 @@
   "license": "MIT",
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/frontendweekly"
-  }
+  },
+  "gitHead": "5758ace4f9bbc84ecfe87966d53f60a1625be43a"
 }

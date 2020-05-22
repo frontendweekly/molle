@@ -1,6 +1,6 @@
 {
   "name": "@frontendweekly/transform-htmlmin",
-  "version": "0.0.11",
+  "version": "0.0.12",
   "description": "A transform to minify html",
   "main": "index.js",
   "scripts": {
@@ -24,5 +24,5 @@
   "dependencies": {
     "html-minifier": "^4.0.0"
   },
-  "gitHead": "7503d8c418a29a43c508caf06bcabba1fdc9634e"
+  "gitHead": "5758ace4f9bbc84ecfe87966d53f60a1625be43a"
 }

@@ -1,6 +1,6 @@
 {
   "name": "@frontendweekly/filter-tags-to-sentence",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "A filter to tags to sentence",
   "main": "index.js",
   "scripts": {
@@ -21,5 +21,6 @@
   },
   "dependencies": {
     "slugify": "^1.4.0"
-  }
+  },
+  "gitHead": "5758ace4f9bbc84ecfe87966d53f60a1625be43a"
 }

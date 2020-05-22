@@ -1,6 +1,6 @@
 {
   "name": "@frontendweekly/netlify-plugin-screenshot-cache",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "A Netlify Build Plugin to cache auto-generated screenshots for Frontend Weekly Tokyo.",
   "main": "index.js",
   "scripts": {
@@ -26,5 +26,6 @@
   },
   "dependencies": {
     "signale": "^1.4.0"
-  }
+  },
+  "gitHead": "5758ace4f9bbc84ecfe87966d53f60a1625be43a"
 }

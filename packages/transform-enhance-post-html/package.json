@@ -1,6 +1,6 @@
 {
   "name": "@frontendweekly/transform-enhance-post-html",
-  "version": "0.0.11",
+  "version": "0.0.12",
   "description": "A transform to enhance HTML for post",
   "main": "index.js",
   "scripts": {
@@ -24,5 +24,5 @@
     "jsdom": "^16.2.2",
     "slugify": "^1.4.0"
   },
-  "gitHead": "83195749cbcc7f397665349a5f1a01854dde28eb"
+  "gitHead": "5758ace4f9bbc84ecfe87966d53f60a1625be43a"
 }
