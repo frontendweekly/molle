@@ -1,9 +1,14 @@
 {
   "name": "root",
   "private": true,
+  "workspaces": [
+    "packages"
+  ],
   "scripts": {
-    "prepublish": "npm run test",
-    "publish": "lerna publish",
+    "prepublish": "run-s test version",
+    "publish": "changeset publish",
+    "version": "changeset version",
+    "changeset": "changeset",
     "test": "jest"
   },
   "devDependencies": {
@@ -38,5 +43,8 @@
     "stylelint-config-recess-order": "^2.0.4",
     "stylelint-config-standard": "^20.0.0",
     "stylelint-prettier": "^1.1.2"
+  },
+  "dependencies": {
+    "@changesets/cli": "^2.7.2"
   }
 }
