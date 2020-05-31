@@ -7,7 +7,7 @@ describe('filter-tags-to-sentence', () => {
     // Act
     const actual = SUT(array); // ?
     // Assert
-    const expected = `<a href="apple">apple</a>, <a href="banana">banana</a> and <a href="pineapple">pineapple</a>`;
+    const expected = `<a href="/tags/apple">apple</a>, <a href="/tags/banana">banana</a> and <a href="/tags/pineapple">pineapple</a>`;
     expect(actual).toEqual(expected);
   });
 
@@ -17,7 +17,7 @@ describe('filter-tags-to-sentence', () => {
     // Act
     const actual = SUT(array); // ?
     // Assert
-    const expected = `<a href="apple">apple</a> and <a href="banana">banana</a>`;
+    const expected = `<a href="/tags/apple">apple</a> and <a href="/tags/banana">banana</a>`;
     expect(actual).toEqual(expected);
   });
 
@@ -27,7 +27,7 @@ describe('filter-tags-to-sentence', () => {
     // Act
     const actual = SUT(array); // ?
     // Assert
-    const expected = `<a href="apple">apple</a>`;
+    const expected = `<a href="/tags/apple">apple</a>`;
     expect(actual).toEqual(expected);
   });
 

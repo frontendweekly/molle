@@ -7,8 +7,11 @@ module.exports = function (value = []) {
 
   // Transform value into <a href="{{value | slug}}">value</a>
   const LinkedTags = value.map((element) => {
-    const linkSlug = slugify(element);
-    return `<a href="${linkSlug}">${element}</a>`;
+    const linkSlug = slugify(element, {
+      lower: true,
+      remove: /[*+~.()'"!:@]/g,
+    });
+    return `<a href="/tags/${linkSlug}">${element}</a>`;
   });
 
   if (LinkedTags.length === 1) {
