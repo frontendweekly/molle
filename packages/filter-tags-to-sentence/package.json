@@ -1,6 +1,6 @@
 {
   "name": "@frontendweekly/filter-tags-to-sentence",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "A filter to tags to sentence",
   "main": "index.js",
   "scripts": {
