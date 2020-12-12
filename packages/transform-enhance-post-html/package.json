@@ -1,6 +1,6 @@
 {
   "name": "@frontendweekly/transform-enhance-post-html",
-  "version": "0.0.12",
+  "version": "0.0.13",
   "description": "A transform to enhance HTML for post",
   "main": "index.js",
   "scripts": {
