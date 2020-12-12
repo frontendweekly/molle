@@ -20,7 +20,7 @@
     "registry": "https://npm.pkg.github.com/frontendweekly"
   },
   "dependencies": {
-    "slugify": "^1.4.0"
+    "slugify": "^1.4.6"
   },
   "gitHead": "5758ace4f9bbc84ecfe87966d53f60a1625be43a"
 }
