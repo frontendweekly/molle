@@ -557,6 +557,20 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@frontendweekly/eleventy-plugin-markdown@workspace:packages/eleventy-plugin-markdown":
+  version: 0.0.0-use.local
+  resolution: "@frontendweekly/eleventy-plugin-markdown@workspace:packages/eleventy-plugin-markdown"
+  dependencies:
+    markdown-it: ^12.0.4
+    markdown-it-anchor: ^6.0.1
+    markdown-it-attribution: ^0.1.1
+    markdown-it-attrs: ^3.0.3
+    markdown-it-deflist: ^2.1.0
+    markdown-it-footnote: ^3.0.2
+    uslug: ^1.0.4
+  languageName: unknown
+  linkType: soft
+
 "@frontendweekly/eslint-config-molle@npm:^0.0.1":
   version: 0.0.1
   resolution: "@frontendweekly/eslint-config-molle@npm:0.0.1::__archiveUrl=https%3A%2F%2Fnpm.pkg.github.com%2Fdownload%2F%40frontendweekly%2Feslint-config-molle%2F0.0.1%2F41c99a6fd7905ffa8efddb994dd269df337479494fe58c12b8e740d48539f796"
@@ -580,7 +594,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@frontendweekly/filter-date-iso@^0.0.13, @frontendweekly/filter-date-iso@workspace:packages/filter-date-iso":
+"@frontendweekly/filter-date-iso@^0.0.14, @frontendweekly/filter-date-iso@workspace:packages/filter-date-iso":
   version: 0.0.0-use.local
   resolution: "@frontendweekly/filter-date-iso@workspace:packages/filter-date-iso"
   dependencies:
@@ -588,7 +602,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@frontendweekly/filter-date-ordinal-suffix@^0.0.16, @frontendweekly/filter-date-ordinal-suffix@workspace:packages/filter-date-with-ordinal-suffix":
+"@frontendweekly/filter-date-ordinal-suffix@^0.0.17, @frontendweekly/filter-date-ordinal-suffix@workspace:packages/filter-date-with-ordinal-suffix":
   version: 0.0.0-use.local
   resolution: "@frontendweekly/filter-date-ordinal-suffix@workspace:packages/filter-date-with-ordinal-suffix"
   dependencies:
@@ -596,13 +610,13 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@frontendweekly/filter-head@^0.0.7, @frontendweekly/filter-head@workspace:packages/filter-head":
+"@frontendweekly/filter-head@^0.0.8, @frontendweekly/filter-head@workspace:packages/filter-head":
   version: 0.0.0-use.local
   resolution: "@frontendweekly/filter-head@workspace:packages/filter-head"
   languageName: unknown
   linkType: soft
 
-"@frontendweekly/filter-markdown@^0.0.8, @frontendweekly/filter-markdown@workspace:packages/filter-markdown":
+"@frontendweekly/filter-markdown@^0.0.9, @frontendweekly/filter-markdown@workspace:packages/filter-markdown":
   version: 0.0.0-use.local
   resolution: "@frontendweekly/filter-markdown@workspace:packages/filter-markdown"
   dependencies:
@@ -610,7 +624,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@frontendweekly/filter-tags-to-sentence@^0.0.9, @frontendweekly/filter-tags-to-sentence@workspace:packages/filter-tags-to-sentence":
+"@frontendweekly/filter-tags-to-sentence@^0.0.10, @frontendweekly/filter-tags-to-sentence@workspace:packages/filter-tags-to-sentence":
   version: 0.0.0-use.local
   resolution: "@frontendweekly/filter-tags-to-sentence@workspace:packages/filter-tags-to-sentence"
   dependencies:
@@ -623,13 +637,13 @@ __metadata:
   resolution: "@frontendweekly/molle@workspace:packages/molle"
   dependencies:
     "@11ty/eleventy": ^0.11.1
-    "@frontendweekly/filter-date-iso": ^0.0.13
-    "@frontendweekly/filter-date-ordinal-suffix": ^0.0.16
-    "@frontendweekly/filter-head": ^0.0.7
-    "@frontendweekly/filter-markdown": ^0.0.8
-    "@frontendweekly/filter-tags-to-sentence": ^0.0.9
-    "@frontendweekly/transform-enhance-post-html": ^0.0.14
-    "@frontendweekly/transform-htmlmin": ^0.0.14
+    "@frontendweekly/filter-date-iso": ^0.0.14
+    "@frontendweekly/filter-date-ordinal-suffix": ^0.0.17
+    "@frontendweekly/filter-head": ^0.0.8
+    "@frontendweekly/filter-markdown": ^0.0.9
+    "@frontendweekly/filter-tags-to-sentence": ^0.0.10
+    "@frontendweekly/transform-enhance-post-html": ^0.0.15
+    "@frontendweekly/transform-htmlmin": ^0.0.15
     markdown-it: ^12.0.3
     markdown-it-attribution: ^0.1.1
     markdown-it-classy: ^0.2.0
@@ -664,7 +678,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@frontendweekly/transform-enhance-post-html@^0.0.14, @frontendweekly/transform-enhance-post-html@workspace:packages/transform-enhance-post-html":
+"@frontendweekly/transform-enhance-post-html@^0.0.15, @frontendweekly/transform-enhance-post-html@workspace:packages/transform-enhance-post-html":
   version: 0.0.0-use.local
   resolution: "@frontendweekly/transform-enhance-post-html@workspace:packages/transform-enhance-post-html"
   dependencies:
@@ -675,7 +689,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@frontendweekly/transform-htmlmin@^0.0.14, @frontendweekly/transform-htmlmin@workspace:packages/transform-htmlmin":
+"@frontendweekly/transform-htmlmin@^0.0.15, @frontendweekly/transform-htmlmin@workspace:packages/transform-htmlmin":
   version: 0.0.0-use.local
   resolution: "@frontendweekly/transform-htmlmin@workspace:packages/transform-htmlmin"
   dependencies:
@@ -9020,10 +9034,28 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
+"markdown-it-anchor@npm:^6.0.1":
+  version: 6.0.1
+  resolution: "markdown-it-anchor@npm:6.0.1"
+  peerDependencies:
+    markdown-it: "*"
+  checksum: bb61826b43875453806af32bbcc11447ddad185a2b36acbad864c08943bef57beda390946de564f86d675a7522c6fe6ef133af4372a637f4a0804707abb0064d
+  languageName: node
+  linkType: hard
+
 "markdown-it-attribution@npm:^0.1.1":
   version: 0.1.1
   resolution: "markdown-it-attribution@npm:0.1.1"
   checksum: 020bbfe67d5b1a78d5a387cc5f3d2001d4f46a04ab238b5b0735f5bcea590d5c1417a41b4ae55c367461c39cfb0af5776be0d8b7edf869e39ecc758f2d7d33c4
+  languageName: node
+  linkType: hard
+
+"markdown-it-attrs@npm:^3.0.3":
+  version: 3.0.3
+  resolution: "markdown-it-attrs@npm:3.0.3"
+  peerDependencies:
+    markdown-it: ">= 9.0.0 < 12.0.0"
+  checksum: 3cb77124f068dd58fe82e1928f776ad3c524639ead51705baaa71b15c24d87dcf1f3825de73ec8ab117e52a11190fbf6365423a3eec26357ec42bc40c3d11d82
   languageName: node
   linkType: hard
 
@@ -9065,7 +9097,7 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
-"markdown-it@npm:^12.0.3":
+"markdown-it@npm:^12.0.3, markdown-it@npm:^12.0.4":
   version: 12.0.4
   resolution: "markdown-it@npm:12.0.4"
   dependencies:
@@ -13888,6 +13920,13 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
+"unorm@npm:>= 1.0.0":
+  version: 1.6.0
+  resolution: "unorm@npm:1.6.0"
+  checksum: 2c3e10ad8c09edf5f0104a57b7b1277e3ca4aeeaf726596c93e940d94661b2bf167c160f3d4ee2d4d9e02742706a56d548462b45d52e9d91db2dcbb524a7b750
+  languageName: node
+  linkType: hard
+
 "unpipe@npm:1.0.0, unpipe@npm:~1.0.0":
   version: 1.0.0
   resolution: "unpipe@npm:1.0.0"
@@ -13946,6 +13985,15 @@ fsevents@~2.1.2:
   version: 3.1.1
   resolution: "use@npm:3.1.1"
   checksum: 8dd3bdeeda53864c779e0fa8d799064739708f80b45d06fa48a1a6ba192dc3f9e3266d4556f223cd718d27aedfd957922152e7463c00ac46e185f8331353fb6f
+  languageName: node
+  linkType: hard
+
+"uslug@npm:^1.0.4":
+  version: 1.0.4
+  resolution: "uslug@npm:1.0.4"
+  dependencies:
+    unorm: ">= 1.0.0"
+  checksum: 883364d9bef0b8ab9932c5b055084fbe02a91be0656fcd964b99df75c562cd5a14449440a1989a77b790d4273f6be7fa8062197b26199d80bd88b2f1f5d1dc40
   languageName: node
   linkType: hard
 

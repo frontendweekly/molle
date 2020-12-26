@@ -1,0 +1,43 @@
+{
+  "name": "@frontendweekly/eleventy-plugin-markdown",
+  "version": "0.0.1",
+  "description": "An Eleventy plugin for markdown-it config",
+  "keywords": [
+    "eleventy",
+    "plugin",
+    "markdown"
+  ],
+  "author": "Yuya Saito <hello@studiomohawk.com>",
+  "license": "MIT",
+  "main": "index.js",
+  "directories": {
+    "test": "__tests__"
+  },
+  "engines": {
+    "node": ">=14.15.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/frontendweekly/molle",
+    "directory": "packages/eleventy-plugin-markdown"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/frontendweekly",
+    "access": "public"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "bugs": {
+    "url": "https://github.com/frontendweekly/molle/issues"
+  },
+  "dependencies": {
+    "markdown-it": "^12.0.4",
+    "markdown-it-anchor": "^6.0.1",
+    "markdown-it-attribution": "^0.1.1",
+    "markdown-it-attrs": "^3.0.3",
+    "markdown-it-deflist": "^2.1.0",
+    "markdown-it-footnote": "^3.0.2",
+    "uslug": "^1.0.4"
+  }
+}
