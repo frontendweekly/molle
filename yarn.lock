@@ -557,10 +557,11 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@frontendweekly/eleventy-plugin-markdown@workspace:packages/eleventy-plugin-markdown":
+"@frontendweekly/eleventy-plugin-markdown@0.0.3, @frontendweekly/eleventy-plugin-markdown@workspace:packages/eleventy-plugin-markdown":
   version: 0.0.0-use.local
   resolution: "@frontendweekly/eleventy-plugin-markdown@workspace:packages/eleventy-plugin-markdown"
   dependencies:
+    jest: ^26.6.3
     markdown-it: ^12.0.4
     markdown-it-anchor: ^6.0.1
     markdown-it-attribution: ^0.1.1
@@ -637,6 +638,7 @@ __metadata:
   resolution: "@frontendweekly/molle@workspace:packages/molle"
   dependencies:
     "@11ty/eleventy": ^0.11.1
+    "@frontendweekly/eleventy-plugin-markdown": 0.0.3
     "@frontendweekly/filter-date-iso": ^0.0.14
     "@frontendweekly/filter-date-ordinal-suffix": ^0.0.17
     "@frontendweekly/filter-head": ^0.0.8
@@ -644,11 +646,6 @@ __metadata:
     "@frontendweekly/filter-tags-to-sentence": ^0.0.10
     "@frontendweekly/transform-enhance-post-html": ^0.0.15
     "@frontendweekly/transform-htmlmin": ^0.0.15
-    markdown-it: ^12.0.3
-    markdown-it-attribution: ^0.1.1
-    markdown-it-classy: ^0.2.0
-    markdown-it-deflist: ^2.1.0
-    markdown-it-footnote: ^3.0.2
     ucontent: ^2.0.0
   languageName: unknown
   linkType: soft
@@ -9056,15 +9053,6 @@ fsevents@~2.1.2:
   peerDependencies:
     markdown-it: ">= 9.0.0 < 12.0.0"
   checksum: 3cb77124f068dd58fe82e1928f776ad3c524639ead51705baaa71b15c24d87dcf1f3825de73ec8ab117e52a11190fbf6365423a3eec26357ec42bc40c3d11d82
-  languageName: node
-  linkType: hard
-
-"markdown-it-classy@npm:^0.2.0":
-  version: 0.2.0
-  resolution: "markdown-it-classy@npm:0.2.0"
-  peerDependencies:
-    markdown-it: ">=4.0.0"
-  checksum: 13282e8d9f5573b3ff3ecf98161a4044914a27f3d9ac0291e633b57b8d156545dc2cd2cd77a36c01d80fb99908c404c4e861d710aca1ae457152b3fd69bff9a8
   languageName: node
   linkType: hard
 

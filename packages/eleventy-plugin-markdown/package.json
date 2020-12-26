@@ -7,6 +7,9 @@
     "plugin",
     "markdown"
   ],
+  "scripts": {
+    "test": "jest"
+  },
   "author": "Yuya Saito <hello@studiomohawk.com>",
   "license": "MIT",
   "main": "index.js",
@@ -25,9 +28,6 @@
     "registry": "https://npm.pkg.github.com/frontendweekly",
     "access": "public"
   },
-  "scripts": {
-    "test": "echo \"Error: run tests from root\" && exit 1"
-  },
   "bugs": {
     "url": "https://github.com/frontendweekly/molle/issues"
   },
@@ -40,5 +40,8 @@
     "markdown-it-footnote": "^3.0.2",
     "uslug": "^1.0.4"
   },
-  "gitHead": "a59cbfd8dc39ff4ae2b70bb797e733424eb75db2"
+  "gitHead": "a59cbfd8dc39ff4ae2b70bb797e733424eb75db2",
+  "devDependencies": {
+    "jest": "^26.6.3"
+  }
 }
