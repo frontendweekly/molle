@@ -1,6 +1,6 @@
 {
   "name": "@frontendweekly/eleventy-plugin-markdown",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "An Eleventy plugin for markdown-it config",
   "keywords": [
     "eleventy",
