@@ -3,6 +3,9 @@
   "version": "0.0.9",
   "description": "A Netlify Build Plugin to cache auto-generated screenshots for Frontend Weekly Tokyo.",
   "main": "index.js",
+  "engines": {
+    "node": ">=14.15.0"
+  },
   "scripts": {
     "test": "jest"
   },

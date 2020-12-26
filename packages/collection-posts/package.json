@@ -3,6 +3,9 @@
   "version": "0.0.7",
   "description": "A custom collection which checks date and draft status",
   "main": "index.js",
+  "engines": {
+    "node": ">=14.15.0"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/frontendweekly/molle",

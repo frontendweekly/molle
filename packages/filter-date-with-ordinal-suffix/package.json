@@ -6,6 +6,9 @@
   "scripts": {
     "test": "jest"
   },
+  "engines": {
+    "node": ">=14.15.0"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/frontendweekly/molle",
@@ -21,5 +24,8 @@
     "registry": "https://npm.pkg.github.com/frontendweekly",
     "access": "public"
   },
-  "gitHead": "5758ace4f9bbc84ecfe87966d53f60a1625be43a"
+  "gitHead": "5758ace4f9bbc84ecfe87966d53f60a1625be43a",
+  "devDependencies": {
+    "jest-date-mock": "^1.0.8"
+  }
 }

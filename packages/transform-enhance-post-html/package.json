@@ -6,6 +6,9 @@
   "scripts": {
     "test": "jest"
   },
+  "engines": {
+    "node": ">=14.15.0"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/frontendweekly/molle",
@@ -24,5 +27,9 @@
     "jsdom": "^16.4.0",
     "slugify": "^1.4.6"
   },
-  "gitHead": "5758ace4f9bbc84ecfe87966d53f60a1625be43a"
+  "gitHead": "5758ace4f9bbc84ecfe87966d53f60a1625be43a",
+  "devDependencies": {
+    "@testing-library/dom": "^7.29.0",
+    "@testing-library/jest-dom": "^5.11.6"
+  }
 }

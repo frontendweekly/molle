@@ -6,6 +6,9 @@
   "scripts": {
     "test": "jest"
   },
+  "engines": {
+    "node": ">=14.15.0"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/frontendweekly/molle",

@@ -11,6 +11,9 @@
     "url": "https://github.com/frontendweekly/molle",
     "directory": "packages/transform-htmlmin"
   },
+  "engines": {
+    "node": ">=14.15.0"
+  },
   "keywords": [
     "eleventy",
     "eleventy-plugin"
