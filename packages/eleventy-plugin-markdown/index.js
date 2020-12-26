@@ -1,7 +1,7 @@
 const markdownIt = require('markdown-it');
 const uslug = require('uslug');
 
-const md = markdown({
+const md = markdownIt({
   html: true,
   breaks: true,
   linkify: true,

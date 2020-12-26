@@ -39,5 +39,6 @@
     "markdown-it-deflist": "^2.1.0",
     "markdown-it-footnote": "^3.0.2",
     "uslug": "^1.0.4"
-  }
+  },
+  "gitHead": "a59cbfd8dc39ff4ae2b70bb797e733424eb75db2"
 }
