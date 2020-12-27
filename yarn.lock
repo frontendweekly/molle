@@ -634,6 +634,22 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@frontendweekly/jest-preset-molle@npm:^0.0.11":
+  version: 0.0.11
+  resolution: "@frontendweekly/jest-preset-molle@npm:0.0.11::__archiveUrl=https%3A%2F%2Fnpm.pkg.github.com%2Fdownload%2F%40frontendweekly%2Fjest-preset-molle%2F0.0.11%2Fa0aaafeed07831d8dadae3e5166327b600eb84d3e9de7caf2e8ea7e7db002f06"
+  dependencies:
+    "@testing-library/dom": ^7.29.0
+    "@testing-library/jest-dom": ^5.11.6
+    jest-date-mock: ^1.0.8
+    jest-runner-eslint: ^0.10.0
+    jest-runner-stylelint: ^2.3.7
+    jest-watch-select-projects: ^2.0.0
+  peerDependencies:
+    jest: "*"
+  checksum: f033933c168071a818b2339111133fa3dfa06224043ca0ce9d449355f85516b921c550d1c73b0c29e746c0e2e29fd0accc5212444102e7694cf14cc09a1e2d60
+  languageName: node
+  linkType: hard
+
 "@frontendweekly/molle@workspace:packages/molle":
   version: 0.0.0-use.local
   resolution: "@frontendweekly/molle@workspace:packages/molle"
@@ -4291,6 +4307,19 @@ __metadata:
   bin:
     create-jest-runner: generator/index.js
   checksum: 18cce006b1ec46435e4a3c50c91670bc1a5b22c4e2506b3625d8016976da93506bc0f12c968ad5c620b6c2203e93aebeef4d7e6e664f03bf249cf30cd43d2e86
+  languageName: node
+  linkType: hard
+
+"create-jest-runner@npm:^0.7.0":
+  version: 0.7.0
+  resolution: "create-jest-runner@npm:0.7.0"
+  dependencies:
+    chalk: ^4.1.0
+    jest-worker: ^26.3.0
+    throat: ^5.0.0
+  bin:
+    create-jest-runner: generator/index.js
+  checksum: e64ee51554a093f6262f55dcc3ca603c642552e2a01c9cf3e4db514392809b54fcb94637741a6b84490a9becf7f9436275f79a1b1984336a0777cb237fdced7c
   languageName: node
   linkType: hard
 
@@ -8041,6 +8070,18 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
+"jest-runner-stylelint@npm:^2.3.7":
+  version: 2.3.7
+  resolution: "jest-runner-stylelint@npm:2.3.7"
+  dependencies:
+    cosmiconfig: ^7.0.0
+    create-jest-runner: ^0.7.0
+  peerDependencies:
+    stylelint: "*"
+  checksum: 08e1d3262f03060d11adebe8efb80c5758f341181b77f17ced827699cc701edb5c757869a46db802d266ef3e79ea52f39a496bfacb72f442a1eeacda12c5ee74
+  languageName: node
+  linkType: hard
+
 "jest-runner@npm:^26.6.3":
   version: 26.6.3
   resolution: "jest-runner@npm:26.6.3"
@@ -8204,7 +8245,7 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
-"jest-worker@npm:^26.6.2":
+"jest-worker@npm:^26.3.0, jest-worker@npm:^26.6.2":
   version: 26.6.2
   resolution: "jest-worker@npm:26.6.2"
   dependencies:
@@ -9508,6 +9549,7 @@ fsevents@~2.1.2:
   dependencies:
     "@11ty/eleventy": ^0.11.1
     "@frontendweekly/eslint-config-molle": ^0.0.1
+    "@frontendweekly/jest-preset-molle": ^0.0.11
     "@frontendweekly/stylelint-config-molle": ^0.0.1
     "@testing-library/dom": ^7.29.0
     "@testing-library/jest-dom": ^5.11.6
