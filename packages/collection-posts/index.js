@@ -1,7 +1,7 @@
-module.exports = function (collection) {
+module.exports = function (collection, globPath) {
   const now = new Date();
   const livePosts = (post) => post.date <= now && !post.data.draft;
   return [
-    ...collection.getFilteredByGlob('./src/posts/*.md').filter(livePosts),
+    ...collection.getFilteredByGlob(globPath).filter(livePosts),
   ].reverse();
 };
