@@ -15,10 +15,9 @@ const md = markdownIt({
   })
   .use(require('markdown-it-anchor'), {
     slugify: (s) => uslug(s),
-    level: 2,
+    level: 1,
     permalink: true,
     permalinkClass: 'heading-link',
-    permalinkSymbol: '#',
   })
   .use(require('markdown-it-footnote'))
   .use(require('markdown-it-attribution'), {
