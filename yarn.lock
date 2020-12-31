@@ -594,9 +594,9 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@frontendweekly/stylelint-config-molle@npm:^0.0.1":
-  version: 0.0.1
-  resolution: "@frontendweekly/stylelint-config-molle@npm:0.0.1::__archiveUrl=https%3A%2F%2Fnpm.pkg.github.com%2Fdownload%2F%40frontendweekly%2Fstylelint-config-molle%2F0.0.1%2Fc64f9fdde03dee486a709141c1421272ee1ef4276df5699312321bb9ada4daf8"
+"@frontendweekly/stylelint-config-molle@npm:^0.0.2":
+  version: 0.0.2
+  resolution: "@frontendweekly/stylelint-config-molle@npm:0.0.2::__archiveUrl=https%3A%2F%2Fnpm.pkg.github.com%2Fdownload%2F%40frontendweekly%2Fstylelint-config-molle%2F0.0.2%2F6086acff1781f5d0d182d9d2a9788c2672c9c38d75b0f1c50bc7bf99e0e159f2"
   dependencies:
     stylelint-config-idiomatic-order: ^8.1.0
     stylelint-config-prettier: ^8.0.2
@@ -607,7 +607,7 @@ __metadata:
   peerDependencies:
     prettier: "*"
     stylelint: "*"
-  checksum: 152d4fe6e0d80b7143f79efab9dc7347424e899a216bfca7083c7a1a5aed167a3321e7b178f43c58500446b87b5542ba176660cd6661d6014d40c1ba62c77a7d
+  checksum: c32d27573724021df4f7a7ad943ddb30ce471690cbe9ecef7e6e10b07a0b6f4afcb0949f54aa66b30868db8aa34514490d37fba6f0932a91bfe3f27cab1e9e4b
   languageName: node
   linkType: hard
 
@@ -3830,7 +3830,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint@npm:^7.15.0":
+"eslint@npm:^7.16.0":
   version: 7.16.0
   resolution: "eslint@npm:7.16.0"
   dependencies:
@@ -4947,7 +4947,7 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
-"husky@npm:^4.3.5":
+"husky@npm:^4.3.6":
   version: 4.3.6
   resolution: "husky@npm:4.3.6"
   dependencies:
@@ -7149,10 +7149,10 @@ fsevents@~2.1.2:
     "@11ty/eleventy": ^0.11.1
     "@frontendweekly/eslint-config-molle": ^0.0.1
     "@frontendweekly/jest-preset-molle": ^0.0.12
-    "@frontendweekly/stylelint-config-molle": ^0.0.1
+    "@frontendweekly/stylelint-config-molle": ^0.0.2
     cross-env: ^7.0.3
-    eslint: ^7.15.0
-    husky: ^4.3.5
+    eslint: ^7.16.0
+    husky: ^4.3.6
     jest: ^26.6.3
     lint-staged: ^10.5.3
     mock-fs: ^4.13.0
