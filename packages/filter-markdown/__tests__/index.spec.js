@@ -78,7 +78,7 @@ your <div>http://example.com</div> site`;
     const actual = markdown(content);
     // Assert
     expect(actual).toMatchInlineSnapshot(`
-      "<h1 id=\\"thisisid\\">I’m id</h1>
+      "<h1 id=\\"thisisid\\">I’m id <a class=\\"o-heading-link\\" href=\\"#thisisid\\">#</a></h1>
       <p>paragraph <em class=\\"red\\">style me</em> more text<br>
       paragraph <strong data-rad=\\"true\\">style me</strong> more text</p>
       "
@@ -92,7 +92,7 @@ your <div>http://example.com</div> site`;
     const actual = markdown(content);
     // Assert
     expect(actual).toMatchInlineSnapshot(`
-      "<h2 id=\\"id-have-an-anchor-link\\">I’d have an anchor link <a class=\\"heading-link\\" href=\\"#id-have-an-anchor-link\\">#</a></h2>
+      "<h2 id=\\"id-have-an-anchor-link\\">I’d have an anchor link <a class=\\"o-heading-link\\" href=\\"#id-have-an-anchor-link\\">#</a></h2>
       "
     `);
   });
@@ -109,9 +109,9 @@ your <div>http://example.com</div> site`;
     // Assert
     expect(actual).toMatchInlineSnapshot(`
       "<p>Here is a footnote reference,<sup class=\\"footnote-ref\\"><a href=\\"#fn1\\" id=\\"fnref1\\">[1]</a></sup> and another.<sup class=\\"footnote-ref\\"><a href=\\"#fn2\\" id=\\"fnref2\\">[2]</a></sup></p>
-      <hr class=\\"footnotes-sep\\">
-      <section class=\\"footnotes\\">
-      <ol class=\\"footnotes-list\\">
+
+      <section class=\\"c-footnotes\\">
+      <ol class=\\"c-footnotes__list\\">
       <li id=\\"fn1\\" class=\\"footnote-item\\"><p>Here is the footnote. <a href=\\"#fnref1\\" class=\\"footnote-backref\\">↩︎</a></p>
       </li>
       <li id=\\"fn2\\" class=\\"footnote-item\\"><p>Here’s one with multiple blocks. <a href=\\"#fnref2\\" class=\\"footnote-backref\\">↩︎</a></p>
@@ -151,7 +151,7 @@ your <div>http://example.com</div> site`;
     const actual = markdown(content);
     // Assert
     expect(actual).toMatchInlineSnapshot(`
-      "<h1>Should not be code block</h1>
+      "<h1 id=\\"should-not-be-code-block\\">Should not be code block <a class=\\"o-heading-link\\" href=\\"#should-not-be-code-block\\">#</a></h1>
       <p>const codeblock = require(‘code’);<br>
       codeblock.render();</p>
       "
