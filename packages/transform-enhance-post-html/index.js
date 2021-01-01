@@ -1,8 +1,6 @@
 const jsdom = require('jsdom');
 const {JSDOM} = jsdom;
-const slugify = require('slugify');
 
-const minify = (input) => input.replace(/\s{2,}/g, '').replace(/'/g, '"');
 const shouldTransformHTML = (outputPath) =>
   outputPath && outputPath.endsWith('.html');
 
@@ -14,11 +12,6 @@ module.exports = function (content, outputPath) {
 
     const document = DOM.window.document;
     const articleImages = [...document.querySelectorAll('.c-post img')];
-    const articleHeadings = [
-      ...document.querySelectorAll(
-        '.c-post h2, .c-post h3, .c-post h4, .c-post h5, .c-post h6'
-      ),
-    ];
     const articleEmbeds = [...document.querySelectorAll('.c-post iframe')];
     const articleCodeBlocks = [
       ...document.querySelectorAll('.c-post pre[class]'),
