@@ -1,6 +1,6 @@
 {
   "name": "@frontendweekly/molle",
-  "version": "0.0.26",
+  "version": "0.0.27",
   "description": "MOLLE is a plugin for Eleventy. Not for everyone to use it.",
   "keywords": [
     "eleventy",
@@ -37,13 +37,13 @@
   },
   "gitHead": "5758ace4f9bbc84ecfe87966d53f60a1625be43a",
   "dependencies": {
-    "@frontendweekly/eleventy-plugin-markdown": "^0.0.6",
+    "@frontendweekly/eleventy-plugin-markdown": "^0.0.7",
     "@frontendweekly/filter-date-iso": "^0.0.14",
     "@frontendweekly/filter-date-ordinal-suffix": "^0.0.17",
     "@frontendweekly/filter-head": "^0.0.8",
-    "@frontendweekly/filter-markdown": "^0.0.12",
+    "@frontendweekly/filter-markdown": "^0.0.13",
     "@frontendweekly/filter-tags-to-sentence": "^0.0.10",
-    "@frontendweekly/transform-enhance-post-html": "^0.0.16",
+    "@frontendweekly/transform-enhance-post-html": "^0.0.17",
     "@frontendweekly/transform-htmlmin": "^0.0.15"
   }
 }
