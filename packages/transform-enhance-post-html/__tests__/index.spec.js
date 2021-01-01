@@ -105,7 +105,7 @@ describe('transform-enhance-post-html', () => {
     // Assert
     expect(actual).toMatchInlineSnapshot(`
       <div
-        class="c-video-player"
+        class="o-video-player"
       >
         <iframe
           allowfullscreen=""
@@ -135,7 +135,7 @@ describe('transform-enhance-post-html', () => {
     // Assert
     expect(actual).toMatchInlineSnapshot(`
       <div
-        class="c-code-block"
+        class="o-code-block"
       >
         <pre
           class="inline-jest"

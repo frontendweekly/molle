@@ -110,8 +110,8 @@ your <div>http://example.com</div> site`;
     expect(actual).toMatchInlineSnapshot(`
       "<p>Here is a footnote reference,<sup class=\\"footnote-ref\\"><a href=\\"#fn1\\" id=\\"fnref1\\">[1]</a></sup> and another.<sup class=\\"footnote-ref\\"><a href=\\"#fn2\\" id=\\"fnref2\\">[2]</a></sup></p>
 
-      <section class=\\"c-footnotes\\">
-      <ol class=\\"c-footnotes__list\\">
+      <section class=\\"o-footnotes\\">
+      <ol class=\\"o-footnotes__list\\">
       <li id=\\"fn1\\" class=\\"footnote-item\\"><p>Here is the footnote. <a href=\\"#fnref1\\" class=\\"footnote-backref\\">↩︎</a></p>
       </li>
       <li id=\\"fn2\\" class=\\"footnote-item\\"><p>Here’s one with multiple blocks. <a href=\\"#fnref2\\" class=\\"footnote-backref\\">↩︎</a></p>
