@@ -23,7 +23,7 @@ const md = markdownIt({
   .use(require('markdown-it-footnote'))
   .use(require('markdown-it-attribution'), {
     removeMarker: false,
-    marker: '— ',
+    marker: '—',
   })
   // Disable indented code blocks.
   // We only support fenced code blocks.
@@ -31,8 +31,8 @@ const md = markdownIt({
 
 // Change markdown-it-footnote markup
 md.renderer.rules.footnote_block_open = () => `
-<section class="c-footnotes">
-<ol class="c-footnotes__list">
+<section class="o-footnotes">
+<ol class="o-footnotes__list">
 `;
 
 module.exports = md;

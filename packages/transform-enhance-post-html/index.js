@@ -41,7 +41,7 @@ module.exports = function (content, outputPath) {
       articleEmbeds.forEach((embed) => {
         if (embed.hasAttribute('allowfullscreen')) {
           const player = document.createElement('div');
-          player.classList.add('c-video-player');
+          player.classList.add('o-video-player');
           player.appendChild(embed.cloneNode(true));
           embed.replaceWith(player);
         }
@@ -52,7 +52,7 @@ module.exports = function (content, outputPath) {
     if (articleCodeBlocks.length) {
       articleCodeBlocks.forEach((codeBlock) => {
         const container = document.createElement('div');
-        container.classList.add('c-code-block');
+        container.classList.add('o-code-block');
         container.appendChild(codeBlock.cloneNode(true));
         codeBlock.replaceWith(container);
       });
