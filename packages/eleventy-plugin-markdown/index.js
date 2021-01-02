@@ -22,6 +22,8 @@ const md = markdownIt({
   })
   .use(require('markdown-it-footnote'))
   .use(require('markdown-it-attribution'), {
+    classNameContainer: 'o-blockquote',
+    classNameAttribution: 'o-blockquote__attribution',
     removeMarker: false,
     marker: '—',
   })
