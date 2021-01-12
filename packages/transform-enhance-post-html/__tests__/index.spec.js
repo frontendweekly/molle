@@ -58,6 +58,7 @@ describe('transform-enhance-post-html', () => {
       <figure>
         <img
           data-testid="inline-jest"
+          decoding="async"
           loading="lazy"
           src="dummy"
         />
