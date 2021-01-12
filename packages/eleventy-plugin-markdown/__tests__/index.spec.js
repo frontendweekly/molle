@@ -131,11 +131,11 @@ your <div>http://example.com</div> site`;
     const actual = md.render(content);
     // Assert
     expect(actual).toMatchInlineSnapshot(`
-      "<figure class=\\"c-blockquote\\">
+      "<figure class=\\"o-blockquote\\">
       <blockquote>
       <p>That’s one small step for [a] man, one giant leap for mankind.</p>
       </blockquote>
-      <figcaption class=\\"c-blockquote__attribution\\">— Neil Armstrong (1969, July 21)</figcaption>
+      <figcaption class=\\"o-blockquote__attribution\\">— Neil Armstrong (1969, July 21)</figcaption>
       </figure>
       "
     `);

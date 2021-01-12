@@ -557,7 +557,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@frontendweekly/eleventy-plugin-markdown@^0.0.4, @frontendweekly/eleventy-plugin-markdown@workspace:packages/eleventy-plugin-markdown":
+"@frontendweekly/eleventy-plugin-markdown@^0.0.9, @frontendweekly/eleventy-plugin-markdown@workspace:packages/eleventy-plugin-markdown":
   version: 0.0.0-use.local
   resolution: "@frontendweekly/eleventy-plugin-markdown@workspace:packages/eleventy-plugin-markdown"
   dependencies:
@@ -572,9 +572,9 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@frontendweekly/eslint-config-molle@npm:^0.0.1":
-  version: 0.0.1
-  resolution: "@frontendweekly/eslint-config-molle@npm:0.0.1::__archiveUrl=https%3A%2F%2Fnpm.pkg.github.com%2Fdownload%2F%40frontendweekly%2Feslint-config-molle%2F0.0.1%2F41c99a6fd7905ffa8efddb994dd269df337479494fe58c12b8e740d48539f796"
+"@frontendweekly/eslint-config-molle@npm:^0.0.2":
+  version: 0.0.2
+  resolution: "@frontendweekly/eslint-config-molle@npm:0.0.2::__archiveUrl=https%3A%2F%2Fnpm.pkg.github.com%2Fdownload%2F%40frontendweekly%2Feslint-config-molle%2F0.0.2%2F32960fdc9bde5aff6019ad2a8d8614087bda0d0df065b178a06fb3be6e268307"
   dependencies:
     eslint-config-prettier: ^7.0.0
     eslint-plugin-chai-friendly: ^0.6.0
@@ -586,12 +586,13 @@ __metadata:
     eslint-plugin-jsdoc: ^30.7.9
     eslint-plugin-node: ^11.1.0
     eslint-plugin-security: ^1.4.0
+    eslint-plugin-sonarjs: ^0.5.0
     eslint-plugin-testing-library: ^3.10.1
   peerDependencies:
     eslint: "*"
     jest: "*"
     prettier: "*"
-  checksum: d31fecd6a7cb73764cecec54ecbd347f06a4e4608a73110a9a2390c621345bfaff89821e50c380585459daff199796183202a2728817580c033bfcd1f2a32ec2
+  checksum: a71c292f93d4cba6cec74677192716dc106f6ce376624846b1ba756c5022d013f697bf7601112c50e28a9cbcce9f2fae2349910a24ca9f42910804a44873bbd7
   languageName: node
   linkType: hard
 
@@ -617,11 +618,11 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@frontendweekly/filter-markdown@^0.0.10, @frontendweekly/filter-markdown@workspace:packages/filter-markdown":
+"@frontendweekly/filter-markdown@^0.0.15, @frontendweekly/filter-markdown@workspace:packages/filter-markdown":
   version: 0.0.0-use.local
   resolution: "@frontendweekly/filter-markdown@workspace:packages/filter-markdown"
   dependencies:
-    "@frontendweekly/eleventy-plugin-markdown": ^0.0.4
+    "@frontendweekly/eleventy-plugin-markdown": ^0.0.9
     jest: ^26.6.3
   languageName: unknown
   linkType: soft
@@ -634,9 +635,9 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@frontendweekly/jest-preset-molle@npm:^0.0.12":
-  version: 0.0.12
-  resolution: "@frontendweekly/jest-preset-molle@npm:0.0.12::__archiveUrl=https%3A%2F%2Fnpm.pkg.github.com%2Fdownload%2F%40frontendweekly%2Fjest-preset-molle%2F0.0.12%2F9c0e7a1e7f6d55c5da767466df2dc61e03be5ff3bd357e61d17b94b8c8f67518"
+"@frontendweekly/jest-preset-molle@npm:^0.0.15":
+  version: 0.0.15
+  resolution: "@frontendweekly/jest-preset-molle@npm:0.0.15::__archiveUrl=https%3A%2F%2Fnpm.pkg.github.com%2Fdownload%2F%40frontendweekly%2Fjest-preset-molle%2F0.0.15%2F8cc1e896cd362cac1539a969492ed2dd78c1692dc0f7cd41abcc6a09553fdbd5"
   dependencies:
     "@testing-library/dom": ^7.29.0
     "@testing-library/jest-dom": ^5.11.6
@@ -647,7 +648,7 @@ __metadata:
     jest-watch-select-projects: ^2.0.0
   peerDependencies:
     jest: "*"
-  checksum: f74d24fe78a12e3241174d6be8dff6a93b57a80e19d5c7c9d75de6f82abc1c6dc412bde00bcb5cf10b57210806d567fb8d5af312a9abdb1cf5f071c14cd38ae0
+  checksum: 57f87e0b6fcb6c0bacfda73d73d9f95b5260eeb194db7f5c6cd56e0c0895e2bd1a1ced2c19795ee5fe4ab92f0c079d78ccaaf21627a419914ccf7c1eb58edf4d
   languageName: node
   linkType: hard
 
@@ -656,13 +657,13 @@ __metadata:
   resolution: "@frontendweekly/molle@workspace:packages/molle"
   dependencies:
     "@11ty/eleventy": ^0.11.1
-    "@frontendweekly/eleventy-plugin-markdown": ^0.0.4
+    "@frontendweekly/eleventy-plugin-markdown": ^0.0.9
     "@frontendweekly/filter-date-iso": ^0.0.14
     "@frontendweekly/filter-date-ordinal-suffix": ^0.0.17
     "@frontendweekly/filter-head": ^0.0.8
-    "@frontendweekly/filter-markdown": ^0.0.10
+    "@frontendweekly/filter-markdown": ^0.0.15
     "@frontendweekly/filter-tags-to-sentence": ^0.0.10
-    "@frontendweekly/transform-enhance-post-html": ^0.0.15
+    "@frontendweekly/transform-enhance-post-html": ^0.0.18
     "@frontendweekly/transform-htmlmin": ^0.0.15
     ucontent: ^2.0.0
   languageName: unknown
@@ -676,24 +677,23 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@frontendweekly/stylelint-config-molle@npm:^0.0.2":
-  version: 0.0.2
-  resolution: "@frontendweekly/stylelint-config-molle@npm:0.0.2::__archiveUrl=https%3A%2F%2Fnpm.pkg.github.com%2Fdownload%2F%40frontendweekly%2Fstylelint-config-molle%2F0.0.2%2F6086acff1781f5d0d182d9d2a9788c2672c9c38d75b0f1c50bc7bf99e0e159f2"
+"@frontendweekly/stylelint-config-molle@npm:^0.0.4":
+  version: 0.0.4
+  resolution: "@frontendweekly/stylelint-config-molle@npm:0.0.4::__archiveUrl=https%3A%2F%2Fnpm.pkg.github.com%2Fdownload%2F%40frontendweekly%2Fstylelint-config-molle%2F0.0.4%2Fc8259b3511f738f4facfd3f2679ed2aec93228a8a7da0d5e84b116eceded1aac"
   dependencies:
     stylelint-config-idiomatic-order: ^8.1.0
     stylelint-config-prettier: ^8.0.2
     stylelint-config-standard: ^20.0.0
     stylelint-declaration-block-no-ignored-properties: ^2.3.0
-    stylelint-no-indistinguishable-colors: ^1.3.0
     stylelint-no-unsupported-browser-features: ^4.1.4
   peerDependencies:
     prettier: "*"
     stylelint: "*"
-  checksum: c32d27573724021df4f7a7ad943ddb30ce471690cbe9ecef7e6e10b07a0b6f4afcb0949f54aa66b30868db8aa34514490d37fba6f0932a91bfe3f27cab1e9e4b
+  checksum: b84ded09dee93eb2922797a4196b940027f23d35320547b8d2f902524f8130cc3864065c5452ecda60316d4393387405f23136c58ea1c555ec1d13ab257f60ac
   languageName: node
   linkType: hard
 
-"@frontendweekly/transform-enhance-post-html@^0.0.15, @frontendweekly/transform-enhance-post-html@workspace:packages/transform-enhance-post-html":
+"@frontendweekly/transform-enhance-post-html@^0.0.18, @frontendweekly/transform-enhance-post-html@workspace:packages/transform-enhance-post-html":
   version: 0.0.0-use.local
   resolution: "@frontendweekly/transform-enhance-post-html@workspace:packages/transform-enhance-post-html"
   dependencies:
@@ -3551,7 +3551,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"chalk@npm:^1.0.0, chalk@npm:^1.1.1, chalk@npm:^1.1.3":
+"chalk@npm:^1.1.3":
   version: 1.1.3
   resolution: "chalk@npm:1.1.3"
   dependencies:
@@ -3869,13 +3869,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"color-diff@npm:^0.1.3":
-  version: 0.1.7
-  resolution: "color-diff@npm:0.1.7"
-  checksum: e7d7a07105cfed53f7ef08af78f48295b3a700eb405387e0ff8968fb1451f122269ad50775c49593f70f0b5df96beb5b79da67bf392d3dd826bccfeade1ee3e1
-  languageName: node
-  linkType: hard
-
 "color-name@npm:1.1.3":
   version: 1.1.3
   resolution: "color-name@npm:1.1.3"
@@ -3894,26 +3887,6 @@ __metadata:
   version: 1.2.1
   resolution: "colorette@npm:1.2.1"
   checksum: 1cc21ad4b84777a424794f78b6bb6a44b614ae17dcea91762199339f8047598e6d981249eeef7ea588c99eaf062be8fcdcd4866c112998922ed854db6dde96f9
-  languageName: node
-  linkType: hard
-
-"colorguard@npm:^1.2.1":
-  version: 1.2.1
-  resolution: "colorguard@npm:1.2.1"
-  dependencies:
-    chalk: ^1.1.1
-    color-diff: ^0.1.3
-    log-symbols: ^1.0.2
-    object-assign: ^4.0.1
-    pipetteur: ^2.0.0
-    plur: ^2.0.0
-    postcss: ^5.0.4
-    postcss-reporter: ^1.2.1
-    text-table: ^0.2.0
-    yargs: ^1.2.6
-  bin:
-    colorguard: ./bin/colorguard
-  checksum: 22a5599412e7ace84185d2f8ace025d7a771530e74178630b1d95ec8784cc6487cd666dc7a8b94a8f86ddfcd8e1216d73600f1db54b59c6541216531e60a72f2
   languageName: node
   linkType: hard
 
@@ -4373,13 +4346,6 @@ __metadata:
     shebang-command: ^2.0.0
     which: ^2.0.1
   checksum: 51f10036f5f1de781be98f4738d58b50c6d44f4f471069b8ab075b21605893ba1548654880f7310a29a732d6fc7cd481da6026169b9f0831cab0148a62fb397a
-  languageName: node
-  linkType: hard
-
-"css-color-names@npm:0.0.3":
-  version: 0.0.3
-  resolution: "css-color-names@npm:0.0.3"
-  checksum: 3cf24d8a7190694b3f382a7ca34d40ae7508439dc1bf045747906000a4506bfe9bfed396f0f7f12295495783b80892075ac5467e15dea9e3de31abbab9776e35
   languageName: node
   linkType: hard
 
@@ -5461,6 +5427,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"eslint-plugin-sonarjs@npm:^0.5.0":
+  version: 0.5.0
+  resolution: "eslint-plugin-sonarjs@npm:0.5.0"
+  peerDependencies:
+    eslint: ^3.0.0 || ^4.0.0 || ^5.0.0 || ^6.0.0
+  checksum: c87c5f461e61cd471f03b03c10c5c962d5a954f124ba5602b85a05f80677e79e0c368b910f754e0595a706c4a261141e951fef3af41583e28b5f35b31a6ea094
+  languageName: node
+  linkType: hard
+
 "eslint-plugin-testing-library@npm:^3.10.1":
   version: 3.10.1
   resolution: "eslint-plugin-testing-library@npm:3.10.1"
@@ -5505,9 +5480,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint@npm:^7.16.0":
-  version: 7.16.0
-  resolution: "eslint@npm:7.16.0"
+"eslint@npm:^7.17.0":
+  version: 7.17.0
+  resolution: "eslint@npm:7.17.0"
   dependencies:
     "@babel/code-frame": ^7.0.0
     "@eslint/eslintrc": ^0.2.2
@@ -5548,7 +5523,7 @@ __metadata:
     v8-compile-cache: ^2.0.3
   bin:
     eslint: bin/eslint.js
-  checksum: facdebbce95f7812b026cae955f22863e0850584c8b4ab6daefa555f48b38a8b3d62c1857c0eeebe52218c49345853f516209b300c6747ea89d6f88ef495a56d
+  checksum: 12b09a972eb0b81fabf9c1b38b3e9ada0cc051a22ee5022e31852e7babde6fe02a0135be3027451ee02c9ff4a6f738b55205d2953f98eb16a43350ad73070b27
   languageName: node
   linkType: hard
 
@@ -5966,12 +5941,22 @@ __metadata:
   languageName: node
   linkType: hard
 
-"find-versions@npm:^3.2.0":
-  version: 3.2.0
-  resolution: "find-versions@npm:3.2.0"
+"find-up@npm:^5.0.0":
+  version: 5.0.0
+  resolution: "find-up@npm:5.0.0"
   dependencies:
-    semver-regex: ^2.0.0
-  checksum: 2ddc16b4265184e2b7ab68bfd9d84835178fef4193abd957ebe328e0de98e8ca3b31e2a19201c1c8308e24786faa295aab46c0bc21fa89440e2a1bc8174987f0
+    locate-path: ^6.0.0
+    path-exists: ^4.0.0
+  checksum: cd0b77415bc59e5af31e4e1b29c6ff8d965d9ca3c60a4b74161f8f116c0d1ad8d35bc6e53bf8f92c69e704e98183f1628a363ed7d519eb28eff54378b8f167a7
+  languageName: node
+  linkType: hard
+
+"find-versions@npm:^4.0.0":
+  version: 4.0.0
+  resolution: "find-versions@npm:4.0.0"
+  dependencies:
+    semver-regex: ^3.1.2
+  checksum: 05174128349e522f0746cc343a509f2ce1c8c765e24968ff2ac6f82fda4e4c680f5f71c6a781ce28406d19addc32a205116ac14ee83cb2e336635dd803f56cbd
   languageName: node
   linkType: hard
 
@@ -6623,13 +6608,6 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
-"has-flag@npm:^1.0.0":
-  version: 1.0.0
-  resolution: "has-flag@npm:1.0.0"
-  checksum: 556423170e15c694061a69052773114159c18ddf4ca0c72912591343f9568878c0ab29c16ab901f3466eaca25faf5ca4b1c6831b6795a3a3cd5d1606bdc6fa1f
-  languageName: node
-  linkType: hard
-
 "has-flag@npm:^3.0.0":
   version: 3.0.0
   resolution: "has-flag@npm:3.0.0"
@@ -6882,24 +6860,24 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
-"husky@npm:^4.3.6":
-  version: 4.3.6
-  resolution: "husky@npm:4.3.6"
+"husky@npm:^4.3.7":
+  version: 4.3.7
+  resolution: "husky@npm:4.3.7"
   dependencies:
     chalk: ^4.0.0
     ci-info: ^2.0.0
     compare-versions: ^3.6.0
     cosmiconfig: ^7.0.0
-    find-versions: ^3.2.0
+    find-versions: ^4.0.0
     opencollective-postinstall: ^2.0.2
-    pkg-dir: ^4.2.0
+    pkg-dir: ^5.0.0
     please-upgrade-node: ^3.2.0
     slash: ^3.0.0
     which-pm-runs: ^1.0.0
   bin:
     husky-run: bin/run.js
     husky-upgrade: lib/upgrader/bin.js
-  checksum: 3c8708887822c93094c4af22608df00a3bdd74784172d13cd08c5d1ed3e7a602f6016bce9982de206f060661f1ea801362edf5658c18fc4a3866d605c47ecaf9
+  checksum: 799b1484e47f868760a612d8578f0bc2cf8848a55719ad00bfbd6bec3d094afaca024631949157390a05616a1c83242c3d917f33c049d9161f7af3ec313b6870
   languageName: node
   linkType: hard
 
@@ -7139,13 +7117,6 @@ fsevents@~2.1.2:
   version: 1.1.5
   resolution: "ip@npm:1.1.5"
   checksum: 3ad007368cf797ec9b73fbac0a644077198dd85a128d0fe39697a78a9cdd47915577eee5c4eca9933549b575ac4716107896c2d4aa43a1622b3f72104232cad4
-  languageName: node
-  linkType: hard
-
-"irregular-plurals@npm:^1.0.0":
-  version: 1.4.0
-  resolution: "irregular-plurals@npm:1.4.0"
-  checksum: ec05f0d9df6a633f611486f2bba6c4ce8a566aa1bf2d78a4283120caceb0caa84272caaafd4da7fe197c951d7692321cd190cceeed65ace2d321d8833604d3ac
   languageName: node
   linkType: hard
 
@@ -8277,13 +8248,6 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
-"js-base64@npm:^2.1.9":
-  version: 2.6.4
-  resolution: "js-base64@npm:2.6.4"
-  checksum: f3fadb18c2feade451a42677d29ddac4e5d40f6561fce38454c0dbf8b5b937d47e65ca54ae109325db90baaab7443780ae071b7d8577273918e8407b01b83f88
-  languageName: node
-  linkType: hard
-
 "js-beautify@npm:^1.6.12":
   version: 1.13.0
   resolution: "js-beautify@npm:1.13.0"
@@ -8806,6 +8770,15 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
+"locate-path@npm:^6.0.0":
+  version: 6.0.0
+  resolution: "locate-path@npm:6.0.0"
+  dependencies:
+    p-locate: ^5.0.0
+  checksum: 4c379638152e0e5fda9a8cc07005702f81fcb9899db0f66d691ac1e64193dea670af14e96c50f14d82d45959daa4c400cb712c158cffe22ae265bfc1b1e3a221
+  languageName: node
+  linkType: hard
+
 "lodash._reinterpolate@npm:^3.0.0":
   version: 3.0.0
   resolution: "lodash._reinterpolate@npm:3.0.0"
@@ -8888,19 +8861,10 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
-"lodash@npm:^4.1.0, lodash@npm:^4.17.10, lodash@npm:^4.17.12, lodash@npm:^4.17.14, lodash@npm:^4.17.15, lodash@npm:^4.17.19, lodash@npm:^4.17.20, lodash@npm:^4.17.4, lodash@npm:^4.2.1":
+"lodash@npm:^4.17.10, lodash@npm:^4.17.12, lodash@npm:^4.17.14, lodash@npm:^4.17.15, lodash@npm:^4.17.19, lodash@npm:^4.17.20, lodash@npm:^4.17.4, lodash@npm:^4.2.1":
   version: 4.17.20
   resolution: "lodash@npm:4.17.20"
   checksum: c62101d2500c383b5f174a7e9e6fe8098149ddd6e9ccfa85f36d4789446195f5c4afd3cfba433026bcaf3da271256566b04a2bf2618e5a39f6e67f8c12030cb6
-  languageName: node
-  linkType: hard
-
-"log-symbols@npm:^1.0.2":
-  version: 1.0.2
-  resolution: "log-symbols@npm:1.0.2"
-  dependencies:
-    chalk: ^1.0.0
-  checksum: 69ba19d52b32bdcc659752321bc89e21d697088b7dce8ed1fed9582e3e37eef6a859502eeb721d8b7d08f0b5cb3d92b16a4321e01393ba8bace23f2a834be077
   languageName: node
   linkType: hard
 
@@ -9556,12 +9520,12 @@ fsevents@~2.1.2:
   resolution: "molle@workspace:."
   dependencies:
     "@11ty/eleventy": ^0.11.1
-    "@frontendweekly/eslint-config-molle": ^0.0.1
-    "@frontendweekly/jest-preset-molle": ^0.0.12
-    "@frontendweekly/stylelint-config-molle": ^0.0.2
+    "@frontendweekly/eslint-config-molle": ^0.0.2
+    "@frontendweekly/jest-preset-molle": ^0.0.15
+    "@frontendweekly/stylelint-config-molle": ^0.0.4
     cross-env: ^7.0.3
-    eslint: ^7.16.0
-    husky: ^4.3.6
+    eslint: ^7.17.0
+    husky: ^4.3.7
     jest: ^26.6.3
     lerna: ^3.22.1
     lint-staged: ^10.5.3
@@ -10205,13 +10169,6 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
-"onecolor@npm:^3.0.4":
-  version: 3.1.0
-  resolution: "onecolor@npm:3.1.0"
-  checksum: e68e498b4cba4001b3359f141c2756c716cea9b79af5d460b16602c23dfc52892c341842a452635b160233d901c61bb79d47ac69c3db316d4eee55880c7f2714
-  languageName: node
-  linkType: hard
-
 "onetime@npm:^2.0.0":
   version: 2.0.1
   resolution: "onetime@npm:2.0.1"
@@ -10349,6 +10306,15 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
+"p-limit@npm:^3.0.2":
+  version: 3.1.0
+  resolution: "p-limit@npm:3.1.0"
+  dependencies:
+    yocto-queue: ^0.1.0
+  checksum: 5301db6a34fc1fe3714ae562c100a0567d8c16ce9db800f547bbe75efc045c40cd74c4a4c893279975dcf15afc1217c8d2c93fe957a156a3a43d7cce98eaad2e
+  languageName: node
+  linkType: hard
+
 "p-locate@npm:^2.0.0":
   version: 2.0.0
   resolution: "p-locate@npm:2.0.0"
@@ -10373,6 +10339,15 @@ fsevents@~2.1.2:
   dependencies:
     p-limit: ^2.2.0
   checksum: 57f9abef0b29f02ff88c0936a392c9a1fbdd08169e636e0d85b7407c108014d71578c0c6fe93fa49b5bf3857b20d6f16b96389e2b356f7f599d4d2150505844f
+  languageName: node
+  linkType: hard
+
+"p-locate@npm:^5.0.0":
+  version: 5.0.0
+  resolution: "p-locate@npm:5.0.0"
+  dependencies:
+    p-limit: ^3.0.2
+  checksum: a233d775c870e00c734adabd29f66f93824df076683c0d5a2dc16e5285b02d80c1bf3bab43b9881e4a5b16b37bb86f1922aebb094674703d30a4973041d5c0f6
   languageName: node
   linkType: hard
 
@@ -10789,16 +10764,6 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
-"pipetteur@npm:^2.0.0":
-  version: 2.0.3
-  resolution: "pipetteur@npm:2.0.3"
-  dependencies:
-    onecolor: ^3.0.4
-    synesthesia: ^1.0.1
-  checksum: 67203c829098d88f8e6706bdf6ee5689672f0a48b7b1a034f118492193b53467de4aa1a58cbfe8a70d7516693f976c199ecff6cdc2d33c0cc1913e67079a329f
-  languageName: node
-  linkType: hard
-
 "pirates@npm:^4.0.1":
   version: 4.0.1
   resolution: "pirates@npm:4.0.1"
@@ -10836,21 +10801,21 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
+"pkg-dir@npm:^5.0.0":
+  version: 5.0.0
+  resolution: "pkg-dir@npm:5.0.0"
+  dependencies:
+    find-up: ^5.0.0
+  checksum: 86f6ecee1787d8fe1606fd831f823f967c6ea0d760ce714af6afd2fec076ce71fbedcb57b339d93b84edf90ccdd81d4e6e2c10fcde21684ef3ffee5e05fd37dc
+  languageName: node
+  linkType: hard
+
 "please-upgrade-node@npm:^3.2.0":
   version: 3.2.0
   resolution: "please-upgrade-node@npm:3.2.0"
   dependencies:
     semver-compare: ^1.0.0
   checksum: 34cf86f6d577877df5e9ced0bda57babd97bd2dc7e5965a67f990337f01ccd5203a98dc5aa7971e10088b2b1b29628d51d9770996151c7d306ed0069b4ecd745
-  languageName: node
-  linkType: hard
-
-"plur@npm:^2.0.0":
-  version: 2.1.2
-  resolution: "plur@npm:2.1.2"
-  dependencies:
-    irregular-plurals: ^1.0.0
-  checksum: 9772bac85a5ba9d499c48a96a2fcfcc7bb3271231067da690575f022c7b4468fa19df2b89f033878749f6139447112fb7d76fbb03176833779769960900d17d9
   languageName: node
   linkType: hard
 
@@ -10896,18 +10861,6 @@ fsevents@~2.1.2:
   version: 0.2.3
   resolution: "postcss-media-query-parser@npm:0.2.3"
   checksum: b8bbf1d1bb96bdad9a6525c05be6f0fba6d077ec3a8b74fbed901b8296f6f649346e57f8726cab2b9cefab6c79619f95fd2f8e1331703f0c72ae5f4f1afb0018
-  languageName: node
-  linkType: hard
-
-"postcss-reporter@npm:^1.2.1":
-  version: 1.4.1
-  resolution: "postcss-reporter@npm:1.4.1"
-  dependencies:
-    chalk: ^1.0.0
-    lodash: ^4.1.0
-    log-symbols: ^1.0.2
-    postcss: ^5.0.0
-  checksum: 83e1de766dc8acb92d82c544a5d7fa2acaeedd1bcf0a1e9b2a2f8c57a889b8ba847ff63676f7f3bed7acb5fdcf9ece6bd11231f5354f3793c79a46af00120f0c
   languageName: node
   linkType: hard
 
@@ -10984,19 +10937,7 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
-"postcss@npm:^5.0.0, postcss@npm:^5.0.4":
-  version: 5.2.18
-  resolution: "postcss@npm:5.2.18"
-  dependencies:
-    chalk: ^1.1.3
-    js-base64: ^2.1.9
-    source-map: ^0.5.6
-    supports-color: ^3.2.3
-  checksum: d57b8d8707a8720579c78198a80132b03dba1bcb6267beae599c4d02c4615706af55e371faa0e4ef4b4a8d69ba3204522576420ed177185238c6fa915bf46927
-  languageName: node
-  linkType: hard
-
-"postcss@npm:^7.0.14, postcss@npm:^7.0.17, postcss@npm:^7.0.18, postcss@npm:^7.0.2, postcss@npm:^7.0.21, postcss@npm:^7.0.26, postcss@npm:^7.0.27, postcss@npm:^7.0.32, postcss@npm:^7.0.35, postcss@npm:^7.0.6":
+"postcss@npm:^7.0.14, postcss@npm:^7.0.17, postcss@npm:^7.0.2, postcss@npm:^7.0.21, postcss@npm:^7.0.26, postcss@npm:^7.0.27, postcss@npm:^7.0.32, postcss@npm:^7.0.35, postcss@npm:^7.0.6":
   version: 7.0.35
   resolution: "postcss@npm:7.0.35"
   dependencies:
@@ -12118,10 +12059,10 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
-"semver-regex@npm:^2.0.0":
-  version: 2.0.0
-  resolution: "semver-regex@npm:2.0.0"
-  checksum: 9b96cc8bd559c1d46968b334ccc88115a2d9d2f7a2125d6838471114ed0c52057e77aae760fbe4932aee06687584733b32aed6d2c9654b2db33e383bfb8f26ce
+"semver-regex@npm:^3.1.2":
+  version: 3.1.2
+  resolution: "semver-regex@npm:3.1.2"
+  checksum: 6a83740f3fc24379629be068e677c71c57e0d9df4977eb56d863f26a7830b85f14d9f1af71ca3a84df9ac70fcd9ce8821466064f5652ffa0dc343b50ded86698
   languageName: node
   linkType: hard
 
@@ -13138,18 +13079,6 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
-"stylelint-no-indistinguishable-colors@npm:^1.3.0":
-  version: 1.3.0
-  resolution: "stylelint-no-indistinguishable-colors@npm:1.3.0"
-  dependencies:
-    colorguard: ^1.2.1
-    postcss: ^7.0.18
-  peerDependencies:
-    stylelint: ^11.1.1
-  checksum: b2acfb89d4af04a7f72529db8477047dd9ae17cf2810e29ed9a19bc9eec5fb97dedaaf3c9cebc4123fd3e401ae978df32cfff56c866b777594bb8281200dec39
-  languageName: node
-  linkType: hard
-
 "stylelint-no-unsupported-browser-features@npm:^4.1.4":
   version: 4.1.4
   resolution: "stylelint-no-unsupported-browser-features@npm:4.1.4"
@@ -13250,15 +13179,6 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
-"supports-color@npm:^3.2.3":
-  version: 3.2.3
-  resolution: "supports-color@npm:3.2.3"
-  dependencies:
-    has-flag: ^1.0.0
-  checksum: d26b4f5f7ab4408e3ecf5809896a399a0d388b948701a8958bb6610ca30aa837e75d56d7dfb5e175f8ffd92431dc1e149faa6183cf166178ea63c74e974a87ce
-  languageName: node
-  linkType: hard
-
 "supports-color@npm:^5.3.0":
   version: 5.5.0
   resolution: "supports-color@npm:5.5.0"
@@ -13314,15 +13234,6 @@ fsevents@~2.1.2:
   version: 3.2.4
   resolution: "symbol-tree@npm:3.2.4"
   checksum: 0b9af4e5f005f9f0b9c916d91a1b654422ffa49ef09c5c4b6efa7a778f63976be9f410e57db1e9ea7576eea0631a34b69a5622674aa92a60a896ccf2afca87a7
-  languageName: node
-  linkType: hard
-
-"synesthesia@npm:^1.0.1":
-  version: 1.0.1
-  resolution: "synesthesia@npm:1.0.1"
-  dependencies:
-    css-color-names: 0.0.3
-  checksum: 8d7a28abd7c68e66113676d42b2dce9bc81b169b834352b5352661f85be35253ef4c24b813768b990cd42fa6ee96f6bdb991bde7c1467090bdcf472792163749
   languageName: node
   linkType: hard
 
@@ -14656,13 +14567,6 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
-"yargs@npm:^1.2.6":
-  version: 1.3.3
-  resolution: "yargs@npm:1.3.3"
-  checksum: faf00d95f82f1c3796faf2d4e494d7c8e1a47f35b436bcec765285d7db9677dabbf0e0120462a387c46ac37c71f5d16011752b0a7e0bd76be630ee2377d4ece2
-  languageName: node
-  linkType: hard
-
 "yargs@npm:^14.2.2":
   version: 14.2.3
   resolution: "yargs@npm:14.2.3"
@@ -14732,6 +14636,13 @@ fsevents@~2.1.2:
   version: 0.1.2
   resolution: "yeast@npm:0.1.2"
   checksum: ce326a71c7f25059ef7581121104c21d2837511a95cb44604f9e1825c5722f5b65324fb0b1d20bcfe3975efe45e418106100aa0d0e9fc502f90f3d07d059e177
+  languageName: node
+  linkType: hard
+
+"yocto-queue@npm:^0.1.0":
+  version: 0.1.0
+  resolution: "yocto-queue@npm:0.1.0"
+  checksum: 096c3b40beb2804659539be1605a35c58eb0c85285f94b77b3e924f42ee265c1a40bf9f4153770039517146b469a964d51742395f35ca8135fc9f7e4982b785d
   languageName: node
   linkType: hard
 

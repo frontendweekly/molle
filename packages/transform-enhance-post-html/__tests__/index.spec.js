@@ -20,6 +20,8 @@ describe('transform-enhance-post-html', () => {
 
   test(`it should add lazy="loading to img`, () => {
     // Arrange
+    // eslint-disable-next-line sonarjs/no-duplicate-string
+    const targetElem = 'inline-jest';
     const content = `
         <div class="c-post">
           <img data-testid="inline-jest" src="dummy">
@@ -31,13 +33,14 @@ describe('transform-enhance-post-html', () => {
     const DOM = new JSDOM(output, {
       resources: 'usable',
     });
-    const actual = queryByTestId(DOM.window.document, 'inline-jest');
+    const actual = queryByTestId(DOM.window.document, targetElem);
     // Assert
     expect(actual).toHaveAttribute('loading', 'lazy');
   });
 
   test(`it should wrap img with figure if img has title`, () => {
     // Arrange
+    const targetElem = 'inline-jest';
     const content = `
         <div class="c-post">
           <img data-testid="inline-jest" src="dummy" title="dummy">
@@ -49,7 +52,7 @@ describe('transform-enhance-post-html', () => {
     const DOM = new JSDOM(output, {
       resources: 'usable',
     });
-    const actual = queryByTestId(DOM.window.document, 'inline-jest').parentNode;
+    const actual = queryByTestId(DOM.window.document, targetElem).parentNode;
     // Assert
     expect(actual).toMatchInlineSnapshot(`
       <figure>
@@ -67,6 +70,7 @@ describe('transform-enhance-post-html', () => {
 
   test(`it should add anchor to heading`, () => {
     // Arrange
+    const targetElem = 'inline-jest';
     const content = `
         <div class="c-post">
           <h2 data-testid="inline-jest">h2</h2>
@@ -79,16 +83,16 @@ describe('transform-enhance-post-html', () => {
       resources: 'usable',
     });
 
-    const actual = queryByTestId(
-      DOM.window.document,
-      'inline-jest'
-    ).querySelector('a');
+    const actual = queryByTestId(DOM.window.document, targetElem).querySelector(
+      'a'
+    );
     // Assert
     expect(actual).toMatchInlineSnapshot(`null`);
   });
 
   test(`it should wrap iframe with .c-video-player container`, () => {
     // Arrange
+    const targetElem = 'inline-jest';
     const content = `
         <div class="c-post">
           <iframe data-testid="inline-jest" allowfullscreen>I'm video</iframe>
@@ -101,7 +105,7 @@ describe('transform-enhance-post-html', () => {
       resources: 'usable',
     });
 
-    const actual = queryByTestId(DOM.window.document, 'inline-jest').parentNode;
+    const actual = queryByTestId(DOM.window.document, targetElem).parentNode;
     // Assert
     expect(actual).toMatchInlineSnapshot(`
       <div
@@ -119,6 +123,7 @@ describe('transform-enhance-post-html', () => {
 
   test(`it should wrap pre[class] with .c-code-block container`, () => {
     // Arrange
+    const targetElem = 'inline-jest';
     const content = `
         <div class="c-post">
           <pre data-testid="inline-jest" class="inline-jest">I'm code block</pre>
@@ -131,7 +136,7 @@ describe('transform-enhance-post-html', () => {
       resources: 'usable',
     });
 
-    const actual = queryByTestId(DOM.window.document, 'inline-jest').parentNode;
+    const actual = queryByTestId(DOM.window.document, targetElem).parentNode;
     // Assert
     expect(actual).toMatchInlineSnapshot(`
       <div

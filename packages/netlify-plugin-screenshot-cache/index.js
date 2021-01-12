@@ -1,6 +1,10 @@
 const fs = require('fs');
 const path = require('path');
 
+/**
+ * @param {string} path
+ * @returns {boolean} returns true when pathExist
+ */
 async function pathExist(path) {
   try {
     await fs.promises.access(path);
@@ -42,7 +46,11 @@ module.exports = {
       console.log('There is no cache available for now.');
     }
   },
-  async onPostBuild({constants: {PUBLISH_DIR}, utils: {cache}, inputs: {screenshotDir}}) {
+  async onPostBuild({
+    constants: {PUBLISH_DIR},
+    utils: {cache},
+    inputs: {screenshotDir},
+  }) {
     const cacheDir = path.normalize(`${PUBLISH_DIR}/${screenshotDir}`);
 
     if (await cache.save(`${cacheDir}`)) {
