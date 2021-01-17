@@ -6,7 +6,12 @@ const Image = require('@11ty/eleventy-img');
 const shouldTransformHTML = (outputPath) =>
   outputPath && outputPath.endsWith('.html');
 
-module.exports = async function (content, outputPath) {
+// eslint-disable-next-line sonarjs/cognitive-complexity
+module.exports = async function (
+  content,
+  outputPath,
+  {image = true, embed = true, codeblock = true}
+) {
   if (shouldTransformHTML(outputPath)) {
     const DOM = new JSDOM(content, {
       resources: 'usable',
@@ -19,7 +24,7 @@ module.exports = async function (content, outputPath) {
       ...document.querySelectorAll('.c-post pre[class]'),
     ];
 
-    if (articleImages.length) {
+    if (image && articleImages.length) {
       await Promise.all(
         articleImages.map(async (image) => {
           const imagePath = path.join(
@@ -77,7 +82,7 @@ module.exports = async function (content, outputPath) {
     }
 
     // Look for videos are wrap them in a container element
-    if (articleEmbeds.length) {
+    if (embed && articleEmbeds.length) {
       await Promise.all(
         articleEmbeds.map((embed) => {
           if (embed.hasAttribute('allowfullscreen')) {
@@ -91,7 +96,7 @@ module.exports = async function (content, outputPath) {
     }
 
     // Look for code block and wrap them in a container element
-    if (articleCodeBlocks.length) {
+    if (codeblock && articleCodeBlocks.length) {
       await Promise.all(
         articleCodeBlocks.map((codeBlock) => {
           const container = document.createElement('div');
