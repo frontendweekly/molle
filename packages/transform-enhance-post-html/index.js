@@ -22,10 +22,11 @@ module.exports = async function (content, outputPath) {
     if (articleImages.length) {
       await Promise.all(
         articleImages.map(async (image) => {
-          const imagePath = path.resolve(
-            __dirname,
-            `..${image.getAttribute('src')}`
+          const imagePath = path.join(
+            process.cwd(),
+            `/11ty/${image.getAttribute('src')}`
           );
+
           const metadata = await Image(imagePath, {
             urlPath: '/images/',
             outputDir: './11ty/images/generated',
