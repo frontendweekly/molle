@@ -8,47 +8,47 @@ const SUT = require('../index');
 expect.extend({toHaveAttribute});
 
 describe('transform-enhance-post-html', () => {
-  test('it should return content when output is not html', () => {
+  test('it should return content when output is not html', async () => {
     // Arrange
     const content = `dummy content`;
     const outputPath = `dummy.txt`;
     // Act
-    const actual = SUT(content, outputPath);
+    const actual = await SUT(content, outputPath);
     // Assert
     expect(actual).toMatchInlineSnapshot(`"dummy content"`);
   });
 
-  test(`it should add lazy="loading to img`, () => {
+  test.skip(`it should create picture`, async () => {
     // Arrange
     // eslint-disable-next-line sonarjs/no-duplicate-string
     const targetElem = 'inline-jest';
     const content = `
         <div class="c-post">
-          <img data-testid="inline-jest" src="dummy">
+          <img data-testid="inline-jest" src="dummy.png">
         </div>
       `;
     const outputPath = `image-lazy.html`;
     // Act
-    const output = SUT(content, outputPath);
+    const output = await SUT(content, outputPath);
     const DOM = new JSDOM(output, {
       resources: 'usable',
     });
     const actual = queryByTestId(DOM.window.document, targetElem);
     // Assert
-    expect(actual).toHaveAttribute('loading', 'lazy');
+    expect(actual).toMatchInlineSnapshot();
   });
 
-  test(`it should wrap img with figure if img has title`, () => {
+  test.skip(`it should wrap picture with figure if img has title`, async () => {
     // Arrange
     const targetElem = 'inline-jest';
     const content = `
         <div class="c-post">
-          <img data-testid="inline-jest" src="dummy" title="dummy">
+          <img data-testid="inline-jest" src="/images/dummy.png" title="dummy">
         </div>
       `;
     const outputPath = `dummy.html`;
     // Act
-    const output = SUT(content, outputPath);
+    const output = await SUT(content, outputPath);
     const DOM = new JSDOM(output, {
       resources: 'usable',
     });
@@ -69,29 +69,7 @@ describe('transform-enhance-post-html', () => {
     `);
   });
 
-  test(`it should add anchor to heading`, () => {
-    // Arrange
-    const targetElem = 'inline-jest';
-    const content = `
-        <div class="c-post">
-          <h2 data-testid="inline-jest">h2</h2>
-        </div>
-      `;
-    const outputPath = `dummy.html`;
-    // Act
-    const output = SUT(content, outputPath);
-    const DOM = new JSDOM(output, {
-      resources: 'usable',
-    });
-
-    const actual = queryByTestId(DOM.window.document, targetElem).querySelector(
-      'a'
-    );
-    // Assert
-    expect(actual).toMatchInlineSnapshot(`null`);
-  });
-
-  test(`it should wrap iframe with .c-video-player container`, () => {
+  test(`it should wrap iframe with .c-video-player container`, async () => {
     // Arrange
     const targetElem = 'inline-jest';
     const content = `
@@ -101,7 +79,7 @@ describe('transform-enhance-post-html', () => {
       `;
     const outputPath = `dummy.html`;
     // Act
-    const output = SUT(content, outputPath);
+    const output = await SUT(content, outputPath);
     const DOM = new JSDOM(output, {
       resources: 'usable',
     });
@@ -122,7 +100,7 @@ describe('transform-enhance-post-html', () => {
     `);
   });
 
-  test(`it should wrap pre[class] with .c-code-block container`, () => {
+  test(`it should wrap pre[class] with .c-code-block container`, async () => {
     // Arrange
     const targetElem = 'inline-jest';
     const content = `
@@ -132,7 +110,7 @@ describe('transform-enhance-post-html', () => {
       `;
     const outputPath = `dummy.html`;
     // Act
-    const output = SUT(content, outputPath);
+    const output = await SUT(content, outputPath);
     const DOM = new JSDOM(output, {
       resources: 'usable',
     });

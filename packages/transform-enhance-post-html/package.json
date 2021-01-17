@@ -24,6 +24,7 @@
     "access": "public"
   },
   "dependencies": {
+    "@11ty/eleventy-img": "^0.7.4",
     "jsdom": "^16.4.0",
     "slugify": "^1.4.6"
   },
