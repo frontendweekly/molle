@@ -22,7 +22,7 @@ module.exports = async function (content, outputPath) {
     if (articleImages.length) {
       await Promise.all(
         articleImages.map(async (image) => {
-          const imagePath = path.join(
+          const imagePath = path.resolve(
             __dirname,
             `..${image.getAttribute('src')}`
           );
