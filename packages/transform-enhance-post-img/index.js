@@ -27,6 +27,7 @@ const getImageMeta = async (src) => {
     widths: [1500, 750],
     formats: ['avif', 'webp', 'png'],
     dryRun: process.env.NODE_ENV === 'test',
+    useCache: process.env.NODE_ENV === 'development',
   });
 };
 
