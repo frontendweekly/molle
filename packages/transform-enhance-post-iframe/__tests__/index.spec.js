@@ -17,9 +17,9 @@ test(`it should wrap iframe with .o-video-player container`, () => {
   // Assert
   expect(actual).toMatchInlineSnapshot(`
     "
-            <div class=\\"c-post o-video-player\\">
-              
-            <iframe data-testid=\\"inline-jest\\" allowfullscreen>I'm video</iframe></div>
+            <div class=\\"c-post\\">
+              <div class=\\"o-video-player\\"><iframe data-testid=\\"inline-jest\\" allowfullscreen>I'm video</iframe></div>
+            </div>
           "
   `);
 });

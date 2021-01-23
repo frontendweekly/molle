@@ -1,18 +1,12 @@
 const transformEnhancePostIframe = require('@frontendweekly/transform-enhance-post-iframe');
-const transformEnhancePostCodeblock = require('@frontendweekly/transform-enhance-post-code-block');
+const transformEnhancePostCodeBlock = require('@frontendweekly/transform-enhance-post-code-block');
 const transformEnhancePostImg = require('@frontendweekly/transform-enhance-post-img');
 
-module.exports = function (eleventyConfig, options = {}) {
+module.exports = function (eleventyConfig) {
+  eleventyConfig.addTransform('enhancePostIframe', transformEnhancePostIframe);
   eleventyConfig.addTransform(
-    'transformEnhancePostIframe',
-    transformEnhancePostIframe
+    'enhancePostCodeBlock',
+    transformEnhancePostCodeBlock
   );
-  eleventyConfig.addTransform(
-    'transformEnhancePostCodeblock',
-    transformEnhancePostCodeblock
-  );
-  eleventyConfig.addTransform(
-    'transformEnhancePostImg',
-    transformEnhancePostImg
-  );
+  eleventyConfig.addTransform('enhancePostImg', transformEnhancePostImg);
 };

@@ -14,9 +14,9 @@ module.exports = function (content, outputPath) {
   if (articleCodeBlocks.length) {
     articleCodeBlocks.forEach((codeblock) => {
       const $codeblock = $(codeblock);
-      const $container = $('div').addClass('o-code-block');
+      const $container = $('<div class="o-code-block"></div>');
 
-      $container.append($codeblock);
+      $codeblock.wrap($container);
     });
   }
 

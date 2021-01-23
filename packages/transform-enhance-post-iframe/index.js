@@ -14,9 +14,9 @@ module.exports = function (content, outputPath) {
   if (articleEmbeds.length) {
     articleEmbeds.forEach((embed) => {
       const $embed = $(embed);
-      const $player = $('div').addClass('o-video-player');
+      const $player = $('<div class="o-video-player"></div>');
 
-      $player.append($embed);
+      $embed.wrap($player);
     });
   }
 

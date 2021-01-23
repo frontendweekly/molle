@@ -17,9 +17,9 @@ test(`it should wrap pre[class] with .o-code-block container`, () => {
   // Assert
   expect(actual).toMatchInlineSnapshot(`
     "
-            <div class=\\"c-post o-code-block\\">
-              
-            <pre data-testid=\\"inline-jest\\" class=\\"inline-jest\\">I&apos;m code block</pre></div>
+            <div class=\\"c-post\\">
+              <div class=\\"o-code-block\\"><pre data-testid=\\"inline-jest\\" class=\\"inline-jest\\">I&apos;m code block</pre></div>
+            </div>
           "
   `);
 });
