@@ -1,0 +1,30 @@
+{
+  "name": "@frontendweekly/transform-enhance-post-code-block",
+  "version": "0.0.1",
+  "description": "An Eleventy Transform which wraps code blocks with div.o-code-block",
+  "keywords": [
+    "eleventy",
+    "eleventy-transform"
+  ],
+  "author": "Yuya Saito <hello@studiomohawk.com>",
+  "homepage": "https://github.com/frontendweekly/molle/packages/transform-enhance-post-code-block#readme",
+  "license": "MIT",
+  "main": "index.js",
+  "directories": {
+    "test": "__tests__"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/frontendweekly/molle.git",
+    "directory": "packages/transform-enhance-post-code-block"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "bugs": {
+    "url": "https://github.com/frontendweekly/molle/issues"
+  },
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.5"
+  }
+}

@@ -24,13 +24,9 @@
     "access": "public"
   },
   "dependencies": {
-    "@11ty/eleventy-img": "^0.7.4",
-    "jsdom": "^16.4.0",
-    "slugify": "^1.4.6"
+    "@frontendweekly/transform-enhance-post-code-block": "workspace:packages/transform-enhance-post-code-block",
+    "@frontendweekly/transform-enhance-post-iframe": "workspace:packages/transform-enhance-post-iframe",
+    "@frontendweekly/transform-enhance-post-img": "workspace:packages/transform-enhance-post-img"
   },
-  "gitHead": "5758ace4f9bbc84ecfe87966d53f60a1625be43a",
-  "devDependencies": {
-    "@testing-library/dom": "^7.29.0",
-    "@testing-library/jest-dom": "^5.11.6"
-  }
+  "gitHead": "5758ace4f9bbc84ecfe87966d53f60a1625be43a"
 }

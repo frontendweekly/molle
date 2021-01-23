@@ -1,0 +1,33 @@
+{
+  "name": "@frontendweekly/transform-enhance-post-iframe",
+  "version": "0.0.1",
+  "description": "An Eleventy transform to enhance irames in article",
+  "keywords": [
+    "eleventy",
+    "eletenty-transform"
+  ],
+  "author": "Yuya Saito <hello@studiomohawk.com>",
+  "homepage": "https://github.com/frontendweekly/molle/packages/transform-enhance-post-iframe#readme",
+  "license": "MIT",
+  "main": "index.js",
+  "directories": {
+    "test": "__tests__"
+  },
+  "engines": {
+    "node": ">=14.15.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/frontendweekly/molle.git",
+    "directory": "packages/transform-enhance-post-iframe"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "bugs": {
+    "url": "https://github.com/frontendweekly/molle/issues"
+  },
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.5"
+  }
+}

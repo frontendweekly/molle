@@ -3,7 +3,6 @@ const filterDateIso = require('@frontendweekly/filter-date-iso');
 const filterHead = require('@frontendweekly/filter-head');
 const filterTagsToSentence = require('@frontendweekly/filter-tags-to-sentence');
 const filterMarkdown = require('@frontendweekly/filter-markdown');
-
 const transformHtmlMin = require('@frontendweekly/transform-htmlmin');
 const transformEnhancePostHtml = require('@frontendweekly/transform-enhance-post-html');
 
@@ -18,6 +17,6 @@ module.exports = function (eleventyConfig, options = {}) {
   eleventyConfig.addFilter('jsonify', (value) => JSON.stringify(value));
 
   eleventyConfig.addTransform('htmlmin', transformHtmlMin);
-  eleventyConfig.addTransform('enhancePostHtml', transformEnhancePostHtml);
+  eleventyConfig.addPlugin(transformEnhancePostHtml);
   eleventyConfig.setLibrary('md', md);
 };
