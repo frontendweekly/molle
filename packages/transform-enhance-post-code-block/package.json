@@ -1,6 +1,6 @@
 {
   "name": "@frontendweekly/transform-enhance-post-code-block",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "An Eleventy Transform which wraps code blocks with div.o-code-block",
   "keywords": [
     "eleventy",
