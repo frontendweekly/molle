@@ -37,13 +37,13 @@
   },
   "gitHead": "5758ace4f9bbc84ecfe87966d53f60a1625be43a",
   "dependencies": {
-    "@frontendweekly/eleventy-plugin-markdown": "workspace:packages/eleventy-plugin-markdown",
-    "@frontendweekly/filter-date-iso": "workspace:packages/filter-date-iso",
-    "@frontendweekly/filter-date-ordinal-suffix": "workspace:packages/filter-date-with-ordinal-suffix",
-    "@frontendweekly/filter-head": "workspace:packages/filter-head",
-    "@frontendweekly/filter-markdown": "workspace:packages/filter-markdown",
-    "@frontendweekly/filter-tags-to-sentence": "workspace:packages/filter-tags-to-sentence",
-    "@frontendweekly/transform-enhance-post-html": "workspace:packages/transform-enhance-post-html",
-    "@frontendweekly/transform-htmlmin": "workspace:packages/transform-htmlmin"
+    "@frontendweekly/eleventy-plugin-markdown": "^0.0.10",
+    "@frontendweekly/filter-date-iso": "^0.0.14",
+    "@frontendweekly/filter-date-ordinal-suffix": "^0.0.17",
+    "@frontendweekly/filter-head": "^0.0.8",
+    "@frontendweekly/filter-markdown": "^0.0.16",
+    "@frontendweekly/filter-tags-to-sentence": "^0.0.10",
+    "@frontendweekly/transform-enhance-post-html": "^0.0.23",
+    "@frontendweekly/transform-htmlmin": "^0.0.15"
   }
 }

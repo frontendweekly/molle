@@ -26,10 +26,7 @@
     "test": "__tests__"
   },
   "dependencies": {
-    "@frontendweekly/eleventy-plugin-markdown": "workspace:packages/eleventy-plugin-markdown"
-  },
-  "devDependencies": {
-    "jest": "^26.6.3"
+    "@frontendweekly/eleventy-plugin-markdown": "^0.0.10"
   },
   "gitHead": "5758ace4f9bbc84ecfe87966d53f60a1625be43a"
 }
