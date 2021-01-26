@@ -32,27 +32,14 @@ const getImageMeta = async (src) => {
 };
 
 const buildPictureElem = (alt, metadata) => {
-  const fallback = metadata.png[0];
-  const sizes = `(max-width: 768px) 100vw, 768px`;
+  const imageAttributes = {
+    alt: alt,
+    sizes: `(max-width: 768px) 100vw, 768px`,
+    loading: `lazy`,
+    decoding: `async`,
+  };
 
-  return `<picture>
-    ${Object.values(metadata)
-      .map((imageFormat) => {
-        return `  <source type="${
-          imageFormat[0].sourceType
-        }" srcset="${imageFormat
-          .map((entry) => entry.srcset)
-          .join(', ')}" sizes="${sizes}">`;
-      })
-      .join('\n')}
-      <img
-        src="${fallback.url}"
-        width="${fallback.width}"
-        height="${fallback.height}"
-        alt="${alt}"
-        loading="lazy"
-        decoding="async">
-    </picture>`;
+  return Image.generateHTML(metadata, imageAttributes);
 };
 
 const buildFigureElem = (title, picture) => {

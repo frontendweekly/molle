@@ -32,7 +32,7 @@
     "url": "https://github.com/frontendweekly/molle/issues"
   },
   "dependencies": {
-    "@11ty/eleventy-img": "^0.7.4",
+    "@11ty/eleventy-img": "^0.7.8",
     "cheerio": "^1.0.0-rc.5"
   },
   "devDependencies": {

@@ -10,7 +10,7 @@ const buildFigureElem = SUT.__get__('buildFigureElem');
 
 test('getImageMeta returns metadata', async () => {
   // Arrange
-  const image = `<img src="https://virga.frontendweekly.tokyo/images/2021-01-09-indieweb-posse-using-eleventy-and-netlify-functions.fig1.png" alt="I am alt">`;
+  const image = `<img src="https://virga.frontendweekly.tokyo/images/63ea9cd0-750.png" alt="I am alt">`;
   const $ = cheerio.load(image, {_useHtmlParser2: true});
   const src = $('img').attr('src'); //?
 
@@ -22,74 +22,41 @@ test('getImageMeta returns metadata', async () => {
     Object {
       "avif": Array [
         Object {
-          "filename": "10bbaf8e-750.avif",
+          "filename": "fc3f538d-750.avif",
           "format": "avif",
           "height": 493,
-          "outputPath": "11ty/images/generated/10bbaf8e-750.avif",
+          "outputPath": "11ty/images/generated/fc3f538d-750.avif",
           "size": undefined,
           "sourceType": "image/avif",
-          "srcset": "/images/10bbaf8e-750.avif 750w",
-          "url": "/images/10bbaf8e-750.avif",
+          "srcset": "/images/fc3f538d-750.avif 750w",
+          "url": "/images/fc3f538d-750.avif",
           "width": 750,
-        },
-        Object {
-          "filename": "10bbaf8e-1500.avif",
-          "format": "avif",
-          "height": 986,
-          "outputPath": "11ty/images/generated/10bbaf8e-1500.avif",
-          "size": undefined,
-          "sourceType": "image/avif",
-          "srcset": "/images/10bbaf8e-1500.avif 1500w",
-          "url": "/images/10bbaf8e-1500.avif",
-          "width": 1500,
         },
       ],
       "png": Array [
         Object {
-          "filename": "10bbaf8e-750.png",
+          "filename": "fc3f538d-750.png",
           "format": "png",
           "height": 493,
-          "outputPath": "11ty/images/generated/10bbaf8e-750.png",
+          "outputPath": "11ty/images/generated/fc3f538d-750.png",
           "size": undefined,
           "sourceType": "image/png",
-          "srcset": "/images/10bbaf8e-750.png 750w",
-          "url": "/images/10bbaf8e-750.png",
+          "srcset": "/images/fc3f538d-750.png 750w",
+          "url": "/images/fc3f538d-750.png",
           "width": 750,
-        },
-        Object {
-          "filename": "10bbaf8e-1500.png",
-          "format": "png",
-          "height": 986,
-          "outputPath": "11ty/images/generated/10bbaf8e-1500.png",
-          "size": undefined,
-          "sourceType": "image/png",
-          "srcset": "/images/10bbaf8e-1500.png 1500w",
-          "url": "/images/10bbaf8e-1500.png",
-          "width": 1500,
         },
       ],
       "webp": Array [
         Object {
-          "filename": "10bbaf8e-750.webp",
+          "filename": "fc3f538d-750.webp",
           "format": "webp",
           "height": 493,
-          "outputPath": "11ty/images/generated/10bbaf8e-750.webp",
+          "outputPath": "11ty/images/generated/fc3f538d-750.webp",
           "size": undefined,
           "sourceType": "image/webp",
-          "srcset": "/images/10bbaf8e-750.webp 750w",
-          "url": "/images/10bbaf8e-750.webp",
+          "srcset": "/images/fc3f538d-750.webp 750w",
+          "url": "/images/fc3f538d-750.webp",
           "width": 750,
-        },
-        Object {
-          "filename": "10bbaf8e-1500.webp",
-          "format": "webp",
-          "height": 986,
-          "outputPath": "11ty/images/generated/10bbaf8e-1500.webp",
-          "size": undefined,
-          "sourceType": "image/webp",
-          "srcset": "/images/10bbaf8e-1500.webp 1500w",
-          "url": "/images/10bbaf8e-1500.webp",
-          "width": 1500,
         },
       ],
     }
@@ -98,7 +65,7 @@ test('getImageMeta returns metadata', async () => {
 
 test('buildPictureElem build picture', () => {
   // Arrange
-  const image = `<img src="https://virga.frontendweekly.tokyo/images/2021-01-09-indieweb-posse-using-eleventy-and-netlify-functions.fig1.png" alt="I am alt">`;
+  const image = `<img src="https://virga.frontendweekly.tokyo/images/63ea9cd0-750.png" alt="I am alt">`;
   const $ = cheerio.load(image, {_useHtmlParser2: true});
   const alt = $('img').attr('alt');
 
@@ -108,23 +75,17 @@ test('buildPictureElem build picture', () => {
   // Assert
   expect(actual).toMatchInlineSnapshot(`
     "<picture>
-          <source type=\\"image/avif\\" srcset=\\"/images/10bbaf8e-750.avif 750w, /images/10bbaf8e-1500.avif 1500w\\" sizes=\\"(max-width: 768px) 100vw, 768px\\">
+      <source type=\\"image/avif\\" srcset=\\"/images/10bbaf8e-750.avif 750w, /images/10bbaf8e-1500.avif 1500w\\" sizes=\\"(max-width: 768px) 100vw, 768px\\">
       <source type=\\"image/webp\\" srcset=\\"/images/10bbaf8e-750.webp 750w, /images/10bbaf8e-1500.webp 1500w\\" sizes=\\"(max-width: 768px) 100vw, 768px\\">
       <source type=\\"image/png\\" srcset=\\"/images/10bbaf8e-750.png 750w, /images/10bbaf8e-1500.png 1500w\\" sizes=\\"(max-width: 768px) 100vw, 768px\\">
-          <img
-            src=\\"/images/10bbaf8e-750.png\\"
-            width=\\"750\\"
-            height=\\"493\\"
-            alt=\\"I am alt\\"
-            loading=\\"lazy\\"
-            decoding=\\"async\\">
-        </picture>"
+      <img src=\\"/images/10bbaf8e-750.png\\" width=\\"750\\" height=\\"493\\" alt=\\"I am alt\\" loading=\\"lazy\\" decoding=\\"async\\">
+    </picture>"
   `);
 });
 
 test('buildFigureElem build figure', () => {
   // Arrange
-  const image = `<img src="https://virga.frontendweekly.tokyo/images/2021-01-09-indieweb-posse-using-eleventy-and-netlify-functions.fig1.png" alt="I am alt" title="title">`;
+  const image = `<img src="https://virga.frontendweekly.tokyo/images/63ea9cd0-750.png" alt="I am alt" title="title">`;
   const $ = cheerio.load(image, {_useHtmlParser2: true});
   const $img = $('img');
   const title = $img.attr('title');
@@ -147,11 +108,11 @@ test('Integration', async () => {
   const content = `
         <div class="c-post">
           <p>
-            <img src="https://virga.frontendweekly.tokyo/images/2021-01-09-indieweb-posse-using-eleventy-and-netlify-functions.fig1.png" alt="I am alt" title="title">
+            <img src="https://virga.frontendweekly.tokyo/images/63ea9cd0-750.png" alt="I am alt" title="title">
             Hello image!
           </p>
           <p>
-            <img src="https://virga.frontendweekly.tokyo/images/2021-01-09-indieweb-posse-using-eleventy-and-netlify-functions.fig1.png" alt="I am alt">
+            <img src="https://virga.frontendweekly.tokyo/images/63ea9cd0-750.png" alt="I am alt">
             Hello image without title!
           </p>
         </div>
@@ -167,22 +128,20 @@ test('Integration', async () => {
               <p>
                 <figure>
         <picture>
-          <source type=\\"image/avif\\" srcset=\\"/images/10bbaf8e-750.avif 750w, /images/10bbaf8e-1500.avif 1500w\\" sizes=\\"(max-width: 768px) 100vw, 768px\\">
-      <source type=\\"image/webp\\" srcset=\\"/images/10bbaf8e-750.webp 750w, /images/10bbaf8e-1500.webp 1500w\\" sizes=\\"(max-width: 768px) 100vw, 768px\\">
-      <source type=\\"image/png\\" srcset=\\"/images/10bbaf8e-750.png 750w, /images/10bbaf8e-1500.png 1500w\\" sizes=\\"(max-width: 768px) 100vw, 768px\\">
-          <img src=\\"/images/10bbaf8e-750.png\\" width=\\"750\\" height=\\"493\\" alt=\\"I am alt\\" loading=\\"lazy\\" decoding=\\"async\\">
-        </picture>
+      <source type=\\"image/avif\\" srcset=\\"/images/fc3f538d-750.avif 750w\\" sizes=\\"(max-width: 768px) 100vw, 768px\\">
+      <source type=\\"image/webp\\" srcset=\\"/images/fc3f538d-750.webp 750w\\" sizes=\\"(max-width: 768px) 100vw, 768px\\">
+      <img src=\\"/images/fc3f538d-750.png\\" width=\\"750\\" height=\\"493\\" alt=\\"I am alt\\" loading=\\"lazy\\" decoding=\\"async\\">
+    </picture>
         <figcaption>title</figcaption>
       </figure>
                 Hello image!
               </p>
               <p>
                 <picture>
-          <source type=\\"image/avif\\" srcset=\\"/images/10bbaf8e-750.avif 750w, /images/10bbaf8e-1500.avif 1500w\\" sizes=\\"(max-width: 768px) 100vw, 768px\\">
-      <source type=\\"image/webp\\" srcset=\\"/images/10bbaf8e-750.webp 750w, /images/10bbaf8e-1500.webp 1500w\\" sizes=\\"(max-width: 768px) 100vw, 768px\\">
-      <source type=\\"image/png\\" srcset=\\"/images/10bbaf8e-750.png 750w, /images/10bbaf8e-1500.png 1500w\\" sizes=\\"(max-width: 768px) 100vw, 768px\\">
-          <img src=\\"/images/10bbaf8e-750.png\\" width=\\"750\\" height=\\"493\\" alt=\\"I am alt\\" loading=\\"lazy\\" decoding=\\"async\\">
-        </picture>
+      <source type=\\"image/avif\\" srcset=\\"/images/fc3f538d-750.avif 750w\\" sizes=\\"(max-width: 768px) 100vw, 768px\\">
+      <source type=\\"image/webp\\" srcset=\\"/images/fc3f538d-750.webp 750w\\" sizes=\\"(max-width: 768px) 100vw, 768px\\">
+      <img src=\\"/images/fc3f538d-750.png\\" width=\\"750\\" height=\\"493\\" alt=\\"I am alt\\" loading=\\"lazy\\" decoding=\\"async\\">
+    </picture>
                 Hello image without title!
               </p>
             </div>

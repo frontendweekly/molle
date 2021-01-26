@@ -12,35 +12,31 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@11ty/eleventy-cache-assets@npm:^2.0.4":
-  version: 2.0.4
-  resolution: "@11ty/eleventy-cache-assets@npm:2.0.4"
+"@11ty/eleventy-cache-assets@npm:^2.1.0":
+  version: 2.1.0
+  resolution: "@11ty/eleventy-cache-assets@npm:2.1.0"
   dependencies:
     debug: ^4.3.1
     flat-cache: ^3.0.4
     node-fetch: ^2.6.1
     p-queue: ^6.6.2
     short-hash: ^1.0.0
-  peerDependencies:
-    "@11ty/eleventy": ">=0.10.0"
-  checksum: d8f6de6714e53a8c816d18b1c2ea74759505944c9fc10ce623dede13d944cdd53d1dfb84971c93242cc5fc4e6c8b01a24fa8334c8526e019c0ce415837ff8de0
+  checksum: 25fd0257b1850fa0234730be0a3ef081854530094a450907b3004cbf847e525c6958b5b056b1df9b8f219751e780f7f5e42456986fcfccfabd78409773975af4
   languageName: node
   linkType: hard
 
-"@11ty/eleventy-img@npm:^0.7.4":
-  version: 0.7.4
-  resolution: "@11ty/eleventy-img@npm:0.7.4"
+"@11ty/eleventy-img@npm:^0.7.8":
+  version: 0.7.8
+  resolution: "@11ty/eleventy-img@npm:0.7.8"
   dependencies:
-    "@11ty/eleventy-cache-assets": ^2.0.4
+    "@11ty/eleventy-cache-assets": ^2.1.0
     debug: ^4.3.1
     fs-extra: ^9.0.1
     image-size: ^0.9.3
     p-queue: ^6.6.2
     sharp: ^0.27.0
     short-hash: ^1.0.0
-  peerDependencies:
-    "@11ty/eleventy": ">=0.10.0"
-  checksum: 3a1f686cf4b709dd0aefdbfd0d488b003b949cac5af9d378be5bb423c313e322fe67a1f5356d68f029a1c201f867db71d73f5055c2cac4153216fce8cd7b0cdd
+  checksum: cde8bc90f775edb3a844f9a8ab22681ce25caece8abf66e2ea98234917a24cdd4056154580a65490e7976c2d5699cb934df32d814c44e840f18a724dec60774e
   languageName: node
   linkType: hard
 
@@ -594,18 +590,18 @@ __metadata:
   resolution: "@frontendweekly/eleventy-plugin-markdown@workspace:packages/eleventy-plugin-markdown"
   dependencies:
     markdown-it: ^12.0.4
-    markdown-it-anchor: ^6.0.1
+    markdown-it-anchor: ^7.0.0
     markdown-it-attribution: ^0.1.1
-    markdown-it-attrs: ^3.0.3
+    markdown-it-attrs: ^4.0.0
     markdown-it-deflist: ^2.1.0
     markdown-it-footnote: ^3.0.2
     uslug: ^1.0.4
   languageName: unknown
   linkType: soft
 
-"@frontendweekly/eslint-config-molle@npm:^0.0.2":
-  version: 0.0.2
-  resolution: "@frontendweekly/eslint-config-molle@npm:0.0.2::__archiveUrl=https%3A%2F%2Fnpm.pkg.github.com%2Fdownload%2F%40frontendweekly%2Feslint-config-molle%2F0.0.2%2F32960fdc9bde5aff6019ad2a8d8614087bda0d0df065b178a06fb3be6e268307"
+"@frontendweekly/eslint-config-molle@npm:^0.0.3":
+  version: 0.0.3
+  resolution: "@frontendweekly/eslint-config-molle@npm:0.0.3::__archiveUrl=https%3A%2F%2Fnpm.pkg.github.com%2Fdownload%2F%40frontendweekly%2Feslint-config-molle%2F0.0.3%2Fd8c1ef49b69184d299138f909748982ff3eaba41228dec3614436db6ae81faec"
   dependencies:
     eslint-config-prettier: ^7.0.0
     eslint-plugin-chai-friendly: ^0.6.0
@@ -623,7 +619,7 @@ __metadata:
     eslint: "*"
     jest: "*"
     prettier: "*"
-  checksum: a71c292f93d4cba6cec74677192716dc106f6ce376624846b1ba756c5022d013f697bf7601112c50e28a9cbcce9f2fae2349910a24ca9f42910804a44873bbd7
+  checksum: 88dfb581f7ae2d0b73949e84b8a1e166406ee5c76202ca8d3b6f41591df4fe16eab9af7215346ecc6ed7f3094c0c30a1a2feaff1afdd7973fc1e4fd291e523f5
   languageName: node
   linkType: hard
 
@@ -693,7 +689,7 @@ __metadata:
     "@frontendweekly/filter-head": ^0.0.8
     "@frontendweekly/filter-markdown": ^0.0.17
     "@frontendweekly/filter-tags-to-sentence": ^0.0.10
-    "@frontendweekly/transform-enhance-post-html": ^0.0.24
+    "@frontendweekly/transform-enhance-post-html": ^0.0.26
     "@frontendweekly/transform-htmlmin": ^0.0.15
     ucontent: ^2.0.0
   languageName: unknown
@@ -707,9 +703,9 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@frontendweekly/stylelint-config-molle@npm:^0.0.4":
-  version: 0.0.4
-  resolution: "@frontendweekly/stylelint-config-molle@npm:0.0.4::__archiveUrl=https%3A%2F%2Fnpm.pkg.github.com%2Fdownload%2F%40frontendweekly%2Fstylelint-config-molle%2F0.0.4%2Fc8259b3511f738f4facfd3f2679ed2aec93228a8a7da0d5e84b116eceded1aac"
+"@frontendweekly/stylelint-config-molle@npm:^0.0.5":
+  version: 0.0.5
+  resolution: "@frontendweekly/stylelint-config-molle@npm:0.0.5::__archiveUrl=https%3A%2F%2Fnpm.pkg.github.com%2Fdownload%2F%40frontendweekly%2Fstylelint-config-molle%2F0.0.5%2F16f83a100a1f9a89450a21c654e4ac662315279bc8fd003bd23c61ab73824a78"
   dependencies:
     stylelint-config-idiomatic-order: ^8.1.0
     stylelint-config-prettier: ^8.0.2
@@ -719,11 +715,11 @@ __metadata:
   peerDependencies:
     prettier: "*"
     stylelint: "*"
-  checksum: b84ded09dee93eb2922797a4196b940027f23d35320547b8d2f902524f8130cc3864065c5452ecda60316d4393387405f23136c58ea1c555ec1d13ab257f60ac
+  checksum: 98186545321c8e2136d8e2a245b02022c5db39038d5af8848ee469cbee1cb3319ed04a6f4f59deb447b6ea638b41e3b39c61aa1ea29a4f409fe21bdf404a9ddb
   languageName: node
   linkType: hard
 
-"@frontendweekly/transform-enhance-post-code-block@^0.0.2, @frontendweekly/transform-enhance-post-code-block@workspace:packages/transform-enhance-post-code-block":
+"@frontendweekly/transform-enhance-post-code-block@^0.0.3, @frontendweekly/transform-enhance-post-code-block@workspace:packages/transform-enhance-post-code-block":
   version: 0.0.0-use.local
   resolution: "@frontendweekly/transform-enhance-post-code-block@workspace:packages/transform-enhance-post-code-block"
   dependencies:
@@ -731,17 +727,17 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@frontendweekly/transform-enhance-post-html@^0.0.24, @frontendweekly/transform-enhance-post-html@workspace:packages/transform-enhance-post-html":
+"@frontendweekly/transform-enhance-post-html@^0.0.26, @frontendweekly/transform-enhance-post-html@workspace:packages/transform-enhance-post-html":
   version: 0.0.0-use.local
   resolution: "@frontendweekly/transform-enhance-post-html@workspace:packages/transform-enhance-post-html"
   dependencies:
-    "@frontendweekly/transform-enhance-post-code-block": ^0.0.2
-    "@frontendweekly/transform-enhance-post-iframe": ^0.0.2
-    "@frontendweekly/transform-enhance-post-img": ^0.0.2
+    "@frontendweekly/transform-enhance-post-code-block": ^0.0.3
+    "@frontendweekly/transform-enhance-post-iframe": ^0.0.3
+    "@frontendweekly/transform-enhance-post-img": ^0.0.3
   languageName: unknown
   linkType: soft
 
-"@frontendweekly/transform-enhance-post-iframe@^0.0.2, @frontendweekly/transform-enhance-post-iframe@workspace:packages/transform-enhance-post-iframe":
+"@frontendweekly/transform-enhance-post-iframe@^0.0.3, @frontendweekly/transform-enhance-post-iframe@workspace:packages/transform-enhance-post-iframe":
   version: 0.0.0-use.local
   resolution: "@frontendweekly/transform-enhance-post-iframe@workspace:packages/transform-enhance-post-iframe"
   dependencies:
@@ -749,11 +745,11 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@frontendweekly/transform-enhance-post-img@^0.0.2, @frontendweekly/transform-enhance-post-img@workspace:packages/transform-enhance-post-img":
+"@frontendweekly/transform-enhance-post-img@^0.0.3, @frontendweekly/transform-enhance-post-img@workspace:packages/transform-enhance-post-img":
   version: 0.0.0-use.local
   resolution: "@frontendweekly/transform-enhance-post-img@workspace:packages/transform-enhance-post-img"
   dependencies:
-    "@11ty/eleventy-img": ^0.7.4
+    "@11ty/eleventy-img": ^0.7.8
     cheerio: ^1.0.0-rc.5
     rewire: ^5.0.0
   languageName: unknown
@@ -9671,12 +9667,12 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
-"markdown-it-anchor@npm:^6.0.1":
-  version: 6.0.1
-  resolution: "markdown-it-anchor@npm:6.0.1"
+"markdown-it-anchor@npm:^7.0.0":
+  version: 7.0.0
+  resolution: "markdown-it-anchor@npm:7.0.0"
   peerDependencies:
     markdown-it: "*"
-  checksum: bb61826b43875453806af32bbcc11447ddad185a2b36acbad864c08943bef57beda390946de564f86d675a7522c6fe6ef133af4372a637f4a0804707abb0064d
+  checksum: 0d8a3bbf8986f14d224ff17b700757a2d4b8d99b0fd54e77e06d5f7330e537e8f16f08db0b42eda8974fe3287e50d37dbaca9c930c04054e16aee7348dfe9e6a
   languageName: node
   linkType: hard
 
@@ -9687,12 +9683,12 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
-"markdown-it-attrs@npm:^3.0.3":
-  version: 3.0.3
-  resolution: "markdown-it-attrs@npm:3.0.3"
+"markdown-it-attrs@npm:^4.0.0":
+  version: 4.0.0
+  resolution: "markdown-it-attrs@npm:4.0.0"
   peerDependencies:
-    markdown-it: ">= 9.0.0 < 12.0.0"
-  checksum: 3cb77124f068dd58fe82e1928f776ad3c524639ead51705baaa71b15c24d87dcf1f3825de73ec8ab117e52a11190fbf6365423a3eec26357ec42bc40c3d11d82
+    markdown-it: ">= 9.0.0 < 13.0.0"
+  checksum: db6c25ec8f992f1d4da7d8d94eff1adb4cffb5557438f5e1eae88db655fff3601ae61c644c625658c9b731a4bce085470a3d3b3f3fdcfab7f75c459b0d5d440b
   languageName: node
   linkType: hard
 
@@ -10168,9 +10164,9 @@ fsevents@~2.3.1:
   resolution: "molle@workspace:."
   dependencies:
     "@11ty/eleventy": ^0.11.1
-    "@frontendweekly/eslint-config-molle": ^0.0.2
+    "@frontendweekly/eslint-config-molle": ^0.0.3
     "@frontendweekly/jest-preset-molle": ^0.0.17
-    "@frontendweekly/stylelint-config-molle": ^0.0.4
+    "@frontendweekly/stylelint-config-molle": ^0.0.5
     "@testing-library/dom": ^7.29.4
     "@testing-library/jest-dom": ^5.11.9
     cross-env: ^7.0.3

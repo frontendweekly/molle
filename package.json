@@ -14,9 +14,9 @@
   },
   "devDependencies": {
     "@11ty/eleventy": "^0.11.1",
-    "@frontendweekly/eslint-config-molle": "^0.0.2",
+    "@frontendweekly/eslint-config-molle": "^0.0.3",
     "@frontendweekly/jest-preset-molle": "^0.0.17",
-    "@frontendweekly/stylelint-config-molle": "^0.0.4",
+    "@frontendweekly/stylelint-config-molle": "^0.0.5",
     "@testing-library/dom": "^7.29.4",
     "@testing-library/jest-dom": "^5.11.9",
     "cross-env": "^7.0.3",
