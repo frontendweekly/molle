@@ -1,48 +1,48 @@
-const cheerio = require('cheerio');
+const {DOMParser} = require('linkedom');
 const SUT = require('../index');
 
 test(`it should wrap iframe with .o-video-player container`, () => {
   // Arrange
   const content = `
         <div class="c-post">
-          <iframe data-testid="inline-jest" allowfullscreen>I'm video</iframe>
+          <iframe allowfullscreen>I'm video</iframe>
         </div>
       `;
   const outputPath = `dummy.html`;
   // Act
   const output = SUT(content, outputPath);
-  const $ = cheerio.load(output, {_useHtmlParser2: true});
+  const document = new DOMParser().parseFromString(output, 'text/html');
 
-  const actual = $.html();
+  const actual = document.toString();
   // Assert
   expect(actual).toMatchInlineSnapshot(`
-    "
+    "<!DOCTYPE html><html>
             <div class=\\"c-post\\">
-              <div class=\\"o-video-player\\"><iframe data-testid=\\"inline-jest\\" allowfullscreen>I'm video</iframe></div>
+              <div class=\\"o-video-player\\"><iframe allowfullscreen>I&#39;m video</iframe></div>
             </div>
-          "
+          </html>"
   `);
 });
 
-test(`it should NOT wrap iframe with .c-video-player container`, () => {
+test(`it should NOT wrap iframe with .o-video-player container`, () => {
   // Arrange
   const content = `
         <div class="c-post">
-          <iframe data-testid="inline-jest">I'm video but no allowfullscreen</iframe>
+          <iframe>I'm video but no allowfullscreen</iframe>
         </div>
       `;
   const outputPath = `dummy.html`;
   // Act
   const output = SUT(content, outputPath);
-  const $ = cheerio.load(output, {_useHtmlParser2: true});
+  const document = new DOMParser().parseFromString(output, 'text/html');
 
-  const actual = $.html();
+  const actual = document.toString();
   // Assert
   expect(actual).toMatchInlineSnapshot(`
-    "
+    "<!DOCTYPE html><html>
             <div class=\\"c-post\\">
-              <iframe data-testid=\\"inline-jest\\">I'm video but no allowfullscreen</iframe>
+              <iframe>I&#39;m video but no allowfullscreen</iframe>
             </div>
-          "
+          </html>"
   `);
 });

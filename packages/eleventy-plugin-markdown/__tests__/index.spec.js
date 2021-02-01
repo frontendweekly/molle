@@ -122,7 +122,7 @@ your <div>http://example.com</div> site`;
     `);
   });
 
-  test('it should convert block quotes sementically', () => {
+  test('it should convert block quotes semantically', () => {
     // Arrange
     const content = `> That's one small step for [a] man, one giant leap for mankind.
 > — Neil Armstrong (1969, July 21)

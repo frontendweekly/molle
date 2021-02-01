@@ -1,5 +1,5 @@
 const path = require('path');
-const cheerio = require('cheerio');
+const {DOMParser, parseHTML} = require('linkedom');
 const Image = require('@11ty/eleventy-img');
 
 const shouldTransformHTML = (outputPath) =>
@@ -39,14 +39,19 @@ const buildPictureElem = (alt, metadata) => {
     decoding: `async`,
   };
 
-  return Image.generateHTML(metadata, imageAttributes);
+  const {document} = parseHTML(Image.generateHTML(metadata, imageAttributes));
+  return document.querySelector('picture');
 };
 
-const buildFigureElem = (title, picture) => {
-  return `<figure>
-    ${picture}
-    <figcaption>${title}</figcaption>
-  </figure>`;
+const buildFigureElem = (document, title, picture) => {
+  const figure = document.createElement('figure');
+  const figCaption = document.createElement('figcaption');
+
+  figCaption.innerHTML = title;
+  figure.appendChild(picture.cloneNode(true));
+  figure.appendChild(figCaption);
+  picture.replaceWith(figure);
+  return figure;
 };
 
 module.exports = async function (content, outputPath) {
@@ -54,16 +59,15 @@ module.exports = async function (content, outputPath) {
     return content;
   }
 
-  const $ = cheerio.load(content, {_useHtmlParser2: true});
-  const articleImages = [...$('.c-post img')];
+  const document = new DOMParser().parseFromString(content, 'text/html');
+  const articleImages = [...document.querySelectorAll('.c-post img')];
 
   if (articleImages.length) {
     await Promise.all(
       articleImages.map(async (image) => {
-        const $image = $(image);
-        const src = $image.attr('src');
-        const alt = $image.attr('alt');
-        const title = $image.attr('title');
+        const src = image.getAttribute('src');
+        const alt = image.getAttribute('alt');
+        const title = image.getAttribute('title');
 
         const metadata = await getImageMeta(src);
         const picture = buildPictureElem(alt, metadata);
@@ -71,14 +75,14 @@ module.exports = async function (content, outputPath) {
         // If an image has a title it means that the user added a caption
         // so replace the image with a figure containing that image and a caption
         if (title) {
-          const $figure = $(buildFigureElem(title, picture));
-          $image.replaceWith($figure);
+          const figure = buildFigureElem(document, title, picture);
+          image.replaceWith(figure);
         } else {
-          $image.replaceWith($(picture));
+          image.replaceWith(picture);
         }
       })
     );
   }
 
-  return $.html();
+  return document.toString();
 };

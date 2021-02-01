@@ -1,4 +1,4 @@
-const cheerio = require('cheerio');
+const {DOMParser} = require('linkedom');
 
 const shouldTransformHTML = (outputPath) =>
   outputPath && outputPath.endsWith('.html');
@@ -8,17 +8,19 @@ module.exports = function (content, outputPath) {
     return content;
   }
 
-  const $ = cheerio.load(content, {_useHtmlParser2: true});
-  const articleCodeBlocks = [...$('.c-post pre[class]')];
+  const document = new DOMParser().parseFromString(content, 'text/html');
+  const articleCodeBlocks = [
+    ...document.querySelectorAll('.c-post pre[class]'),
+  ];
 
   if (articleCodeBlocks.length) {
     articleCodeBlocks.forEach((codeblock) => {
-      const $codeblock = $(codeblock);
-      const $container = $('<div class="o-code-block"></div>');
-
-      $codeblock.wrap($container);
+      const container = document.createElement('div');
+      container.classList.add('o-code-block');
+      container.appendChild(codeblock.cloneNode(true));
+      codeblock.replaceWith(container);
     });
   }
 
-  return $.html();
+  return document.toString();
 };

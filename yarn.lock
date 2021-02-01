@@ -585,12 +585,12 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@frontendweekly/eleventy-plugin-markdown@^0.0.11, @frontendweekly/eleventy-plugin-markdown@workspace:packages/eleventy-plugin-markdown":
+"@frontendweekly/eleventy-plugin-markdown@^0.0.12, @frontendweekly/eleventy-plugin-markdown@workspace:packages/eleventy-plugin-markdown":
   version: 0.0.0-use.local
   resolution: "@frontendweekly/eleventy-plugin-markdown@workspace:packages/eleventy-plugin-markdown"
   dependencies:
     markdown-it: ^12.0.4
-    markdown-it-anchor: ^7.0.0
+    markdown-it-anchor: ^7.0.1
     markdown-it-attribution: ^0.1.1
     markdown-it-attrs: ^4.0.0
     markdown-it-deflist: ^2.1.0
@@ -645,11 +645,11 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@frontendweekly/filter-markdown@^0.0.17, @frontendweekly/filter-markdown@workspace:packages/filter-markdown":
+"@frontendweekly/filter-markdown@^0.0.18, @frontendweekly/filter-markdown@workspace:packages/filter-markdown":
   version: 0.0.0-use.local
   resolution: "@frontendweekly/filter-markdown@workspace:packages/filter-markdown"
   dependencies:
-    "@frontendweekly/eleventy-plugin-markdown": ^0.0.11
+    "@frontendweekly/eleventy-plugin-markdown": ^0.0.12
   languageName: unknown
   linkType: soft
 
@@ -683,13 +683,13 @@ __metadata:
   resolution: "@frontendweekly/molle@workspace:packages/molle"
   dependencies:
     "@11ty/eleventy": ^0.11.1
-    "@frontendweekly/eleventy-plugin-markdown": ^0.0.11
+    "@frontendweekly/eleventy-plugin-markdown": ^0.0.12
     "@frontendweekly/filter-date-iso": ^0.0.14
     "@frontendweekly/filter-date-ordinal-suffix": ^0.0.17
     "@frontendweekly/filter-head": ^0.0.8
-    "@frontendweekly/filter-markdown": ^0.0.17
+    "@frontendweekly/filter-markdown": ^0.0.18
     "@frontendweekly/filter-tags-to-sentence": ^0.0.10
-    "@frontendweekly/transform-enhance-post-html": ^0.0.26
+    "@frontendweekly/transform-enhance-post-html": ^0.0.27
     "@frontendweekly/transform-htmlmin": ^0.0.15
     ucontent: ^2.0.0
   languageName: unknown
@@ -723,17 +723,17 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@frontendweekly/transform-enhance-post-code-block@workspace:packages/transform-enhance-post-code-block"
   dependencies:
-    cheerio: ^1.0.0-rc.5
+    linkedom: ^0.2.14
   languageName: unknown
   linkType: soft
 
-"@frontendweekly/transform-enhance-post-html@^0.0.26, @frontendweekly/transform-enhance-post-html@workspace:packages/transform-enhance-post-html":
+"@frontendweekly/transform-enhance-post-html@^0.0.27, @frontendweekly/transform-enhance-post-html@workspace:packages/transform-enhance-post-html":
   version: 0.0.0-use.local
   resolution: "@frontendweekly/transform-enhance-post-html@workspace:packages/transform-enhance-post-html"
   dependencies:
     "@frontendweekly/transform-enhance-post-code-block": ^0.0.3
     "@frontendweekly/transform-enhance-post-iframe": ^0.0.3
-    "@frontendweekly/transform-enhance-post-img": ^0.0.3
+    "@frontendweekly/transform-enhance-post-img": ^0.0.4
   languageName: unknown
   linkType: soft
 
@@ -741,16 +741,17 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@frontendweekly/transform-enhance-post-iframe@workspace:packages/transform-enhance-post-iframe"
   dependencies:
-    cheerio: ^1.0.0-rc.5
+    linkedom: ^0.2.14
   languageName: unknown
   linkType: soft
 
-"@frontendweekly/transform-enhance-post-img@^0.0.3, @frontendweekly/transform-enhance-post-img@workspace:packages/transform-enhance-post-img":
+"@frontendweekly/transform-enhance-post-img@^0.0.4, @frontendweekly/transform-enhance-post-img@workspace:packages/transform-enhance-post-img":
   version: 0.0.0-use.local
   resolution: "@frontendweekly/transform-enhance-post-img@workspace:packages/transform-enhance-post-img"
   dependencies:
     "@11ty/eleventy-img": ^0.7.8
     cheerio: ^1.0.0-rc.5
+    linkedom: ^0.2.14
     rewire: ^5.0.0
   languageName: unknown
   linkType: soft
@@ -2429,6 +2430,20 @@ __metadata:
     "@typescript-eslint/types": 4.11.0
     eslint-visitor-keys: ^2.0.0
   checksum: 5c9c83d2209ac9f0d2b2b9fb86565aa90e8daa6946607d7718570a6aae3463132276db979f8528084ccbf970987a3506e0c671959f4e1ae238b89ccddb485dc4
+  languageName: node
+  linkType: hard
+
+"@ungap/event-target@npm:^0.2.2":
+  version: 0.2.2
+  resolution: "@ungap/event-target@npm:0.2.2"
+  checksum: 7b0dd978778b50c7ec5a48441dd1b8cbced2df107681cbcfa1e7e6f1ea0c4b13a749928802caa5e2d01014e15e5a4f92446c808f44b891436d398921fffd0cde
+  languageName: node
+  linkType: hard
+
+"@ungap/event@npm:^0.2.2":
+  version: 0.2.2
+  resolution: "@ungap/event@npm:0.2.2"
+  checksum: b6c5cc14d89267a4b3035aa14b3d21303bfd8f4b4a1957581bb399c9b1acb5ab35e4dd811b5cca47a2920043fdb768912463786020395a615c18d7070466c68c
   languageName: node
   linkType: hard
 
@@ -5867,9 +5882,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint@npm:^7.18.0":
-  version: 7.18.0
-  resolution: "eslint@npm:7.18.0"
+"eslint@npm:^7.19.0":
+  version: 7.19.0
+  resolution: "eslint@npm:7.19.0"
   dependencies:
     "@babel/code-frame": ^7.0.0
     "@eslint/eslintrc": ^0.3.0
@@ -5910,7 +5925,7 @@ __metadata:
     v8-compile-cache: ^2.0.3
   bin:
     eslint: bin/eslint.js
-  checksum: 5c6f6ca0eb6c3738a0d14d3441a23f045ef9e7f73aaba4848aea0877c5fd50ec42937ccdaf53fb9107694f5700a9989bca55334b7b17e5d3be2f6e69a42241fa
+  checksum: 0461e8b2b53c9097995efe131f659e2df77deda1daf79d7673654e2cbdac90bd2a412758b0ee0db48d29bf58f4b4d99170a70e17df1345782f0c8fa511bb0734
   languageName: node
   linkType: hard
 
@@ -9224,6 +9239,20 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
+"linkedom@npm:^0.2.14":
+  version: 0.2.14
+  resolution: "linkedom@npm:0.2.14"
+  dependencies:
+    "@ungap/event": ^0.2.2
+    "@ungap/event-target": ^0.2.2
+    css-select: ^3.1.2
+    html-escaper: ^3.0.0
+    htmlparser2: ^6.0.0
+    uhyphen: ^0.1.0
+  checksum: 278975e7ecbefcd6c49a2e437dc2a7b5a90005573fb7ccad130a6f3fefa340bf64ae27d82c2aadc22c78f48be0414197ad9725e967fa3adc18811a794979238b
+  languageName: node
+  linkType: hard
+
 "linkify-it@npm:^2.0.0":
   version: 2.2.0
   resolution: "linkify-it@npm:2.2.0"
@@ -9667,12 +9696,12 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
-"markdown-it-anchor@npm:^7.0.0":
-  version: 7.0.0
-  resolution: "markdown-it-anchor@npm:7.0.0"
+"markdown-it-anchor@npm:^7.0.1":
+  version: 7.0.1
+  resolution: "markdown-it-anchor@npm:7.0.1"
   peerDependencies:
     markdown-it: "*"
-  checksum: 0d8a3bbf8986f14d224ff17b700757a2d4b8d99b0fd54e77e06d5f7330e537e8f16f08db0b42eda8974fe3287e50d37dbaca9c930c04054e16aee7348dfe9e6a
+  checksum: 8f38d208ad1d7dddde0f1e6071de56822c06b98844438832ff7cfbdc23467dcf7c290ca2f1579b3a8211e10844b5c178759258f66d85f148022ddc00a60e6a48
   languageName: node
   linkType: hard
 
@@ -10170,13 +10199,13 @@ fsevents@~2.3.1:
     "@testing-library/dom": ^7.29.4
     "@testing-library/jest-dom": ^5.11.9
     cross-env: ^7.0.3
-    eslint: ^7.18.0
+    eslint: ^7.19.0
     husky: ^4.3.8
     jest: ^26.6.3
     lerna: ^3.22.1
     lint-staged: ^10.5.3
     mock-fs: ^4.13.0
-    msw: ^0.25.0
+    msw: ^0.26.0
     npm-run-all: ^4.1.5
     prettier: ^2.2.1
     pretty-quick: ^3.1.0
@@ -10235,9 +10264,9 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
-"msw@npm:^0.25.0":
-  version: 0.25.0
-  resolution: "msw@npm:0.25.0"
+"msw@npm:^0.26.0":
+  version: 0.26.0
+  resolution: "msw@npm:0.26.0"
   dependencies:
     "@open-draft/until": ^1.0.3
     "@types/cookie": ^0.4.0
@@ -10247,14 +10276,14 @@ fsevents@~2.3.1:
     graphql: ^15.4.0
     headers-utils: ^1.2.0
     node-fetch: ^2.6.1
-    node-match-path: ^0.6.0
+    node-match-path: ^0.6.1
     node-request-interceptor: ^0.6.3
     statuses: ^2.0.0
     strict-event-emitter: ^0.1.0
     yargs: ^16.2.0
   bin:
     msw: cli/index.js
-  checksum: 32a19f1a9deb74aa24971e011acf488c10189fe0b9f21a7e5be72ae1e774ed1765e91cd6a8e268e4827ee49a52ceeffdadf5c7d26d9e1b797a9713c29f78d539
+  checksum: f557fc423320806485a80a13565d27974fee06b213c546b0c9c86a5776a6e087d3fd709dae29f6fc50137c71179c1ece8bbe8cedf2df14e0d889218613a76d35
   languageName: node
   linkType: hard
 
@@ -10486,10 +10515,10 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
-"node-match-path@npm:^0.6.0":
-  version: 0.6.0
-  resolution: "node-match-path@npm:0.6.0"
-  checksum: 8432cc4403aa783844d6dee974a2857727be73803b39063670e240437244e44da782599d9adb565dcbb00766955823f273fffd39bc4308eea20ffebda978bf75
+"node-match-path@npm:^0.6.1":
+  version: 0.6.1
+  resolution: "node-match-path@npm:0.6.1"
+  checksum: c1a499d04d7bf6b167b9cd382f736e8f60b9a361f77c56bdf9b941dfb249d88bba58b93b793ca740e2439a35804a4449352a1e49bc8dee69c8bb20d0dfcc0d91
   languageName: node
   linkType: hard
 

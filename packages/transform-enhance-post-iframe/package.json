@@ -1,7 +1,7 @@
 {
   "name": "@frontendweekly/transform-enhance-post-iframe",
   "version": "0.0.3",
-  "description": "An Eleventy transform to enhance irames in article",
+  "description": "An Eleventy transform to enhance iframes in article",
   "keywords": [
     "eleventy",
     "eletenty-transform"
@@ -28,6 +28,6 @@
     "url": "https://github.com/frontendweekly/molle/issues"
   },
   "dependencies": {
-    "cheerio": "^1.0.0-rc.5"
+    "linkedom": "^0.2.14"
   }
 }

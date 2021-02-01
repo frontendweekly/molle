@@ -33,7 +33,7 @@
   },
   "dependencies": {
     "@11ty/eleventy-img": "^0.7.8",
-    "cheerio": "^1.0.0-rc.5"
+    "linkedom": "^0.2.14"
   },
   "devDependencies": {
     "rewire": "^5.0.0"

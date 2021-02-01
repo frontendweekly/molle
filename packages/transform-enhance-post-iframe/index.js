@@ -1,4 +1,4 @@
-const cheerio = require('cheerio');
+const {DOMParser} = require('linkedom');
 
 const shouldTransformHTML = (outputPath) =>
   outputPath && outputPath.endsWith('.html');
@@ -8,17 +8,19 @@ module.exports = function (content, outputPath) {
     return content;
   }
 
-  const $ = cheerio.load(content, {_useHtmlParser2: true});
-  const articleEmbeds = [...$('.c-post iframe[allowfullscreen]')];
+  const document = new DOMParser().parseFromString(content, 'text/html');
+  const articleEmbeds = [
+    ...document.querySelectorAll('.c-post iframe[allowfullscreen]'),
+  ];
 
   if (articleEmbeds.length) {
     articleEmbeds.forEach((embed) => {
-      const $embed = $(embed);
-      const $player = $('<div class="o-video-player"></div>');
-
-      $embed.wrap($player);
+      const player = document.createElement('div');
+      player.classList.add('o-video-player');
+      player.appendChild(embed.cloneNode(true));
+      embed.replaceWith(player);
     });
   }
 
-  return $.html();
+  return document.toString();
 };
