@@ -28,6 +28,6 @@
     "url": "https://github.com/frontendweekly/molle/issues"
   },
   "dependencies": {
-    "linkedom": "^0.2.14"
+    "linkedom": "^0.3.6"
   }
 }

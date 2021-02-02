@@ -1,4 +1,4 @@
-const {DOMParser} = require('linkedom');
+const {parseHTML} = require('linkedom');
 
 const shouldTransformHTML = (outputPath) =>
   outputPath && outputPath.endsWith('.html');
@@ -8,7 +8,7 @@ module.exports = function (content, outputPath) {
     return content;
   }
 
-  const document = new DOMParser().parseFromString(content, 'text/html');
+  const {document} = parseHTML(content);
   const articleEmbeds = [
     ...document.querySelectorAll('.c-post iframe[allowfullscreen]'),
   ];

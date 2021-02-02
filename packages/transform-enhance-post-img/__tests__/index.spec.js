@@ -1,5 +1,5 @@
 const rewire = require('rewire');
-const {DOMParser} = require('linkedom');
+const {parseHTML} = require('linkedom');
 
 const SUTINTEGRATION = require('../index');
 const SUT = rewire('../index');
@@ -11,7 +11,8 @@ const buildFigureElem = SUT.__get__('buildFigureElem');
 test('getImageMeta returns metadata', async () => {
   // Arrange
   const image = `<img src="https://virga.frontendweekly.tokyo/images/63ea9cd0-750.png" alt="I am alt">`;
-  const document = new DOMParser().parseFromString(image, 'text/html');
+  const {document} = parseHTML(image);
+
   const imageDOM = document.querySelector('img');
   const src = imageDOM.getAttribute('src');
 
@@ -25,7 +26,7 @@ test('getImageMeta returns metadata', async () => {
 test('buildPictureElem build picture', () => {
   // Arrange
   const image = `<img src="https://virga.frontendweekly.tokyo/images/63ea9cd0-750.png" alt="I am alt">`;
-  const document = new DOMParser().parseFromString(image, 'text/html');
+  const {document} = parseHTML(image);
   const imageDOM = document.querySelector('img');
   const alt = imageDOM.getAttribute('alt');
 
@@ -75,7 +76,7 @@ test('buildPictureElem build picture', () => {
 test('buildFigureElem build figure', () => {
   // Arrange
   const image = `<img src="https://virga.frontendweekly.tokyo/images/63ea9cd0-750.png" alt="I am alt" title="title">`;
-  const document = new DOMParser().parseFromString(image, 'text/html');
+  const {document} = parseHTML(image);
   const imageDOM = document.querySelector('img');
   const title = imageDOM.getAttribute('title');
   const picture = document.createElement('picture');

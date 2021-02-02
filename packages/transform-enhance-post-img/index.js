@@ -1,5 +1,5 @@
 const path = require('path');
-const {DOMParser, parseHTML} = require('linkedom');
+const {parseHTML} = require('linkedom');
 const Image = require('@11ty/eleventy-img');
 
 const shouldTransformHTML = (outputPath) =>
@@ -59,7 +59,7 @@ module.exports = async function (content, outputPath) {
     return content;
   }
 
-  const document = new DOMParser().parseFromString(content, 'text/html');
+  const {document} = parseHTML(content);
   const articleImages = [...document.querySelectorAll('.c-post img')];
 
   if (articleImages.length) {

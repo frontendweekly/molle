@@ -1,4 +1,3 @@
-const {DOMParser} = require('linkedom');
 const SUT = require('../index');
 
 test(`it should wrap iframe with .o-video-player container`, () => {
@@ -11,11 +10,9 @@ test(`it should wrap iframe with .o-video-player container`, () => {
   const outputPath = `dummy.html`;
   // Act
   const output = SUT(content, outputPath);
-  const document = new DOMParser().parseFromString(output, 'text/html');
 
-  const actual = document.toString();
   // Assert
-  expect(actual).toMatchInlineSnapshot(`
+  expect(output).toMatchInlineSnapshot(`
     "<!DOCTYPE html><html>
             <div class=\\"c-post\\">
               <div class=\\"o-video-player\\"><iframe allowfullscreen>I&#39;m video</iframe></div>
@@ -34,11 +31,9 @@ test(`it should NOT wrap iframe with .o-video-player container`, () => {
   const outputPath = `dummy.html`;
   // Act
   const output = SUT(content, outputPath);
-  const document = new DOMParser().parseFromString(output, 'text/html');
 
-  const actual = document.toString();
   // Assert
-  expect(actual).toMatchInlineSnapshot(`
+  expect(output).toMatchInlineSnapshot(`
     "<!DOCTYPE html><html>
             <div class=\\"c-post\\">
               <iframe>I&#39;m video but no allowfullscreen</iframe>

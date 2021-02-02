@@ -1,4 +1,4 @@
-const {DOMParser} = require('linkedom');
+const {parseHTML} = require('linkedom');
 
 const shouldTransformHTML = (outputPath) =>
   outputPath && outputPath.endsWith('.html');
@@ -8,7 +8,9 @@ module.exports = function (content, outputPath) {
     return content;
   }
 
-  const document = new DOMParser().parseFromString(content, 'text/html');
+  const {document} = parseHTML(content);
+  console.log(content);
+
   const articleCodeBlocks = [
     ...document.querySelectorAll('.c-post pre[class]'),
   ];
