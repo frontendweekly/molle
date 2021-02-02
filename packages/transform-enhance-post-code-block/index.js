@@ -9,7 +9,6 @@ module.exports = function (content, outputPath) {
   }
 
   const {document} = parseHTML(content);
-  console.log(content);
 
   const articleCodeBlocks = [
     ...document.querySelectorAll('.c-post pre[class]'),
