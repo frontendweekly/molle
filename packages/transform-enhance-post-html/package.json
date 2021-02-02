@@ -1,6 +1,6 @@
 {
   "name": "@frontendweekly/transform-enhance-post-html",
-  "version": "0.0.29",
+  "version": "0.0.30",
   "description": "A transform to enhance HTML for post",
   "main": "index.js",
   "scripts": {
@@ -24,7 +24,7 @@
     "access": "public"
   },
   "dependencies": {
-    "@frontendweekly/transform-enhance-post-code-block": "^0.0.5",
+    "@frontendweekly/transform-enhance-post-code-block": "^0.0.6",
     "@frontendweekly/transform-enhance-post-iframe": "^0.0.5",
     "@frontendweekly/transform-enhance-post-img": "^0.0.6"
   },
