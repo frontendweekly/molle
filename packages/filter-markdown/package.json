@@ -1,6 +1,6 @@
 {
   "name": "@frontendweekly/filter-markdown",
-  "version": "0.0.19",
+  "version": "0.0.20",
   "description": "A filter to convert markdown format text into html",
   "main": "index.js",
   "engines": {
@@ -26,7 +26,7 @@
     "test": "__tests__"
   },
   "dependencies": {
-    "@frontendweekly/eleventy-plugin-markdown": "^0.0.13"
+    "@frontendweekly/eleventy-plugin-markdown": "^0.0.14"
   },
   "gitHead": "5758ace4f9bbc84ecfe87966d53f60a1625be43a"
 }
