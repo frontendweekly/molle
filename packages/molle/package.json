@@ -32,7 +32,7 @@
     "url": "https://github.com/frontendweekly/molle/issues"
   },
   "devDependencies": {
-    "@11ty/eleventy": "^0.11.1",
+    "@11ty/eleventy": "^0.12.1",
     "ucontent": "^2.0.0"
   },
   "gitHead": "5758ace4f9bbc84ecfe87966d53f60a1625be43a",
