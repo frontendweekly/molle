@@ -36,39 +36,29 @@ test('buildPictureElem build picture', () => {
   // Assert
   expect(actual).toMatchInlineSnapshot(`
     <picture>
-      
-      
       <source
         sizes="(max-width: 768px) 100vw, 768px"
         srcset="/images/10bbaf8e-750.avif 750w, /images/10bbaf8e-1500.avif 1500w"
         type="image/avif"
       />
-      
-      
       <source
         sizes="(max-width: 768px) 100vw, 768px"
         srcset="/images/10bbaf8e-750.webp 750w, /images/10bbaf8e-1500.webp 1500w"
         type="image/webp"
       />
-      
-      
       <source
         sizes="(max-width: 768px) 100vw, 768px"
         srcset="/images/10bbaf8e-750.png 750w, /images/10bbaf8e-1500.png 1500w"
         type="image/png"
       />
-      
-      
       <img
         alt="I am alt"
         decoding="async"
-        height="493"
+        height="986"
         loading="lazy"
         src="/images/10bbaf8e-750.png"
-        width="750"
+        width="1500"
       />
-      
-
     </picture>
   `);
 });
@@ -115,25 +105,17 @@ test('Integration', async () => {
   const actual = await SUTINTEGRATION(content, outputPath);
 
   expect(actual).toMatchInlineSnapshot(`
-    "<!DOCTYPE html><html>
+    "
             <div class=\\"c-post\\">
               <p>
-                <figure><picture>
-      <source sizes=\\"(max-width: 768px) 100vw, 768px\\" srcset=\\"/images/fc3f538d-750.avif 750w\\" type=\\"image/avif\\">
-      <source sizes=\\"(max-width: 768px) 100vw, 768px\\" srcset=\\"/images/fc3f538d-750.webp 750w\\" type=\\"image/webp\\">
-      <img decoding=\\"async\\" loading=\\"lazy\\" alt=\\"I am alt\\" height=\\"493\\" width=\\"750\\" src=\\"/images/fc3f538d-750.png\\">
-    </picture><figcaption>title</figcaption></figure>
+                <figure><picture><source type=\\"image/avif\\" srcset=\\"/images/fc3f538d-750.avif 750w\\" sizes=\\"(max-width: 768px) 100vw, 768px\\"><source type=\\"image/webp\\" srcset=\\"/images/fc3f538d-750.webp 750w\\" sizes=\\"(max-width: 768px) 100vw, 768px\\"><img alt=\\"I am alt\\" loading=\\"lazy\\" decoding=\\"async\\" src=\\"/images/fc3f538d-750.png\\" width=\\"750\\" height=\\"493\\"></picture><figcaption>title</figcaption></figure>
                 Hello image!
               </p>
               <p>
-                <picture>
-      <source sizes=\\"(max-width: 768px) 100vw, 768px\\" srcset=\\"/images/fc3f538d-750.avif 750w\\" type=\\"image/avif\\">
-      <source sizes=\\"(max-width: 768px) 100vw, 768px\\" srcset=\\"/images/fc3f538d-750.webp 750w\\" type=\\"image/webp\\">
-      <img decoding=\\"async\\" loading=\\"lazy\\" alt=\\"I am alt\\" height=\\"493\\" width=\\"750\\" src=\\"/images/fc3f538d-750.png\\">
-    </picture>
+                <picture><source type=\\"image/avif\\" srcset=\\"/images/fc3f538d-750.avif 750w\\" sizes=\\"(max-width: 768px) 100vw, 768px\\"><source type=\\"image/webp\\" srcset=\\"/images/fc3f538d-750.webp 750w\\" sizes=\\"(max-width: 768px) 100vw, 768px\\"><img alt=\\"I am alt\\" loading=\\"lazy\\" decoding=\\"async\\" src=\\"/images/fc3f538d-750.png\\" width=\\"750\\" height=\\"493\\"></picture>
                 Hello image without title!
               </p>
             </div>
-          </html>"
+          "
   `);
 }, 25000);
