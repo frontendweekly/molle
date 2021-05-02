@@ -29,7 +29,12 @@ const imgOptions = {
 };
 
 const getImageMeta = (src, width, height) => {
-  return Image.statsByDimensionsSync(setImagePath(), width, height, imgOptions);
+  return Image.statsByDimensionsSync(
+    setImagePath(src),
+    width,
+    height,
+    imgOptions
+  );
 };
 
 const buildPictureElem = (alt, metadata) => {
