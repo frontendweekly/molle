@@ -1,6 +1,6 @@
 {
   "name": "@frontendweekly/transform-enhance-post-iframe",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "An Eleventy transform to enhance iframes in article",
   "keywords": [
     "eleventy",
