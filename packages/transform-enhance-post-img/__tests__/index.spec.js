@@ -4,20 +4,23 @@ const {parseHTML} = require('linkedom');
 const SUTINTEGRATION = require('../index');
 const SUT = rewire('../index');
 const metadataMock = require('./metadata.mock');
+const IMG_SRC = 'https://virga.frontendweekly.tokyo/images/63ea9cd0-750.png';
 const getImageMeta = SUT.__get__('getImageMeta');
 const buildPictureElem = SUT.__get__('buildPictureElem');
 const buildFigureElem = SUT.__get__('buildFigureElem');
 
-test('getImageMeta returns metadata', async () => {
+test('getImageMeta returns metadata', () => {
   // Arrange
-  const image = `<img src="https://virga.frontendweekly.tokyo/images/63ea9cd0-750.png" alt="I am alt">`;
+  const image = `<img src="${IMG_SRC}" width="750" height="493" alt="I am alt">`;
   const {document} = parseHTML(image);
 
   const imageDOM = document.querySelector('img');
   const src = imageDOM.getAttribute('src');
+  const width = imageDOM.getAttribute('width');
+  const height = imageDOM.getAttribute('height');
 
   // Act
-  const actual = await getImageMeta(src);
+  const actual = getImageMeta(src, width, height);
 
   // Assert
   expect(actual).toMatchSnapshot();
@@ -25,7 +28,7 @@ test('getImageMeta returns metadata', async () => {
 
 test('buildPictureElem build picture', () => {
   // Arrange
-  const image = `<img src="https://virga.frontendweekly.tokyo/images/63ea9cd0-750.png" alt="I am alt">`;
+  const image = `<img src="${IMG_SRC}" width="750" height="493" alt="I am alt">`;
   const {document} = parseHTML(image);
   const imageDOM = document.querySelector('img');
   const alt = imageDOM.getAttribute('alt');
@@ -65,7 +68,7 @@ test('buildPictureElem build picture', () => {
 
 test('buildFigureElem build figure', () => {
   // Arrange
-  const image = `<img src="https://virga.frontendweekly.tokyo/images/63ea9cd0-750.png" alt="I am alt" title="title">`;
+  const image = `<img src="${IMG_SRC}" width="750" height="493" alt="I am alt" title="title">`;
   const {document} = parseHTML(image);
   const imageDOM = document.querySelector('img');
   const title = imageDOM.getAttribute('title');
@@ -85,16 +88,16 @@ test('buildFigureElem build figure', () => {
   `);
 });
 
-test('Integration', async () => {
+test('Integration', () => {
   // Arrange
   const content = `
         <div class="c-post">
           <p>
-            <img src="https://virga.frontendweekly.tokyo/images/63ea9cd0-750.png" alt="I am alt" title="title">
+            <img src="${IMG_SRC}" width="750" height="493" alt="I am alt" title="title">
             Hello image!
           </p>
           <p>
-            <img src="https://virga.frontendweekly.tokyo/images/63ea9cd0-750.png" alt="I am alt">
+            <img src="${IMG_SRC}" width="750" height="493" alt="I am alt">
             Hello image without title!
           </p>
         </div>
@@ -102,17 +105,17 @@ test('Integration', async () => {
   const outputPath = `dummy.html`;
 
   // actual
-  const actual = await SUTINTEGRATION(content, outputPath);
+  const actual = SUTINTEGRATION(content, outputPath);
 
   expect(actual).toMatchInlineSnapshot(`
     "
             <div class=\\"c-post\\">
               <p>
-                <figure><picture><source type=\\"image/avif\\" srcset=\\"/images/fc3f538d-750.avif 750w\\" sizes=\\"(max-width: 768px) 100vw, 768px\\"><source type=\\"image/webp\\" srcset=\\"/images/fc3f538d-750.webp 750w\\" sizes=\\"(max-width: 768px) 100vw, 768px\\"><img alt=\\"I am alt\\" loading=\\"lazy\\" decoding=\\"async\\" src=\\"/images/fc3f538d-750.png\\" width=\\"750\\" height=\\"493\\"></picture><figcaption>title</figcaption></figure>
+                <figure><picture><source type=\\"image/avif\\" srcset=\\"/images/cdc4f079-750.avif 750w\\" sizes=\\"(max-width: 768px) 100vw, 768px\\"><source type=\\"image/webp\\" srcset=\\"/images/cdc4f079-750.webp 750w\\" sizes=\\"(max-width: 768px) 100vw, 768px\\"><img alt=\\"I am alt\\" loading=\\"lazy\\" decoding=\\"async\\" src=\\"/images/cdc4f079-750.png\\" width=\\"750\\" height=\\"493\\"></picture><figcaption>title</figcaption></figure>
                 Hello image!
               </p>
               <p>
-                <picture><source type=\\"image/avif\\" srcset=\\"/images/fc3f538d-750.avif 750w\\" sizes=\\"(max-width: 768px) 100vw, 768px\\"><source type=\\"image/webp\\" srcset=\\"/images/fc3f538d-750.webp 750w\\" sizes=\\"(max-width: 768px) 100vw, 768px\\"><img alt=\\"I am alt\\" loading=\\"lazy\\" decoding=\\"async\\" src=\\"/images/fc3f538d-750.png\\" width=\\"750\\" height=\\"493\\"></picture>
+                <picture><source type=\\"image/avif\\" srcset=\\"/images/cdc4f079-750.avif 750w\\" sizes=\\"(max-width: 768px) 100vw, 768px\\"><source type=\\"image/webp\\" srcset=\\"/images/cdc4f079-750.webp 750w\\" sizes=\\"(max-width: 768px) 100vw, 768px\\"><img alt=\\"I am alt\\" loading=\\"lazy\\" decoding=\\"async\\" src=\\"/images/cdc4f079-750.png\\" width=\\"750\\" height=\\"493\\"></picture>
                 Hello image without title!
               </p>
             </div>

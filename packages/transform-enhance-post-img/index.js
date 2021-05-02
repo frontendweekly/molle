@@ -1,4 +1,5 @@
 const path = require('path');
+const {URL} = require('url');
 const {parseHTML} = require('linkedom');
 const Image = require('@11ty/eleventy-img');
 
@@ -6,29 +7,29 @@ const shouldTransformHTML = (outputPath) =>
   outputPath && outputPath.endsWith('.html');
 
 const isURL = (str) => {
-  const pattern = new RegExp(
-    '^(https?:\\/\\/)?' + // protocol
-      '((([a-z\\d]([a-z\\d-]*[a-z\\d])*)\\.)+[a-z]{2,}|' + // domain name
-      '((\\d{1,3}\\.){3}\\d{1,3}))' + // OR ip (v4) address
-      '(\\:\\d+)?(\\/[-a-z\\d%_.~+]*)*' + // port and path
-      '(\\?[;&a-z\\d%_.~+=-]*)?' + // query string
-      '(\\#[-a-z\\d_]*)?$',
-    'i'
-  ); // fragment locator
-  return !!pattern.test(str);
+  try {
+    new URL(str);
+    return true;
+  } catch (e) {
+    // invalid url OR local path
+    return false;
+  }
 };
 
-const getImageMeta = async (src) => {
-  const imagePath = isURL(src) ? src : path.join(process.cwd(), `/11ty/${src}`);
+const setImagePath = (src) =>
+  isURL(src) ? src : path.join(process.cwd(), `/11ty/${src}`);
 
-  return await Image(imagePath, {
-    urlPath: '/images/',
-    outputDir: './11ty/images/generated',
-    widths: [1500, 750],
-    formats: ['avif', 'webp', 'png'],
-    dryRun: process.env.NODE_ENV === 'test',
-    useCache: process.env.NODE_ENV === 'development',
-  });
+const imgOptions = {
+  urlPath: '/images/',
+  outputDir: './11ty/images/generated',
+  widths: [1500, 750],
+  formats: ['avif', 'webp', 'png'],
+  dryRun: process.env.NODE_ENV === 'test',
+  useCache: process.env.NODE_ENV === 'development',
+};
+
+const getImageMeta = (src, width, height) => {
+  return Image.statsByDimensionsSync(setImagePath(), width, height, imgOptions);
 };
 
 const buildPictureElem = (alt, metadata) => {
@@ -54,7 +55,7 @@ const buildFigureElem = (document, title, picture) => {
   return figure;
 };
 
-module.exports = async function (content, outputPath) {
+module.exports = function (content, outputPath) {
   if (!shouldTransformHTML(outputPath)) {
     return content;
   }
@@ -63,25 +64,27 @@ module.exports = async function (content, outputPath) {
   const articleImages = [...document.querySelectorAll('.c-post img')];
 
   if (articleImages.length) {
-    await Promise.all(
-      articleImages.map(async (image) => {
-        const src = image.getAttribute('src');
-        const alt = image.getAttribute('alt');
-        const title = image.getAttribute('title');
+    articleImages.forEach((img) => {
+      const src = img.getAttribute('src');
+      const alt = img.getAttribute('alt');
+      const title = img.getAttribute('title');
+      const width = img.getAttribute('width');
+      const height = img.getAttribute('height');
 
-        const metadata = await getImageMeta(src);
-        const picture = buildPictureElem(alt, metadata);
+      Image(src, imgOptions);
 
-        // If an image has a title it means that the user added a caption
-        // so replace the image with a figure containing that image and a caption
-        if (title) {
-          const figure = buildFigureElem(document, title, picture);
-          image.replaceWith(figure);
-        } else {
-          image.replaceWith(picture);
-        }
-      })
-    );
+      const metadata = getImageMeta(src, width, height);
+      const picture = buildPictureElem(alt, metadata);
+
+      // If an image has a title it means that the user added a caption
+      // so replace the image with a figure containing that image and a caption
+      if (title) {
+        const figure = buildFigureElem(document, title, picture);
+        img.replaceWith(figure);
+      } else {
+        img.replaceWith(picture);
+      }
+    });
   }
 
   return document.toString();
