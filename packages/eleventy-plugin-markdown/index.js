@@ -27,6 +27,9 @@ const md = markdownIt({
     removeMarker: false,
     marker: '—',
   })
+  .use(require('markdown-it-imsize'), {
+    autofill: true,
+  })
   // Disable indented code blocks.
   // We only support fenced code blocks.
   .disable('code');

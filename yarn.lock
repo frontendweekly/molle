@@ -532,6 +532,7 @@ __metadata:
     markdown-it-attrs: ^4.0.0
     markdown-it-deflist: ^2.1.0
     markdown-it-footnote: ^3.0.2
+    markdown-it-imsize: ^2.0.1
     uslug: ^1.0.4
   languageName: unknown
   linkType: soft
@@ -627,7 +628,7 @@ __metadata:
     "@frontendweekly/filter-head": ^0.0.8
     "@frontendweekly/filter-markdown": ^0.0.21
     "@frontendweekly/filter-tags-to-sentence": ^0.0.11
-    "@frontendweekly/transform-enhance-post-html": ^0.0.32
+    "@frontendweekly/transform-enhance-post-html": ^0.0.33
     "@frontendweekly/transform-htmlmin": ^0.0.15
     ucontent: ^2.0.0
   languageName: unknown
@@ -657,7 +658,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@frontendweekly/transform-enhance-post-code-block@^0.0.8, @frontendweekly/transform-enhance-post-code-block@workspace:packages/transform-enhance-post-code-block":
+"@frontendweekly/transform-enhance-post-code-block@^0.0.9, @frontendweekly/transform-enhance-post-code-block@workspace:packages/transform-enhance-post-code-block":
   version: 0.0.0-use.local
   resolution: "@frontendweekly/transform-enhance-post-code-block@workspace:packages/transform-enhance-post-code-block"
   dependencies:
@@ -665,17 +666,17 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@frontendweekly/transform-enhance-post-html@^0.0.32, @frontendweekly/transform-enhance-post-html@workspace:packages/transform-enhance-post-html":
+"@frontendweekly/transform-enhance-post-html@^0.0.33, @frontendweekly/transform-enhance-post-html@workspace:packages/transform-enhance-post-html":
   version: 0.0.0-use.local
   resolution: "@frontendweekly/transform-enhance-post-html@workspace:packages/transform-enhance-post-html"
   dependencies:
-    "@frontendweekly/transform-enhance-post-code-block": ^0.0.8
-    "@frontendweekly/transform-enhance-post-iframe": ^0.0.7
-    "@frontendweekly/transform-enhance-post-img": ^0.0.8
+    "@frontendweekly/transform-enhance-post-code-block": ^0.0.9
+    "@frontendweekly/transform-enhance-post-iframe": ^0.0.8
+    "@frontendweekly/transform-enhance-post-img": ^0.0.9
   languageName: unknown
   linkType: soft
 
-"@frontendweekly/transform-enhance-post-iframe@^0.0.7, @frontendweekly/transform-enhance-post-iframe@workspace:packages/transform-enhance-post-iframe":
+"@frontendweekly/transform-enhance-post-iframe@^0.0.8, @frontendweekly/transform-enhance-post-iframe@workspace:packages/transform-enhance-post-iframe":
   version: 0.0.0-use.local
   resolution: "@frontendweekly/transform-enhance-post-iframe@workspace:packages/transform-enhance-post-iframe"
   dependencies:
@@ -683,7 +684,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@frontendweekly/transform-enhance-post-img@^0.0.8, @frontendweekly/transform-enhance-post-img@workspace:packages/transform-enhance-post-img":
+"@frontendweekly/transform-enhance-post-img@^0.0.9, @frontendweekly/transform-enhance-post-img@workspace:packages/transform-enhance-post-img":
   version: 0.0.0-use.local
   resolution: "@frontendweekly/transform-enhance-post-img@workspace:packages/transform-enhance-post-img"
   dependencies:
@@ -9296,6 +9297,13 @@ fsevents@~2.3.1:
   version: 3.0.2
   resolution: "markdown-it-footnote@npm:3.0.2"
   checksum: dab9173ddcf91d2ae41938afcaceee4cbf5c886505eb0389df0cb624e8beb387f8660c537cefee069f94780c097d390ec0f183ad1ed36d07e2d0b9dce68afd7f
+  languageName: node
+  linkType: hard
+
+"markdown-it-imsize@npm:^2.0.1":
+  version: 2.0.1
+  resolution: "markdown-it-imsize@npm:2.0.1"
+  checksum: 8552388ae973987b44680c0349a2e6bc2115f12846088c38bfd8c37373b8a404d5e9b86de59a8950c7c4d723610b83a717c00313a0951d3b2ce960f97d4434ed
   languageName: node
   linkType: hard
 
