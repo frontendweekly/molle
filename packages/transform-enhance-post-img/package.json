@@ -33,7 +33,7 @@
   },
   "dependencies": {
     "@11ty/eleventy-img": "^0.8.3",
-    "linkedom": "^0.7.3"
+    "linkedom": "^0.7.6"
   },
   "devDependencies": {
     "rewire": "^5.0.0"
