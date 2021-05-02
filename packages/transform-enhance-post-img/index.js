@@ -29,6 +29,7 @@ const imgOptions = {
 };
 
 const getImageMeta = (src, width, height) => {
+  console.log(setImagePath(src));
   return Image.statsByDimensionsSync(
     setImagePath(src),
     width,

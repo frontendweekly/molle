@@ -111,11 +111,11 @@ test('Integration', () => {
     "
             <div class=\\"c-post\\">
               <p>
-                <figure><picture><source type=\\"image/avif\\" srcset=\\"/images/cdc4f079-750.avif 750w\\" sizes=\\"(max-width: 768px) 100vw, 768px\\"><source type=\\"image/webp\\" srcset=\\"/images/cdc4f079-750.webp 750w\\" sizes=\\"(max-width: 768px) 100vw, 768px\\"><img alt=\\"I am alt\\" loading=\\"lazy\\" decoding=\\"async\\" src=\\"/images/cdc4f079-750.png\\" width=\\"750\\" height=\\"493\\"></picture><figcaption>title</figcaption></figure>
+                <figure><picture><source type=\\"image/avif\\" srcset=\\"/images/fc3f538d-750.avif 750w\\" sizes=\\"(max-width: 768px) 100vw, 768px\\"><source type=\\"image/webp\\" srcset=\\"/images/fc3f538d-750.webp 750w\\" sizes=\\"(max-width: 768px) 100vw, 768px\\"><img alt=\\"I am alt\\" loading=\\"lazy\\" decoding=\\"async\\" src=\\"/images/fc3f538d-750.png\\" width=\\"750\\" height=\\"493\\"></picture><figcaption>title</figcaption></figure>
                 Hello image!
               </p>
               <p>
-                <picture><source type=\\"image/avif\\" srcset=\\"/images/cdc4f079-750.avif 750w\\" sizes=\\"(max-width: 768px) 100vw, 768px\\"><source type=\\"image/webp\\" srcset=\\"/images/cdc4f079-750.webp 750w\\" sizes=\\"(max-width: 768px) 100vw, 768px\\"><img alt=\\"I am alt\\" loading=\\"lazy\\" decoding=\\"async\\" src=\\"/images/cdc4f079-750.png\\" width=\\"750\\" height=\\"493\\"></picture>
+                <picture><source type=\\"image/avif\\" srcset=\\"/images/fc3f538d-750.avif 750w\\" sizes=\\"(max-width: 768px) 100vw, 768px\\"><source type=\\"image/webp\\" srcset=\\"/images/fc3f538d-750.webp 750w\\" sizes=\\"(max-width: 768px) 100vw, 768px\\"><img alt=\\"I am alt\\" loading=\\"lazy\\" decoding=\\"async\\" src=\\"/images/fc3f538d-750.png\\" width=\\"750\\" height=\\"493\\"></picture>
                 Hello image without title!
               </p>
             </div>
