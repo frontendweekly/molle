@@ -1,13 +1,13 @@
 {
   "name": "@frontendweekly/transform-enhance-post-img",
-  "version": "0.0.10",
+  "version": "0.2.0",
   "description": "An Eleventy Transform to enhance img in articles",
   "keywords": [
     "eleventy",
     "eleventy-transform"
   ],
   "author": "Yuya Saito <hello@studiomohawk.com>",
-  "homepage": "https://github.com/frontendweekly/molle/packages/transform-enhance-post-html/#readme",
+  "homepage": "https://github.com/frontendweekly/molle/packages/transform-enhance-post-img/#readme",
   "license": "MIT",
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/frontendweekly",
@@ -23,7 +23,7 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/frontendweekly/molle.git",
-    "directory": "packages/transform-enhance-post-html"
+    "directory": "packages/transform-enhance-post-img"
   },
   "scripts": {
     "test": "jest"
