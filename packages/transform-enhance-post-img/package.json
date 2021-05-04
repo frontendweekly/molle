@@ -1,6 +1,6 @@
 {
   "name": "@frontendweekly/transform-enhance-post-img",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "An Eleventy Transform to enhance img in articles",
   "keywords": [
     "eleventy",
