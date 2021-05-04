@@ -9,24 +9,53 @@ const getImageMeta = SUT.__get__('getImageMeta');
 const buildPictureElem = SUT.__get__('buildPictureElem');
 const buildFigureElem = SUT.__get__('buildFigureElem');
 
-test('getImageMeta returns metadata', async () => {
+test('getImageMeta returns metadata', () => {
   // Arrange
-  const image = `<img src="${IMG_SRC}" alt="I am alt">`;
+  const image = `<img src="${IMG_SRC}" width="600" height="400" alt="I am alt">`;
   const {document} = parseHTML(image);
 
   const imageDOM = document.querySelector('img');
   const src = imageDOM.getAttribute('src');
+  const width = imageDOM.getAttribute('width');
+  const height = imageDOM.getAttribute('height');
 
   // Act
-  const actual = await getImageMeta(src);
+  const actual = getImageMeta(src, width, height);
 
   // Assert
-  expect(actual).toMatchSnapshot();
+  expect(actual).toMatchInlineSnapshot(`
+    Object {
+      "avif": Array [
+        Object {
+          "filename": "ee6eed7-600.avif",
+          "format": "avif",
+          "height": 400,
+          "outputPath": "11ty/generated/ee6eed7-600.avif",
+          "sourceType": "image/avif",
+          "srcset": "/images/ee6eed7-600.avif 600w",
+          "url": "/images/ee6eed7-600.avif",
+          "width": 600,
+        },
+      ],
+      "webp": Array [
+        Object {
+          "filename": "ee6eed7-600.webp",
+          "format": "webp",
+          "height": 400,
+          "outputPath": "11ty/generated/ee6eed7-600.webp",
+          "sourceType": "image/webp",
+          "srcset": "/images/ee6eed7-600.webp 600w",
+          "url": "/images/ee6eed7-600.webp",
+          "width": 600,
+        },
+      ],
+    }
+  `);
 }, 30000);
 
 test('buildPictureElem build picture', () => {
   // Arrange
-  const image = `<img src="${IMG_SRC}" alt="I am alt">`;
+  const image = `<img src="${IMG_SRC}" width="600" height="400" alt="I am alt">`;
   const {document} = parseHTML(image);
   const imageDOM = document.querySelector('img');
   const alt = imageDOM.getAttribute('alt');
@@ -66,7 +95,7 @@ test('buildPictureElem build picture', () => {
 
 test('buildFigureElem build figure', () => {
   // Arrange
-  const image = `<img src="${IMG_SRC}" alt="I am alt" title="title">`;
+  const image = `<img src="${IMG_SRC}" width="600" height="400" alt="I am alt" title="title">`;
   const {document} = parseHTML(image);
   const imageDOM = document.querySelector('img');
   const title = imageDOM.getAttribute('title');
@@ -86,16 +115,16 @@ test('buildFigureElem build figure', () => {
   `);
 });
 
-test('Integration', async () => {
+test('Integration', () => {
   // Arrange
   const content = `
-        <div class="c-post">
+        <div class="h-entry">
           <p>
-            <img src="${IMG_SRC}" alt="I am alt" title="title">
+            <img src="${IMG_SRC}" width="600" height="400" alt="I am alt" title="title">
             Hello image!
           </p>
           <p>
-            <img src="${IMG_SRC}" alt="I am alt">
+            <img src="${IMG_SRC}" width="600" height="400" alt="I am alt">
             Hello image without title!
           </p>
         </div>
@@ -103,17 +132,17 @@ test('Integration', async () => {
   const outputPath = `dummy.html`;
 
   // actual
-  const actual = await SUTINTEGRATION(content, outputPath);
+  const actual = SUTINTEGRATION(content, outputPath);
 
   expect(actual).toMatchInlineSnapshot(`
     "
-            <div class=\\"c-post\\">
+            <div class=\\"h-entry\\">
               <p>
                 <figure><picture><source type=\\"image/avif\\" srcset=\\"/images/ee6eed7-600.avif 600w\\" sizes=\\"(max-width: 768px) 100vw, 768px\\"><source type=\\"image/webp\\" srcset=\\"/images/ee6eed7-600.webp 600w\\" sizes=\\"(max-width: 768px) 100vw, 768px\\"><img alt=\\"I am alt\\" loading=\\"lazy\\" decoding=\\"async\\" src=\\"/images/ee6eed7-600.png\\" width=\\"600\\" height=\\"400\\"></picture><figcaption>title</figcaption></figure>
                 Hello image!
               </p>
               <p>
-                <picture><source type=\\"image/avif\\" srcset=\\"/images/ee6eed7-600.avif 600w\\" sizes=\\"(max-width: 768px) 100vw, 768px\\"><source type=\\"image/webp\\" srcset=\\"/images/ee6eed7-600.webp 600w\\" sizes=\\"(max-width: 768px) 100vw, 768px\\"><img alt=\\"I am alt\\" loading=\\"lazy\\" decoding=\\"async\\" src=\\"/images/ee6eed7-600.png\\" width=\\"600\\" height=\\"400\\"></picture>
+                <picture><source type=\\"image/avif\\" srcset=\\"/images/ee6eed7-600.avif 600w\\" sizes=\\"(max-width: 768px) 100vw, 768px\\"><source type=\\"image/webp\\" srcset=\\"/images/ee6eed7-600.webp 600w\\" sizes=\\"(max-width: 768px) 100vw, 768px\\"><source type=\\"image/png\\" srcset=\\"/images/ee6eed7-600.png 600w, /images/ee6eed7-600.png 600w\\" sizes=\\"(max-width: 768px) 100vw, 768px\\"><img alt=\\"I am alt\\" loading=\\"lazy\\" decoding=\\"async\\" src=\\"/images/ee6eed7-600.png\\" width=\\"600\\" height=\\"400\\"></picture>
                 Hello image without title!
               </p>
             </div>

@@ -16,17 +16,34 @@ const isURL = (str) => {
   }
 };
 
-const getImageMeta = async (src) => {
-  const imagePath = isURL(src) ? src : path.join(process.cwd(), `/11ty/${src}`);
+const imgOptions = {
+  urlPath: '/images/',
+  outputDir: './11ty/generated',
+  widths: [1500, 750, null],
+  formats: ['avif', 'webp'],
+  dryRun: process.env.NODE_ENV === 'test',
+  useCache: process.env.NODE_ENV === 'development',
+  cacheOptions: {
+    duration: '1d',
+    directory: '.cache',
+    removeUrlQueryParams: false,
+  },
+};
 
-  return Image(imagePath, {
-    urlPath: '/images/',
-    outputDir: './11ty/images/generated',
-    widths: [1500, 750],
-    formats: ['avif', 'webp', 'png'],
-    dryRun: process.env.NODE_ENV === 'test',
-    useCache: process.env.NODE_ENV === 'development',
-  });
+const setImagePath = (src) => {
+  if (isURL(src)) {
+    return src;
+  } else {
+    return path.join(process.cwd(), `/11ty/${src}`);
+  }
+};
+
+const getImageMeta = (src, width, height) => {
+  if (isURL(src)) {
+    return Image.statsByDimensionsSync(src, width, height, imgOptions);
+  } else {
+    return Image.statsSync(src, imgOptions);
+  }
 };
 
 const buildPictureElem = (alt, metadata) => {
@@ -52,34 +69,39 @@ const buildFigureElem = (document, title, picture) => {
   return figure;
 };
 
-module.exports = async function (content, outputPath) {
+module.exports = function (content, outputPath) {
   if (!shouldTransformHTML(outputPath)) {
     return content;
   }
 
   const {document} = parseHTML(content);
-  const articleImages = [...document.querySelectorAll('.c-post img')];
+  const articleImages = [...document.querySelectorAll('.h-entry img')];
 
   if (articleImages.length) {
-    await Promise.all(
-      articleImages.map(async (image) => {
-        const src = image.getAttribute('src');
-        const alt = image.getAttribute('alt');
-        const title = image.getAttribute('title');
+    articleImages.forEach((img) => {
+      const src = img.getAttribute('src');
+      const alt = img.getAttribute('alt');
+      const title = img.getAttribute('title');
+      const width = img.getAttribute('width');
+      const height = img.getAttribute('height');
+      const ext = path.extname(src).slice(1);
 
-        const metadata = await getImageMeta(src);
-        const picture = buildPictureElem(alt, metadata);
+      imgOptions.formats.push(ext ? ext : 'png');
 
-        // If an image has a title it means that the user added a caption
-        // so replace the image with a figure containing that image and a caption
-        if (title) {
-          const figure = buildFigureElem(document, title, picture);
-          image.replaceWith(figure);
-        } else {
-          image.replaceWith(picture);
-        }
-      })
-    );
+      Image(setImagePath(src), imgOptions);
+
+      const metadata = getImageMeta(setImagePath(src), width, height);
+      const picture = buildPictureElem(alt, metadata);
+
+      // If an image has a title it means that the user added a caption
+      // so replace the image with a figure containing that image and a caption
+      if (title) {
+        const figure = buildFigureElem(document, title, picture);
+        img.replaceWith(figure);
+      } else {
+        img.replaceWith(picture);
+      }
+    });
   }
 
   return document.toString();
