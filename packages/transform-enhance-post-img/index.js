@@ -18,7 +18,7 @@ const isURL = (str) => {
 
 const imgOptions = {
   urlPath: '/images/',
-  outputDir: './11ty/generated',
+  outputDir: './dist/images/',
   widths: [1500, 750, null],
   formats: ['avif', 'webp'],
   dryRun: process.env.NODE_ENV === 'test',

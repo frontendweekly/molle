@@ -596,7 +596,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@frontendweekly/filter-tags-to-sentence@workspace:packages/filter-tags-to-sentence"
   dependencies:
-    slugify: ^1.5.0
+    slugify: ^1.5.1
   languageName: unknown
   linkType: soft
 
@@ -672,7 +672,7 @@ __metadata:
   dependencies:
     "@frontendweekly/transform-enhance-post-code-block": ^0.0.9
     "@frontendweekly/transform-enhance-post-iframe": ^0.0.8
-    "@frontendweekly/transform-enhance-post-img": ^0.1.2
+    "@frontendweekly/transform-enhance-post-img": ^0.4.0
   languageName: unknown
   linkType: soft
 
@@ -684,12 +684,13 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@frontendweekly/transform-enhance-post-img@^0.1.2, @frontendweekly/transform-enhance-post-img@workspace:packages/transform-enhance-post-img":
+"@frontendweekly/transform-enhance-post-img@^0.4.0, @frontendweekly/transform-enhance-post-img@workspace:packages/transform-enhance-post-img":
   version: 0.0.0-use.local
   resolution: "@frontendweekly/transform-enhance-post-img@workspace:packages/transform-enhance-post-img"
   dependencies:
     "@11ty/eleventy-img": ^0.8.3
     linkedom: ^0.7.6
+    rewire: ^5.0.0
   languageName: unknown
   linkType: soft
 
@@ -3948,10 +3949,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"commander@npm:^6.2.0":
-  version: 6.2.1
-  resolution: "commander@npm:6.2.1"
-  checksum: 47856aae6f194404122e359d8463e5e1a18f7cbab26722ce69f1379be8514bd49a160ef81a983d3d2091e3240022643354101d1276c797dcdd0b5bfc3c3f04a3
+"commander@npm:^7.2.0":
+  version: 7.2.0
+  resolution: "commander@npm:7.2.0"
+  checksum: bdc0eca5e25cd24af8440163d3c9a996785bbac4b49a590365699cdc1ed08cefbac8f268153208ab2bc5dc3cb1d3fb573fd1590c681e36e371342186bd331a4c
   languageName: node
   linkType: hard
 
@@ -4513,7 +4514,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"debug@npm:4.3.1, debug@npm:^4.0.0, debug@npm:^4.0.1, debug@npm:^4.1.0, debug@npm:^4.1.1, debug@npm:^4.2.0":
+"debug@npm:4.3.1, debug@npm:^4.0.0, debug@npm:^4.0.1, debug@npm:^4.1.0, debug@npm:^4.1.1":
   version: 4.3.1
   resolution: "debug@npm:4.3.1"
   dependencies:
@@ -5727,7 +5728,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"execa@npm:^4.0.0, execa@npm:^4.1.0":
+"execa@npm:^4.0.0":
   version: 4.1.0
   resolution: "execa@npm:4.1.0"
   dependencies:
@@ -8880,28 +8881,28 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
-"lint-staged@npm:^10.5.4":
-  version: 10.5.4
-  resolution: "lint-staged@npm:10.5.4"
+"lint-staged@npm:^11.0.0":
+  version: 11.0.0
+  resolution: "lint-staged@npm:11.0.0"
   dependencies:
-    chalk: ^4.1.0
+    chalk: ^4.1.1
     cli-truncate: ^2.1.0
-    commander: ^6.2.0
+    commander: ^7.2.0
     cosmiconfig: ^7.0.0
-    debug: ^4.2.0
+    debug: ^4.3.1
     dedent: ^0.7.0
     enquirer: ^2.3.6
-    execa: ^4.1.0
-    listr2: ^3.2.2
-    log-symbols: ^4.0.0
-    micromatch: ^4.0.2
+    execa: ^5.0.0
+    listr2: ^3.8.2
+    log-symbols: ^4.1.0
+    micromatch: ^4.0.4
     normalize-path: ^3.0.0
     please-upgrade-node: ^3.2.0
     string-argv: 0.3.1
     stringify-object: ^3.3.0
   bin:
     lint-staged: bin/lint-staged.js
-  checksum: dbcafe3679668379fc03f3aef481c3f710794ec03dd5c3915f26a0de110977fbcb44b55ab6dfcff9e8e5789c568ea5629e92f55944fc43f6f6fa1890ee5b07ba
+  checksum: e5d9c38f468fae090939d150f8a1676ca208e50c714f20c9957a16833eeae20ca9676c8679883d0a005fda58375581c26352e18a2227d6449a29adaca650f957
   languageName: node
   linkType: hard
 
@@ -8912,21 +8913,22 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
-"listr2@npm:^3.2.2":
-  version: 3.2.3
-  resolution: "listr2@npm:3.2.3"
+"listr2@npm:^3.8.2":
+  version: 3.8.2
+  resolution: "listr2@npm:3.8.2"
   dependencies:
-    chalk: ^4.1.0
+    chalk: ^4.1.1
     cli-truncate: ^2.1.0
     figures: ^3.2.0
     indent-string: ^4.0.0
     log-update: ^4.0.0
     p-map: ^4.0.0
-    rxjs: ^6.6.3
+    rxjs: ^6.6.7
     through: ^2.3.8
+    wrap-ansi: ^7.0.0
   peerDependencies:
     enquirer: ">= 2.3.0 < 3"
-  checksum: 83f7659bd94f714274284e238562e4f78beb213d02ec0575210a1254e9bb3415a8040c691d419633e029099f2629a99e05c8b0adb0dade3f6a9ff6499e69c69f
+  checksum: ecc039103c8d1065782d327b87045431b609105bcdada16cd209daf1b2f971605ba5c083fbe74e4d17a0002d7f8ab038c94c4feaaf48a0601dba628cd6f0b6e3
   languageName: node
   linkType: hard
 
@@ -9086,15 +9088,6 @@ fsevents@~2.3.1:
   version: 4.17.21
   resolution: "lodash@npm:4.17.21"
   checksum: 4983720b9abca930a4a46f18db163d7dad8dd00dbed6db0cc7b499b33b717cce69f80928b27bbb1ff2cbd3b19d251ee90669a8b5ea466072ca81c2ebe91e7468
-  languageName: node
-  linkType: hard
-
-"log-symbols@npm:^4.0.0":
-  version: 4.0.0
-  resolution: "log-symbols@npm:4.0.0"
-  dependencies:
-    chalk: ^4.0.0
-  checksum: 2cbdb0427d1853f2bd36645bff42aaca200902284f28aadacb3c0fa4c8c43fe6bfb71b5d61ab08b67063d066d7c55b8bf5fbb43b03e4a150dbcdd643e9cd1dbf
   languageName: node
   linkType: hard
 
@@ -9795,7 +9788,7 @@ fsevents@~2.3.1:
     husky: ^6.0.0
     jest: ^26.6.3
     lerna: ^4.0.0
-    lint-staged: ^10.5.4
+    lint-staged: ^11.0.0
     mock-fs: ^4.14.0
     msw: ^0.28.2
     npm-run-all: ^4.1.5
@@ -12263,12 +12256,21 @@ resolve@^1.15.1:
   languageName: node
   linkType: hard
 
-"rxjs@npm:^6.4.0, rxjs@npm:^6.6.0, rxjs@npm:^6.6.3":
+"rxjs@npm:^6.4.0, rxjs@npm:^6.6.0":
   version: 6.6.3
   resolution: "rxjs@npm:6.6.3"
   dependencies:
     tslib: ^1.9.0
   checksum: 61a3da6db947f69b7d805df3a619d8f60678b7372c4d571dd63e45ef3532be984a88307ea0aa2cd8d2578b62c3c022186e8da9dca47c9c1b8c9ecba6f5581deb
+  languageName: node
+  linkType: hard
+
+"rxjs@npm:^6.6.7":
+  version: 6.6.7
+  resolution: "rxjs@npm:6.6.7"
+  dependencies:
+    tslib: ^1.9.0
+  checksum: 1146975cbd5388ee5e61450235dc5670931e43cce71813f567977d334acc4d75c6e8d9d293df67e1fb31510b99fc8957943d4a9b550d109e4dc69967a8471543
   languageName: node
   linkType: hard
 
@@ -12711,10 +12713,17 @@ resolve@^1.15.1:
   languageName: node
   linkType: hard
 
-"slugify@npm:^1.4.7, slugify@npm:^1.5.0":
+"slugify@npm:^1.4.7":
   version: 1.5.0
   resolution: "slugify@npm:1.5.0"
   checksum: 049cb08bda13e3adfa0eb05e6a6d26cfa76526d9ce41b455f48833e1d3c99940683047618af9b864a93cd544ca1f4b795b524414d3725c71caac7f9f8f7374f1
+  languageName: node
+  linkType: hard
+
+"slugify@npm:^1.5.1":
+  version: 1.5.1
+  resolution: "slugify@npm:1.5.1"
+  checksum: 7d2ca37d77bd06d5e148b06599c75d7c745d4188edb9825bf26482978b5510f9657fb9d05ab86549d7d708dae35dd479d7c037edd85137a33a4156b296725858
   languageName: node
   linkType: hard
 
