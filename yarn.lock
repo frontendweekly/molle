@@ -493,9 +493,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@eslint/eslintrc@npm:^0.4.0":
-  version: 0.4.0
-  resolution: "@eslint/eslintrc@npm:0.4.0"
+"@eslint/eslintrc@npm:^0.4.1":
+  version: 0.4.1
+  resolution: "@eslint/eslintrc@npm:0.4.1"
   dependencies:
     ajv: ^6.12.4
     debug: ^4.1.1
@@ -506,7 +506,7 @@ __metadata:
     js-yaml: ^3.13.1
     minimatch: ^3.0.4
     strip-json-comments: ^3.1.1
-  checksum: d3f51b741997cbf36662d8b5a52985bfa5d2873e48cadccd95c67fcce1706327ec98ebb6f0be79c6ecbc31bdeca32c2b1c4f66fd1cf3934c434d1ac269cbceac
+  checksum: 418f5810c8dd9897d2457ceef098197d0e5f1ad345fbe4cd9256fd4223d7ea83d5e350f9091b3ab3483b6b1c367fa560df3ba1fccc7eb8ca6e1aae5a5b126d60
   languageName: node
   linkType: hard
 
@@ -592,11 +592,11 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@frontendweekly/filter-tags-to-sentence@^0.0.11, @frontendweekly/filter-tags-to-sentence@workspace:packages/filter-tags-to-sentence":
+"@frontendweekly/filter-tags-to-sentence@^0.0.12, @frontendweekly/filter-tags-to-sentence@workspace:packages/filter-tags-to-sentence":
   version: 0.0.0-use.local
   resolution: "@frontendweekly/filter-tags-to-sentence@workspace:packages/filter-tags-to-sentence"
   dependencies:
-    slugify: ^1.5.1
+    slugify: ^1.5.2
   languageName: unknown
   linkType: soft
 
@@ -627,8 +627,8 @@ __metadata:
     "@frontendweekly/filter-date-ordinal-suffix": ^0.0.17
     "@frontendweekly/filter-head": ^0.0.8
     "@frontendweekly/filter-markdown": ^0.1.0
-    "@frontendweekly/filter-tags-to-sentence": ^0.0.11
-    "@frontendweekly/transform-enhance-post-html": ^0.0.36
+    "@frontendweekly/filter-tags-to-sentence": ^0.0.12
+    "@frontendweekly/transform-enhance-post-html": ^0.0.37
     "@frontendweekly/transform-htmlmin": ^0.0.15
     ucontent: ^2.0.0
   languageName: unknown
@@ -666,13 +666,13 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@frontendweekly/transform-enhance-post-html@^0.0.36, @frontendweekly/transform-enhance-post-html@workspace:packages/transform-enhance-post-html":
+"@frontendweekly/transform-enhance-post-html@^0.0.37, @frontendweekly/transform-enhance-post-html@workspace:packages/transform-enhance-post-html":
   version: 0.0.0-use.local
   resolution: "@frontendweekly/transform-enhance-post-html@workspace:packages/transform-enhance-post-html"
   dependencies:
     "@frontendweekly/transform-enhance-post-code-block": ^0.0.9
     "@frontendweekly/transform-enhance-post-iframe": ^0.0.8
-    "@frontendweekly/transform-enhance-post-img": ^0.4.0
+    "@frontendweekly/transform-enhance-post-img": ^0.4.1
   languageName: unknown
   linkType: soft
 
@@ -684,7 +684,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@frontendweekly/transform-enhance-post-img@^0.4.0, @frontendweekly/transform-enhance-post-img@workspace:packages/transform-enhance-post-img":
+"@frontendweekly/transform-enhance-post-img@^0.4.1, @frontendweekly/transform-enhance-post-img@workspace:packages/transform-enhance-post-img":
   version: 0.0.0-use.local
   resolution: "@frontendweekly/transform-enhance-post-img@workspace:packages/transform-enhance-post-img"
   dependencies:
@@ -5558,12 +5558,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint@npm:^7.25.0":
-  version: 7.25.0
-  resolution: "eslint@npm:7.25.0"
+"eslint@npm:^7.26.0":
+  version: 7.26.0
+  resolution: "eslint@npm:7.26.0"
   dependencies:
     "@babel/code-frame": 7.12.11
-    "@eslint/eslintrc": ^0.4.0
+    "@eslint/eslintrc": ^0.4.1
     ajv: ^6.10.0
     chalk: ^4.0.0
     cross-spawn: ^7.0.2
@@ -5601,7 +5601,7 @@ __metadata:
     v8-compile-cache: ^2.0.3
   bin:
     eslint: bin/eslint.js
-  checksum: 6e1782e2264ebf987504746ee82e996bf0ef2c29a2eaea869b54cb8aa1eaf10945b1d563618515e65ac934ca626f3609282127773f45868ad4a98744458a3c62
+  checksum: 08f99befd764fbd6ea811e9eec27d5c6b9dc9d1bbfe5ffa1016e4f1fe526a4f45ea127c4e30c554c423ee55eb290ce9af4fb7fedf9b7af3f84076a444c2bbdf6
   languageName: node
   linkType: hard
 
@@ -9784,7 +9784,7 @@ fsevents@~2.3.1:
     "@testing-library/dom": ^7.30.4
     "@testing-library/jest-dom": ^5.12.0
     cross-env: ^7.0.3
-    eslint: ^7.25.0
+    eslint: ^7.26.0
     husky: ^6.0.0
     jest: ^26.6.3
     lerna: ^4.0.0
@@ -12720,10 +12720,10 @@ resolve@^1.15.1:
   languageName: node
   linkType: hard
 
-"slugify@npm:^1.5.1":
-  version: 1.5.1
-  resolution: "slugify@npm:1.5.1"
-  checksum: 7d2ca37d77bd06d5e148b06599c75d7c745d4188edb9825bf26482978b5510f9657fb9d05ab86549d7d708dae35dd479d7c037edd85137a33a4156b296725858
+"slugify@npm:^1.5.2":
+  version: 1.5.2
+  resolution: "slugify@npm:1.5.2"
+  checksum: aa478151565d6fa6c5fbbc3642f9daec848eaf762e27fb41ec3a5cab0e5637289aa909e3e50ef296f33b0f9a31092be932950dca8d51e797b614c53fdc645e4b
   languageName: node
   linkType: hard
 

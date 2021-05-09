@@ -4,7 +4,9 @@ const {parseHTML} = require('linkedom');
 const Image = require('@11ty/eleventy-img');
 
 const shouldTransformHTML = (outputPath) =>
-  outputPath && outputPath.endsWith('.html');
+  outputPath &&
+  outputPath.endsWith('.html') &&
+  process.env.ELEVENTY_ENV === 'production';
 
 const isURL = (str) => {
   try {
