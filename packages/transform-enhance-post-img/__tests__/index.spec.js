@@ -24,33 +24,33 @@ test('getImageMeta returns metadata', () => {
 
   // Assert
   expect(actual).toMatchInlineSnapshot(`
+Object {
+  "avif": Array [
     Object {
-      "avif": Array [
-        Object {
-          "filename": "ee6eed7-600.avif",
-          "format": "avif",
-          "height": 400,
-          "outputPath": "11ty/generated/ee6eed7-600.avif",
-          "sourceType": "image/avif",
-          "srcset": "/images/ee6eed7-600.avif 600w",
-          "url": "/images/ee6eed7-600.avif",
-          "width": 600,
-        },
-      ],
-      "webp": Array [
-        Object {
-          "filename": "ee6eed7-600.webp",
-          "format": "webp",
-          "height": 400,
-          "outputPath": "11ty/generated/ee6eed7-600.webp",
-          "sourceType": "image/webp",
-          "srcset": "/images/ee6eed7-600.webp 600w",
-          "url": "/images/ee6eed7-600.webp",
-          "width": 600,
-        },
-      ],
-    }
-  `);
+      "filename": "ee6eed7-600.avif",
+      "format": "avif",
+      "height": 400,
+      "outputPath": "dist/images/ee6eed7-600.avif",
+      "sourceType": "image/avif",
+      "srcset": "/images/ee6eed7-600.avif 600w",
+      "url": "/images/ee6eed7-600.avif",
+      "width": 600,
+    },
+  ],
+  "webp": Array [
+    Object {
+      "filename": "ee6eed7-600.webp",
+      "format": "webp",
+      "height": 400,
+      "outputPath": "dist/images/ee6eed7-600.webp",
+      "sourceType": "image/webp",
+      "srcset": "/images/ee6eed7-600.webp 600w",
+      "url": "/images/ee6eed7-600.webp",
+      "width": 600,
+    },
+  ],
+}
+`);
 }, 30000);
 
 test('buildPictureElem build picture', () => {
@@ -135,17 +135,17 @@ test('Integration', () => {
   const actual = SUTINTEGRATION(content, outputPath);
 
   expect(actual).toMatchInlineSnapshot(`
-    "
-            <div class=\\"h-entry\\">
-              <p>
-                <figure><picture><source type=\\"image/avif\\" srcset=\\"/images/ee6eed7-600.avif 600w\\" sizes=\\"(max-width: 768px) 100vw, 768px\\"><source type=\\"image/webp\\" srcset=\\"/images/ee6eed7-600.webp 600w\\" sizes=\\"(max-width: 768px) 100vw, 768px\\"><img alt=\\"I am alt\\" loading=\\"lazy\\" decoding=\\"async\\" src=\\"/images/ee6eed7-600.png\\" width=\\"600\\" height=\\"400\\"></picture><figcaption>title</figcaption></figure>
-                Hello image!
-              </p>
-              <p>
-                <picture><source type=\\"image/avif\\" srcset=\\"/images/ee6eed7-600.avif 600w\\" sizes=\\"(max-width: 768px) 100vw, 768px\\"><source type=\\"image/webp\\" srcset=\\"/images/ee6eed7-600.webp 600w\\" sizes=\\"(max-width: 768px) 100vw, 768px\\"><source type=\\"image/png\\" srcset=\\"/images/ee6eed7-600.png 600w, /images/ee6eed7-600.png 600w\\" sizes=\\"(max-width: 768px) 100vw, 768px\\"><img alt=\\"I am alt\\" loading=\\"lazy\\" decoding=\\"async\\" src=\\"/images/ee6eed7-600.png\\" width=\\"600\\" height=\\"400\\"></picture>
-                Hello image without title!
-              </p>
-            </div>
-          "
-  `);
+"
+        <div class=\\"h-entry\\">
+          <p>
+            <img src=\\"https://dummyimage.com/600x400/000/fff\\" width=\\"600\\" height=\\"400\\" alt=\\"I am alt\\" title=\\"title\\">
+            Hello image!
+          </p>
+          <p>
+            <img src=\\"https://dummyimage.com/600x400/000/fff\\" width=\\"600\\" height=\\"400\\" alt=\\"I am alt\\">
+            Hello image without title!
+          </p>
+        </div>
+      "
+`);
 }, 30000);

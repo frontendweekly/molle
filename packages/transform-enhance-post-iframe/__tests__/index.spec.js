@@ -13,12 +13,12 @@ test(`it should wrap iframe with .o-video-player container`, () => {
 
   // Assert
   expect(output).toMatchInlineSnapshot(`
-    "
-            <div class=\\"c-post\\">
-              <div class=\\"o-video-player\\"><iframe allowfullscreen>I&#39;m video</iframe></div>
-            </div>
-          "
-  `);
+"
+        <div class=\\"c-post\\">
+          <div class=\\"o-video-player\\"><iframe allowfullscreen>I'm video</iframe></div>
+        </div>
+      "
+`);
 });
 
 test(`it should NOT wrap iframe with .o-video-player container`, () => {
@@ -34,10 +34,10 @@ test(`it should NOT wrap iframe with .o-video-player container`, () => {
 
   // Assert
   expect(output).toMatchInlineSnapshot(`
-    "
-            <div class=\\"c-post\\">
-              <iframe>I&#39;m video but no allowfullscreen</iframe>
-            </div>
-          "
-  `);
+"
+        <div class=\\"c-post\\">
+          <iframe>I'm video but no allowfullscreen</iframe>
+        </div>
+      "
+`);
 });

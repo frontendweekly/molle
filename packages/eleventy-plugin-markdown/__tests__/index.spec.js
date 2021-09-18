@@ -78,11 +78,11 @@ your <div>http://example.com</div> site`;
     const actual = md.render(content);
     // Assert
     expect(actual).toMatchInlineSnapshot(`
-      "<h1 id=\\"thisisid\\">I’m id <a class=\\"o-heading-link\\" href=\\"#thisisid\\">#</a></h1>
-      <p>paragraph <em class=\\"red\\">style me</em> more text<br>
-      paragraph <strong data-rad=\\"true\\">style me</strong> more text</p>
-      "
-    `);
+"<h1 id=\\"thisisid\\" tabindex=\\"-1\\">I’m id <a class=\\"o-heading-link\\" href=\\"#thisisid\\">#</a></h1>
+<p>paragraph <em class=\\"red\\">style me</em> more text<br>
+paragraph <strong data-rad=\\"true\\">style me</strong> more text</p>
+"
+`);
   });
 
   test('it should have anchor', () => {
@@ -92,9 +92,9 @@ your <div>http://example.com</div> site`;
     const actual = md.render(content);
     // Assert
     expect(actual).toMatchInlineSnapshot(`
-      "<h2 id=\\"id-have-an-anchor-link\\">I’d have an anchor link <a class=\\"o-heading-link\\" href=\\"#id-have-an-anchor-link\\">#</a></h2>
-      "
-    `);
+"<h2 id=\\"id-have-an-anchor-link\\" tabindex=\\"-1\\">I’d have an anchor link <a class=\\"o-heading-link\\" href=\\"#id-have-an-anchor-link\\">#</a></h2>
+"
+`);
   });
 
   test('it should have footnote', () => {
@@ -151,10 +151,10 @@ your <div>http://example.com</div> site`;
     const actual = md.render(content);
     // Assert
     expect(actual).toMatchInlineSnapshot(`
-      "<h1 id=\\"should-not-be-code-block\\">Should not be code block <a class=\\"o-heading-link\\" href=\\"#should-not-be-code-block\\">#</a></h1>
-      <p>const codeblock = require(‘code’);<br>
-      codeblock.render();</p>
-      "
-    `);
+"<h1 id=\\"should-not-be-code-block\\" tabindex=\\"-1\\">Should not be code block <a class=\\"o-heading-link\\" href=\\"#should-not-be-code-block\\">#</a></h1>
+<p>const codeblock = require(‘code’);<br>
+codeblock.render();</p>
+"
+`);
   });
 });

@@ -1,5 +1,0 @@
-{
-  "*.js": ["eslint --cache --fix", "jest --findRelatedTests"],
-  "*.pcss": "stylelint --fix",
-  "*.{js,pcss,json}": "prettier --write"
-}
