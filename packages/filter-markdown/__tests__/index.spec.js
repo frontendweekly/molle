@@ -78,8 +78,11 @@ your <div>http://example.com</div> site`;
     const actual = markdown(content);
     // Assert
     expect(actual).toMatchInlineSnapshot(`
-"<h1 id=\\"thisisid\\" tabindex=\\"-1\\">I’m id</h1>
-<a class=\\"o-heading-link\\" href=\\"#thisisid\\"><span class=\\"visually-hidden\\">Permalink to “I’m id”</span> <span aria-hidden=\\"true\\">#</span></a><p>paragraph <em class=\\"red\\">style me</em> more text<br>
+"<h1 id=\\"thisisid\\" tabindex=\\"-1\\"><a class=\\"header-anchor\\" href=\\"#thisisid\\">
+      <span class=\\"u-visually-hidden\\">Jump to heading</span>
+      <span aria-hidden=\\"true\\">#</span>
+    </a> I’m id</h1>
+<p>paragraph <em class=\\"red\\">style me</em> more text<br>
 paragraph <strong data-rad=\\"true\\">style me</strong> more text</p>
 "
 `);
@@ -92,8 +95,11 @@ paragraph <strong data-rad=\\"true\\">style me</strong> more text</p>
     const actual = markdown(content);
     // Assert
     expect(actual).toMatchInlineSnapshot(`
-"<h2 id=\\"id-have-an-anchor-link\\" tabindex=\\"-1\\">I’d have an anchor link</h2>
-<a class=\\"o-heading-link\\" href=\\"#id-have-an-anchor-link\\"><span class=\\"visually-hidden\\">Permalink to “I’d have an anchor link”</span> <span aria-hidden=\\"true\\">#</span></a>"
+"<h2 id=\\"id-have-an-anchor-link\\" tabindex=\\"-1\\"><a class=\\"header-anchor\\" href=\\"#id-have-an-anchor-link\\">
+      <span class=\\"u-visually-hidden\\">Jump to heading</span>
+      <span aria-hidden=\\"true\\">#</span>
+    </a> I’d have an anchor link</h2>
+"
 `);
   });
 
@@ -151,8 +157,11 @@ paragraph <strong data-rad=\\"true\\">style me</strong> more text</p>
     const actual = markdown(content);
     // Assert
     expect(actual).toMatchInlineSnapshot(`
-"<h1 id=\\"should-not-be-code-block\\" tabindex=\\"-1\\">Should not be code block</h1>
-<a class=\\"o-heading-link\\" href=\\"#should-not-be-code-block\\"><span class=\\"visually-hidden\\">Permalink to “Should not be code block”</span> <span aria-hidden=\\"true\\">#</span></a><p>const codeblock = require(‘code’);<br>
+"<h1 id=\\"should-not-be-code-block\\" tabindex=\\"-1\\"><a class=\\"header-anchor\\" href=\\"#should-not-be-code-block\\">
+      <span class=\\"u-visually-hidden\\">Jump to heading</span>
+      <span aria-hidden=\\"true\\">#</span>
+    </a> Should not be code block</h1>
+<p>const codeblock = require(‘code’);<br>
 codeblock.render();</p>
 "
 `);

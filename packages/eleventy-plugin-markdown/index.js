@@ -17,11 +17,12 @@ const md = markdownIt({
   .use(anchor, {
     slugify: (s) => uslug(s),
     level: 1,
-    permalink: anchor.permalink.linkAfterHeader({
-      class: 'o-heading-link',
-      style: 'visually-hidden',
-      assistiveText: (title) => `Permalink to “${title}”`,
-      visuallyHiddenClass: 'visually-hidden',
+    permalink: anchor.permalink.linkInsideHeader({
+      symbol: `
+      <span class="u-visually-hidden">Jump to heading</span>
+      <span aria-hidden="true">#</span>
+    `,
+      placement: 'before',
     }),
   })
   .use(require('markdown-it-footnote'))
