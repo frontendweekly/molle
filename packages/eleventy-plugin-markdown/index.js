@@ -1,3 +1,4 @@
+const anchor = require('markdown-it-anchor');
 const markdownIt = require('markdown-it');
 const uslug = require('uslug');
 
@@ -13,12 +14,15 @@ const md = markdownIt({
     rightDelimiter: '}',
     allowedAttributes: ['id', 'class', /^data-.*$/],
   })
-  .use(require('markdown-it-anchor'), {
+  .use(anchor, {
     slugify: (s) => uslug(s),
     level: 1,
-    permalink: true,
-    permalinkClass: 'o-heading-link',
-    permalinkSymbol: '#',
+    permalink: anchor.permalink.linkAfterHeader({
+      class: 'o-heading-link',
+      style: 'visually-hidden',
+      assistiveText: (title) => `Permalink to “${title}”`,
+      visuallyHiddenClass: 'visually-hidden',
+    }),
   })
   .use(require('markdown-it-footnote'))
   .use(require('markdown-it-attribution'), {

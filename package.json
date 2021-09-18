@@ -9,7 +9,7 @@
   },
   "scripts": {
     "prepare": "husky install",
-    "prepublish": "yarn run lint && yarn test",
+    "prepublish": "yarn test",
     "publish": "yarn lerna publish",
     "test": "jest",
     "lint": "eslint . --fix"
